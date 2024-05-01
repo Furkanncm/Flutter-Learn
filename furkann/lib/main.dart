@@ -3,13 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:furkann/appBar.dart';
-import 'package:furkann/b%C4%B1kt%C4%B1m.dart';
 import 'package:furkann/button.dart';
 import 'package:furkann/card.dart';
 import 'package:furkann/custom_widget.dart';
 import 'package:furkann/firstPage.dart';
 import 'package:furkann/randomPage.dart';
-import 'package:furkann/rows.dart';
 import 'package:furkann/stateles.dart';
 
 void main() {
