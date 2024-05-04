@@ -6,10 +6,12 @@ import 'package:furkann/appBar.dart';
 import 'package:furkann/button.dart';
 import 'package:furkann/card.dart';
 import 'package:furkann/custom_widget.dart';
+import 'package:furkann/demos/stack_demo_view.dart';
 import 'package:furkann/firstPage.dart';
 import 'package:furkann/listTile.dart';
 import 'package:furkann/randomPage.dart';
 import 'package:furkann/row_and_column.dart';
+import 'package:furkann/stack.dart';
 import 'package:furkann/stateles.dart';
 
 void main() {
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: rowAndColumn(),
+      home: stackDemo(),
     );
   }
 }
