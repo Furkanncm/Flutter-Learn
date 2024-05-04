@@ -8,29 +8,38 @@ class customWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [Center(child: circularRedIndicator())],
-      ),
+          // actions: [Center(child: circularRedIndicator())],
+          ),
       body: Column(
+        
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const LinearProgressIndicator(
-            color: Colors.white,
-          ),
+          
+          // const LinearProgressIndicator(
+          //   color: Colors.white,
+          // ),
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: const customButton(text: "Add to Card")),
+                  child: customButton(
+                    text: "Add to Card",
+                    onPressed: () {},
+                  )),
             ),
           ),
           const SizedBox(
             height: 100,
           ),
-          customButton(text: "Food"),
-          Center(child: circularRedIndicator()),
+          customButton(
+            text: "Food",
+            onPressed: () {},
+          ),
+          //  Center(child: circularRedIndicator()),
         ],
       ),
+      drawer: Drawer(),
     );
   }
 }
@@ -50,12 +59,17 @@ class circularRedIndicator extends StatelessWidget {
 
 class customButton extends StatelessWidget {
   final String text;
-  const customButton({super.key, required this.text});
+  final void Function() onPressed;
+  const customButton({
+    Key? key,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           backgroundColor: Colors.red, shape: const StadiumBorder()),
       child: Text(text,

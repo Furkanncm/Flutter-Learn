@@ -44,6 +44,9 @@ class randPage extends StatelessWidget {
           ],
         ),
       ),
+      drawer: Drawer(
+        backgroundColor: Colors.blueGrey,
+      ),
     );
   }
 }

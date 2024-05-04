@@ -7,6 +7,7 @@ import 'package:furkann/button.dart';
 import 'package:furkann/card.dart';
 import 'package:furkann/custom_widget.dart';
 import 'package:furkann/firstPage.dart';
+import 'package:furkann/listTile.dart';
 import 'package:furkann/randomPage.dart';
 import 'package:furkann/stateles.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: randPage(),
+      home: listTile(),
     );
   }
 }
