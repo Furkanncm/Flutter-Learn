@@ -9,6 +9,7 @@ import 'package:furkann/custom_widget.dart';
 import 'package:furkann/firstPage.dart';
 import 'package:furkann/listTile.dart';
 import 'package:furkann/randomPage.dart';
+import 'package:furkann/row_and_column.dart';
 import 'package:furkann/stateles.dart';
 
 void main() {
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: listTile(),
+      home: rowAndColumn(),
     );
   }
 }
