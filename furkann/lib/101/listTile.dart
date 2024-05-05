@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/firstPage.dart';
+import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/core/random_image.dart';
 
 class listTile extends StatelessWidget {
