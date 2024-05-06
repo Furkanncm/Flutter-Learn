@@ -102,10 +102,8 @@ class subtitleWidget extends StatelessWidget {
     return Text(
       textAlign: textAlign,
       subtitle,
-      style: Theme.of(context)
-          .textTheme
-          .bodyMedium!
-          .copyWith(color: Colors.black87),
+      style:
+          Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white),
     );
   }
 }

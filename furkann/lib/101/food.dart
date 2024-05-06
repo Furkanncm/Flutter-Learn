@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:furkann/101/firstPage.dart';
+import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/core/random_image.dart';
 
 class foodPage extends StatelessWidget {
@@ -24,23 +25,21 @@ class foodPage extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                       left: 40,
-                      top: 200,
+                      top: 150,
                       child: Card(
-                        child: IconButton(
-                            color: Colors.amberAccent,
-                            onPressed: () {},
-                            icon: Icon(Icons.chevron_left)),
+                        child: customIconButton(
+                          icon: Icon(Icons.chevron_left),
+                        ),
                       )),
-                  Positioned(
+                  const Positioned(
                       right: 40,
-                      top: 200,
+                      top: 150,
                       child: Card(
-                        child: IconButton(
-                            color: Colors.amberAccent,
-                            onPressed: () {},
-                            icon: Icon(Icons.chevron_right)),
+                        child: customIconButton(
+                          icon: Icon(Icons.chevron_right),
+                        ),
                       ))
                 ],
               )),
@@ -59,7 +58,10 @@ class foodPage extends StatelessWidget {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amberAccent),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => mainFood()));
+                  },
                   child: buttonText(buttonTextt: "Start Explore"))),
           Spacer(
             flex: 1,
@@ -67,5 +69,18 @@ class foodPage extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class customIconButton extends StatelessWidget {
+  final Icon icon;
+  const customIconButton({
+    Key? key,
+    required this.icon,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(color: Colors.amberAccent, onPressed: () {}, icon: icon);
   }
 }
