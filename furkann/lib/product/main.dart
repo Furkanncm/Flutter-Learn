@@ -8,6 +8,7 @@ import 'package:furkann/101/card.dart';
 import 'package:furkann/101/custom_widget.dart';
 import 'package:furkann/101/food.dart';
 import 'package:furkann/101/mainFood.dart';
+import 'package:furkann/101/stateful_learn.dart';
 import 'package:furkann/demos/stack_demo_view.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/listTile.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: foodPage(),
+      home: statefull_learn(),
     );
   }
 }
