@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furkann/101/firstPage.dart';
+import 'package:furkann/product/helloCountCustom.dart';
 
 class statefull_learn extends StatefulWidget {
   const statefull_learn({super.key});
@@ -24,7 +25,13 @@ class _statefull_learnState extends State<statefull_learn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: textWidget(text: _countValue.toString())),
+      body: Column(
+        children: [
+          Center(child: textWidget(text: _countValue.toString())),
+          Placeholder(),
+          countCustom()
+        ],
+      ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [add_count(), decrease_count()],
