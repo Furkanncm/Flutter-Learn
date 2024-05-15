@@ -7,6 +7,7 @@ import 'package:furkann/101/button.dart';
 import 'package:furkann/101/card.dart';
 import 'package:furkann/101/custom_widget.dart';
 import 'package:furkann/101/food.dart';
+import 'package:furkann/101/lifeCycle_learn.dart';
 import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/stateful_learn.dart';
@@ -46,7 +47,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: pageView(),
+      home: lifeCycle(
+        message: "Furkan",
+      ),
     );
   }
 }
