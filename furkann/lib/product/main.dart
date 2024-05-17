@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:furkann/101/appBar.dart';
 import 'package:furkann/101/button.dart';
 import 'package:furkann/101/card.dart';
+import 'package:furkann/101/customTextField.dart';
 import 'package:furkann/101/custom_widget.dart';
 import 'package:furkann/101/food.dart';
 import 'package:furkann/101/lifeCycle_learn.dart';
@@ -47,9 +48,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: lifeCycle(
-        message: "Furkan",
-      ),
+      home: customTextField(),
     );
   }
 }
