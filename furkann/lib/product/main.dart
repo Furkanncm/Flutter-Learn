@@ -12,6 +12,7 @@ import 'package:furkann/101/lifeCycle_learn.dart';
 import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/stateful_learn.dart';
+import 'package:furkann/demos/color_demo_view.dart';
 import 'package:furkann/demos/stack_demo_view.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/listTile.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: customTextField(),
+      home: colorDemos(),
     );
   }
 }
