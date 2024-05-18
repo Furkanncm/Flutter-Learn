@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:furkann/101/button.dart';
+import 'package:furkann/101/custom_widget.dart';
 import 'package:furkann/product/language/language_items.dart';
 
 class customTextField extends StatefulWidget {
@@ -22,25 +24,47 @@ class _customTextFieldState extends State<customTextField> {
           title: Text(LanguageItems.MainTitle),
           leading: Icon(Icons.chevron_left),
         ),
-        body: Column(
-          children: [
-            Padding(padding: ProjectPadding.generalPadding),
-            TextField(
-              focusNode: focusNode1,
-              textInputAction: TextInputAction.next,
-              decoration: _customTextFieldDecoration(
-                  Icon(Icons.person), LanguageItems.usernameTitle),
-              keyboardType: TextInputType.name,
-            ),
-            Padding(padding: ProjectPadding.generalPadding),
-            TextField(
-              focusNode: focusNode2,
-              decoration: _customTextFieldDecoration(
-                  Icon(Icons.lock), LanguageItems.passwordTitle),
-              obscureText: true,
-              keyboardType: TextInputType.visiblePassword,
-            )
-          ],
+        body: Padding(
+          padding: ProjectPadding.generalPadding,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(padding: ProjectPadding.generalPadding),
+              TextField(
+                focusNode: focusNode1,
+                textInputAction: TextInputAction.next,
+                decoration: _customTextFieldDecoration(
+                    Icon(Icons.person), LanguageItems.usernameTitle),
+                keyboardType: TextInputType.name,
+              ),
+              Padding(padding: ProjectPadding.generalPadding),
+              TextField(
+                focusNode: focusNode2,
+                textInputAction: TextInputAction.next,
+                keyboardType: TextInputType.emailAddress,
+                decoration: _customTextFieldDecoration(
+                    Icon(Icons.email), LanguageItems.emailTitle),
+              ),
+              Padding(padding: ProjectPadding.generalPadding),
+              TextField(
+                focusNode: focusNode3,
+                textInputAction: TextInputAction.next,
+                decoration: _customTextFieldDecoration(
+                    Icon(Icons.lock), LanguageItems.passwordTitle),
+                obscureText: true,
+                keyboardType: TextInputType.visiblePassword,
+              ),
+              Padding(padding: ProjectPadding.generalPadding),
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(), backgroundColor: Colors.blueGrey),
+                  onPressed: () {},
+                  child: Text(LanguageItems.submitTitle)),
+            ],
+          ),
         ));
   }
 
