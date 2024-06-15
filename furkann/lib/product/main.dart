@@ -5,14 +5,18 @@ import 'package:flutter/services.dart';
 import 'package:furkann/101/appBar.dart';
 import 'package:furkann/101/button.dart';
 import 'package:furkann/101/card.dart';
+import 'package:furkann/101/color_picker.dart';
 import 'package:furkann/101/customTextField.dart';
 import 'package:furkann/101/custom_widget.dart';
 import 'package:furkann/101/food.dart';
 import 'package:furkann/101/lifeCycle_learn.dart';
+import 'package:furkann/101/listView_learn.dart';
 import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/stateful_learn.dart';
+import 'package:furkann/demos/collection_demo.dart';
 import 'package:furkann/demos/color_demo_view.dart';
+import 'package:furkann/demos/color_life_cycle.dart';
 import 'package:furkann/demos/stack_demo_view.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/listTile.dart';
@@ -49,7 +53,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: colorDemos(),
+      home: collectionDemo(),
     );
   }
 }
