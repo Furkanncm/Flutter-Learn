@@ -14,6 +14,9 @@ import 'package:furkann/101/listView_learn.dart';
 import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/stateful_learn.dart';
+import 'package:furkann/202/service/service_model.dart';
+import 'package:furkann/202/tab.dart';
+import 'package:furkann/202/tab.dart';
 import 'package:furkann/demos/collection_demo.dart';
 import 'package:furkann/demos/color_demo_view.dart';
 import 'package:furkann/demos/color_life_cycle.dart';
@@ -53,7 +56,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: collectionDemo(),
+      home: ServiceLearn(),
     );
   }
 }
