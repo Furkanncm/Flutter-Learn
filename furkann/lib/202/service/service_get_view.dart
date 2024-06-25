@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:furkann/202/model_learn.dart';
 import 'package:furkann/202/service/model.dart';
+import 'package:furkann/202/service/postService.dart';
 
 class ServiceLearn extends StatefulWidget {
   const ServiceLearn({super.key});
@@ -15,13 +16,12 @@ class ServiceLearn extends StatefulWidget {
 class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   bool _isLoading = false;
-  final _baseUrl = "https://jsonplaceholder.typicode.com";
-  late final Dio _networkManager;
+  late final PostService _postService;
 
   @override
   void initState() {
     super.initState();
-    _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
+    _postService = PostService();
     fetchPostItems();
   }
 
@@ -33,17 +33,7 @@ class _ServiceLearnState extends State<ServiceLearn> {
 
   Future<void> fetchPostItems() async {
     changeLoading();
-    final response = await _networkManager.get("/posts");
-    if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-
-      if (_datas is List) {
-        setState(() {
-          _items = _datas.map((e) => PostModel.fromJson(e)).toList();
-        });
-      }
-    }
-
+    _items = await _postService.fetchPostItems();
     changeLoading();
   }
 
@@ -56,14 +46,16 @@ class _ServiceLearnState extends State<ServiceLearn> {
           _isLoading ? CircularProgressIndicator.adaptive() : SizedBox.shrink()
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(
-            itemCount: _items?.length ?? 0,
-            itemBuilder: (context, index) {
-              return postCard(model: _items?[index]);
-            }),
-      ),
+      body: _items == null
+          ? Placeholder()
+          : Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                  itemCount: _items?.length ?? 0,
+                  itemBuilder: (context, index) {
+                    return postCard(model: _items?[index]);
+                  }),
+            ),
     );
   }
 }

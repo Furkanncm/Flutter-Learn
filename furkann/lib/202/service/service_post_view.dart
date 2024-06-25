@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:furkann/202/service/model.dart';
 import 'package:dio/dio.dart';
+import 'package:furkann/202/service/postService.dart';
 
 class ServicePostModel extends StatefulWidget {
   const ServicePostModel({super.key});
@@ -15,10 +16,7 @@ class _ServicePostModelState extends State<ServicePostModel> {
   late final TextEditingController _titleController;
   late final TextEditingController _bodyController;
   late final TextEditingController _userIdController;
-
-  late final Dio _networkManager;
-  final String _baseUrl = "https://jsonplaceholder.typicode.com";
-
+  late final PostService _postService;
   final String title = "Title";
   final String body = "Body";
   final String userId = "UserId";
@@ -28,17 +26,14 @@ class _ServicePostModelState extends State<ServicePostModel> {
   @override
   void initState() {
     super.initState();
-    _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
+    _postService = PostService();
     _titleController = TextEditingController();
     _bodyController = TextEditingController();
     _userIdController = TextEditingController();
   }
 
   Future<void> updateService(PostModel model) async {
-    final response = await _networkManager.post("/posts", data: model);
-    if (response.statusCode == HttpStatus.created) {
-      print("success");
-    }
+    final response = await _postService.updateService(model);
   }
 
   @override
