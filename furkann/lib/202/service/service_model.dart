@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:furkann/202/model_learn.dart';
@@ -13,11 +15,15 @@ class ServiceLearn extends StatefulWidget {
 class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   bool _isLoading = false;
+  final _baseUrl = "https://jsonplaceholder.typicode.com";
+  late final Dio _networkManager;
 
   @override
   void initState() {
     super.initState();
+    _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
     fetchPostItems();
+    
   }
 
   void changeLoading() {
@@ -28,15 +34,17 @@ class _ServiceLearnState extends State<ServiceLearn> {
 
   Future<void> fetchPostItems() async {
     changeLoading();
-    final response =
-        await Dio().get("https://jsonplaceholder.typicode.com/posts");
-    final _datas = response.data;
+    final response = await _networkManager.get("/posts");
+    if (response.statusCode == HttpStatus.ok) {
+      final _datas = response.data;
 
-    if (_datas is List) {
-      setState(() {
-        _items = _datas.map((e) => PostModel.fromJson(e)).toList();
-      });
+      if (_datas is List) {
+        setState(() {
+          _items = _datas.map((e) => PostModel.fromJson(e)).toList();
+        });
+      }
     }
+
     changeLoading();
   }
 
