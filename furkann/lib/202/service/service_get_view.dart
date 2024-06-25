@@ -23,7 +23,6 @@ class _ServiceLearnState extends State<ServiceLearn> {
     super.initState();
     _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
     fetchPostItems();
-    
   }
 
   void changeLoading() {
@@ -81,7 +80,10 @@ class postCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        title: Text(_model?.title ?? " "),
+        title: Text(
+          _model?.title ?? " ",
+          style: TextStyle(color: Colors.amber),
+        ),
         subtitle: Text(_model?.body ?? ""),
       ),
     );

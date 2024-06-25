@@ -15,7 +15,7 @@ import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/stateful_learn.dart';
 
-import 'package:furkann/202/service/service_post_model.dart';
+import 'package:furkann/202/service/service_post_view.dart';
 import 'package:furkann/202/service/service_view.dart';
 import 'package:furkann/202/tab.dart';
 import 'package:furkann/202/tab.dart';

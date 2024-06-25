@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:furkann/202/service/service_model.dart';
-import 'package:furkann/202/service/service_post_model.dart';
+import 'package:furkann/202/service/service_get_view.dart';
+import 'package:furkann/202/service/service_post_view.dart';
 
 class ServiceView extends StatefulWidget {
   const ServiceView({super.key});
