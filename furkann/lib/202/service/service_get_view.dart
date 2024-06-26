@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:furkann/202/model_learn.dart';
+import 'package:furkann/202/service/comment_learn_view.dart';
 import 'package:furkann/202/service/model.dart';
 import 'package:furkann/202/service/postService.dart';
 
@@ -16,7 +17,7 @@ class ServiceLearn extends StatefulWidget {
 class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   bool _isLoading = false;
-  late final PostService _postService;
+  late final IService _postService;
 
   @override
   void initState() {
@@ -72,6 +73,13 @@ class postCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => CommentLearnView(postId: _model?.id,)));
+          
+        },
         title: Text(
           _model?.title ?? " ",
           style: TextStyle(color: Colors.amber),

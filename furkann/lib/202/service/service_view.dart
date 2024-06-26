@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furkann/202/service/comment_learn_view.dart';
 
 import 'package:furkann/202/service/service_get_view.dart';
 import 'package:furkann/202/service/service_post_view.dart';
@@ -58,7 +59,4 @@ class _ServiceViewState extends State<ServiceView>
   }
 }
 
-enum _MyPageRoute {
-  ServiceGet,
-  ServicePost,
-}
+enum _MyPageRoute { ServiceGet, ServicePost }

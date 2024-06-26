@@ -16,7 +16,7 @@ class _ServicePostModelState extends State<ServicePostModel> {
   late final TextEditingController _titleController;
   late final TextEditingController _bodyController;
   late final TextEditingController _userIdController;
-  late final PostService _postService;
+  late final IService _postService;
   final String title = "Title";
   final String body = "Body";
   final String userId = "UserId";
@@ -33,7 +33,7 @@ class _ServicePostModelState extends State<ServicePostModel> {
   }
 
   Future<void> updateService(PostModel model) async {
-    final response = await _postService.updateService(model);
+    final response = await _postService.postItemService(model);
   }
 
   @override
