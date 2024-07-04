@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:furkann/202/Form_learnd.dart';
+import 'package:furkann/202/OOPLearn_view.dart';
 import 'package:furkann/202/image_learn_advance.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: ImageAdvanced(),
+      home: TextFormLearn(),
     );
   }
 }
