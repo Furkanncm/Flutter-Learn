@@ -39,9 +39,9 @@ class _CommentLearnViewState extends State<CommentLearnView> {
     return Scaffold(
       appBar: AppBar(),
       body: _isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : _items == null
-              ? Center(child: Text("No data found"))
+              ? const Center(child: Text("No data found"))
               : ListView.builder(
                   itemCount: 1,
                   itemBuilder: (context, index) {

@@ -1,39 +1,11 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furkann/101/appBar.dart';
-import 'package:furkann/101/button.dart';
-import 'package:furkann/101/card.dart';
-import 'package:furkann/101/color_picker.dart';
-import 'package:furkann/101/customTextField.dart';
-import 'package:furkann/101/custom_widget.dart';
-import 'package:furkann/101/food.dart';
-import 'package:furkann/101/lifeCycle_learn.dart';
-import 'package:furkann/101/listView_learn.dart';
-import 'package:furkann/101/mainFood.dart';
-import 'package:furkann/101/pageView_learn.dart';
-import 'package:furkann/101/stateful_learn.dart';
-import 'package:furkann/202/service/exp_get_view.dart';
-
-import 'package:furkann/202/service/service_post_view.dart';
-import 'package:furkann/202/service/service_view.dart';
-import 'package:furkann/202/tab.dart';
-import 'package:furkann/202/tab.dart';
-import 'package:furkann/demos/collection_demo.dart';
-import 'package:furkann/demos/color_demo_view.dart';
-import 'package:furkann/demos/color_life_cycle.dart';
-import 'package:furkann/demos/stack_demo_view.dart';
-import 'package:furkann/101/firstPage.dart';
-import 'package:furkann/101/listTile.dart';
-import 'package:furkann/101/randomPage.dart';
-import 'package:furkann/101/row_and_column.dart';
-import 'package:furkann/101/stack.dart';
-import 'package:furkann/101/stateles.dart';
+import 'package:furkann/202/image_learn_advance.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -52,14 +24,16 @@ class MyApp extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         ),
         appBarTheme: const AppBarTheme(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
           centerTitle: true,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.indigo,
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: ServiceView(),
+      home: ImageAdvanced(),
     );
   }
 }

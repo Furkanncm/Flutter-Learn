@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:furkann/202/service/comment_model.dart';
 import 'package:furkann/202/service/model.dart';
 
@@ -66,6 +67,8 @@ class PostService implements IService {
     return false;
   }
 
+
+
   @override
   Future<List<PostModel>?> fetchPostItems() async {
     try {
@@ -82,6 +85,40 @@ class PostService implements IService {
     }
     return null;
   }
+
+  // Future<List<PostModel>?> get() async {
+  //   try {
+  //     final response = await networkManager.get(_PostServicepaths.posts.name);
+  //     if (response.statusCode == HttpStatus.ok) {
+  //       final _datas = response.data;
+  //       if (_datas is List) {
+  //         return _datas.map((e) => PostModel.fromJson(e)).toList();
+  //       }
+  //     }
+  //   } catch (e) {
+  //     return null;
+  //   }
+  // }
+
+    // Future<bool> DeleteCharacterIntent(int id) async {
+  //   try {
+  //     final response =
+  //         await networkManager.delete("${_PostServicepaths.posts.name}/ $id");
+
+  //     return response.statusCode == HttpStatus.ok;
+  //   } catch (e) {}
+  //   return false;
+  // }
+
+  // Future<bool> update(PostModel model, int id) async {
+  //   try {
+  //     final response = await networkManager
+  //         .put("${_PostServicepaths.posts.name}/$id", data: model);
+  //     return response.statusCode == HttpStatus.ok;
+  //   } catch (e) {}
+
+  //   return false;
+  // }
 }
 
 enum _PostServicepaths {

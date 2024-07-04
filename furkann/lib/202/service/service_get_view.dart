@@ -42,13 +42,13 @@ class _ServiceLearnState extends State<ServiceLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: _isLoading ? Text("Furkan") : Text("Service Learn"),
+        title: _isLoading ?const Text("Furkan") :const Text("Service Learn"),
         actions: [
-          _isLoading ? CircularProgressIndicator.adaptive() : SizedBox.shrink()
+          _isLoading ? const CircularProgressIndicator.adaptive() : const SizedBox.shrink()
         ],
       ),
       body: _items == null
-          ? Placeholder()
+          ? const Placeholder()
           : Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListView.builder(

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class PostModel12 {
    int _UserId;
    int _id;

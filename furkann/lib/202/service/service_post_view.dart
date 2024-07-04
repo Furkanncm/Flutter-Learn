@@ -48,14 +48,14 @@ class _ServicePostModelState extends State<ServicePostModel> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: _customTextField(
+                child: customTextField(
                     controller: _userIdController,
                     text: userId,
                     inputType: TextInputType.number),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: _customTextField(
+                child: customTextField(
                   controller: _titleController,
                   text: title,
                   inputType: TextInputType.text,
@@ -63,7 +63,7 @@ class _ServicePostModelState extends State<ServicePostModel> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: _customTextField(
+                child: customTextField(
                     controller: _bodyController,
                     text: body,
                     inputType: TextInputType.text),
@@ -75,7 +75,7 @@ class _ServicePostModelState extends State<ServicePostModel> {
                       if (_userIdController.text.isNotEmpty &&
                           _titleController.text.isNotEmpty &&
                           _bodyController.text.isNotEmpty) {
-                        final _model = PostModel(
+                        final  _model = PostModel(
                             title: _titleController.text,
                             body: _bodyController.text,
                             userId: int.tryParse(_userIdController.text));
@@ -99,11 +99,11 @@ class _ServicePostModelState extends State<ServicePostModel> {
   }
 }
 
-class _customTextField extends StatelessWidget {
+class customTextField extends StatelessWidget {
   final TextEditingController controller;
   final String text;
   final TextInputType inputType;
-  const _customTextField({
+  const customTextField({
     Key? key,
     required this.controller,
     required this.text,

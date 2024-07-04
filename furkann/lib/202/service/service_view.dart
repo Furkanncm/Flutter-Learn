@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/service/comment_learn_view.dart';
-
 import 'package:furkann/202/service/service_get_view.dart';
 import 'package:furkann/202/service/service_post_view.dart';
 
@@ -29,8 +27,8 @@ class _ServiceViewState extends State<ServiceView>
         child: Scaffold(
           body: TabBarView(
             controller: _kontroller,
-            physics: NeverScrollableScrollPhysics(),
-            children: [ServiceLearn(), ServicePostModel()],
+            physics: const NeverScrollableScrollPhysics(),
+            children: const [ServiceLearn(), ServicePostModel()],
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
@@ -40,7 +38,7 @@ class _ServiceViewState extends State<ServiceView>
                 _kontroller.animateTo(1);
               }
             },
-            child: Icon(Icons.swipe),
+            child: const Icon(Icons.swipe),
           ),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
