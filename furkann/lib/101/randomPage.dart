@@ -32,19 +32,19 @@ class randPage extends StatelessWidget {
               textAlign: TextAlign.center,
               subtitle: _description * 5,
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: pagePadding.dikey,
               child: elevatedButtonWidget(buttonText2: "Create A Note"),
             ),
             TextButton(onPressed: () {}, child: Text(_texttt)),
-            SizedBox(
+           const  SizedBox(
               height: 50,
             ),
           ],
         ),
       ),
-      drawer: Drawer(
+      drawer: const Drawer(
         backgroundColor: Colors.blueGrey,
       ),
     );

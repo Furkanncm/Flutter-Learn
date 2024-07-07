@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furkann/202/Form_learnd.dart';
-import 'package:furkann/202/OOPLearn_view.dart';
-import 'package:furkann/202/image_learn_advance.dart';
+import 'package:furkann/202/Cache/SecureCache.dart';
+import 'package:furkann/202/Cache/shared.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,13 +17,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
-        progressIndicatorTheme: ProgressIndicatorThemeData(
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: Colors.red,
         ),
         cardTheme: CardTheme(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         ),
+        floatingActionButtonTheme:
+            const FloatingActionButtonThemeData(backgroundColor: Colors.greenAccent),
         appBarTheme: const AppBarTheme(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: TextFormLearn(),
+      home: const SecureCacheView(),
     );
   }
 }

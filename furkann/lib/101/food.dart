@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/mainFood.dart';
-import 'package:furkann/core/random_image.dart';
+
 
 class foodPage extends StatelessWidget {
   const foodPage({super.key});
