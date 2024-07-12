@@ -4,6 +4,8 @@ import 'package:furkann/202/Cache/SecureCache.dart';
 import 'package:furkann/202/Cache/shared.dart';
 import 'package:furkann/202/MySheet.dart';
 import 'package:furkann/202/Sheet_learn.dart';
+import 'package:furkann/303/Callback_learn.dart';
+import 'package:furkann/303/part/Partof_Learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MySheetView(),
+      home: const CallbackLearn(),
     );
   }
 }
