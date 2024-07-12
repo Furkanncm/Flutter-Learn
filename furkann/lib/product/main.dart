@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:furkann/202/Cache/SecureCache.dart';
 import 'package:furkann/202/Cache/shared.dart';
-
+import 'package:furkann/202/MySheet.dart';
+import 'package:furkann/202/Sheet_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,8 +25,8 @@ class MyApp extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         ),
-        floatingActionButtonTheme:
-            const FloatingActionButtonThemeData(backgroundColor: Colors.greenAccent),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            backgroundColor: Colors.greenAccent),
         appBarTheme: const AppBarTheme(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SecureCacheView(),
+      home: const MySheetView(),
     );
   }
 }
