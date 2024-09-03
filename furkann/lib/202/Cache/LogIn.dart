@@ -16,7 +16,7 @@ class _LoginViewState extends LogInViewModel {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Log In"),
+        title: const Text("Log In"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -33,7 +33,7 @@ class _LoginViewState extends LogInViewModel {
                   textEditingController: mailController,
                   inputType: inputType,
                   labeltext: mailText,
-                  icon: Icon(Icons.mail_outline_outlined)),
+                  icon: const Icon(Icons.mail_outline_outlined)),
               customFormField(
                   isVisible: isPasswordVisible,
                   suffixIcon: IconButton(
@@ -41,8 +41,8 @@ class _LoginViewState extends LogInViewModel {
                       changePasswordVisible();
                     },
                     icon: isPasswordVisible
-                        ? Icon(Icons.visibility_off_outlined)
-                        : Icon(Icons.visibility_outlined),
+                        ? const Icon(Icons.visibility_off_outlined)
+                        : const Icon(Icons.visibility_outlined),
                   ),
                   validator: (value) {
                     return ((value!.length > 8) ?? false)
@@ -52,7 +52,7 @@ class _LoginViewState extends LogInViewModel {
                   textEditingController: PasswordController,
                   inputType: input2Type,
                   labeltext: passwordText,
-                  icon: Icon(Icons.lock_outline)),
+                  icon: const Icon(Icons.lock_outline)),
               ElevatedButton.icon(
                   onPressed: () {
                     if ((globalKey.currentState?.validate() ?? false) &&
@@ -61,22 +61,22 @@ class _LoginViewState extends LogInViewModel {
                         PasswordController.text ==
                             sharedPreferences?.getString(passwordText)) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Tabbar()));
+                          MaterialPageRoute(builder: (context) => const Tabbar()));
                     } else {
                       print("Form validation failed");
                     }
                   },
-                  icon: Icon(Icons.login),
-                  label: Text("Log In")),
+                  icon: const Icon(Icons.login),
+                  label: const Text("Log In")),
               ElevatedButton.icon(
                   onPressed: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) {
-                      return SigInPageView();
+                      return const SigInPageView();
                     }));
                   },
-                  icon: Icon(Icons.chevron_left),
-                  label: Text("Dont Have Account?"))
+                  icon: const Icon(Icons.chevron_left),
+                  label: const Text("Dont Have Account?"))
             ],
           ),
         ),

@@ -34,12 +34,12 @@ class PostService implements IService {
   @override
   Future<List<CommentModel>?> fetchSpecificItemsService(int postId) async {
     final response = await networkManager.get(_PostServicepaths.comments.name,
-        queryParameters: {"${_PostQueryPaths.postId.name}": postId});
+        queryParameters: {_PostQueryPaths.postId.name: postId});
 
     if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-      if (_datas is List) {
-        return _datas.map((e) => CommentModel.fromJson(e)).toList();
+      final datas = response.data;
+      if (datas is List) {
+        return datas.map((e) => CommentModel.fromJson(e)).toList();
       }
     }
     return null;
@@ -74,10 +74,10 @@ class PostService implements IService {
     try {
       final response = await networkManager.get(_PostServicepaths.posts.name);
       if (response.statusCode == HttpStatus.ok) {
-        final _datas = response.data;
+        final datas = response.data;
 
-        if (_datas is List) {
-          return _datas.map((e) => PostModel.fromJson(e)).toList();
+        if (datas is List) {
+          return datas.map((e) => PostModel.fromJson(e)).toList();
         }
       }
     } catch (_) {

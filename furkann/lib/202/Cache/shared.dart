@@ -22,7 +22,7 @@ class _SharedViewState extends SharedViewModel {
               ? CircularProgressIndicator(
                   color: Theme.of(context).scaffoldBackgroundColor,
                 )
-              : SizedBox.shrink()
+              : const SizedBox.shrink()
         ],
       ),
       body: Column(
@@ -49,7 +49,7 @@ class _SharedViewState extends SharedViewModel {
             title: Text(text.toString()),
             subtitle: Text(number.toString()),
           ),
-          Expanded(child: _userListView())
+          const Expanded(child: _userListView())
         ],
       ),
       floatingActionButton: Row(
@@ -70,7 +70,7 @@ class _SharedViewState extends SharedViewModel {
                 sharedManager.setString(SharedKeys.action, action.toString());
               }
             },
-            child: Icon(Icons.send),
+            child: const Icon(Icons.send),
           ),
           FloatingActionButton(
             onPressed: () async {
@@ -81,7 +81,7 @@ class _SharedViewState extends SharedViewModel {
               changeTitle("Nothing");
               changeLoading();
             },
-            child: Icon(Icons.remove_circle_outline_outlined),
+            child: const Icon(Icons.remove_circle_outline_outlined),
           ),
         ],
       ),
@@ -90,9 +90,7 @@ class _SharedViewState extends SharedViewModel {
 }
 
 class _userListView extends StatelessWidget {
-  const _userListView({
-    super.key,
-  });
+  const _userListView();
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +113,7 @@ class _userListView extends StatelessWidget {
                 ),
                 trailing: Text(
                   users[index].Url,
-                  style: TextStyle(decoration: TextDecoration.underline),
+                  style: const TextStyle(decoration: TextDecoration.underline),
                 ),
               ),
             ),

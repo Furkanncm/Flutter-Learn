@@ -62,7 +62,7 @@ class ImageAdvancedState extends State<ImageAdvanced>
                 title: AnimatedOpacity(
                   opacity: _isOpacity ? 1 : 0,
                   duration: DurationUtils()._duration,
-                  child: Text("Furkan"),
+                  child: const Text("Furkan"),
                 ),
               ),
             ),
@@ -92,20 +92,20 @@ class ImageAdvancedState extends State<ImageAdvanced>
                 onPressed: () {
                   _changeOpacity();
                 },
-                child: Text("Change")),
+                child: const Text("Change")),
             // AnimatedCrossFade with different widgets to prevent infinite loop
             AnimatedCrossFade(
               firstChild: Container(
                 color: Colors.red,
                 width: 100,
                 height: 100,
-                child: Center(child: Text('First')),
+                child: const Center(child: Text('First')),
               ),
               secondChild: Container(
                 color: Colors.blue,
                 width: 100,
                 height: 100,
-                child: Center(child: Text('Second')),
+                child: const Center(child: Text('Second')),
               ),
               crossFadeState: (_isVisible
                   ? CrossFadeState.showFirst
@@ -128,10 +128,10 @@ enum _ImageEnum { indir, dog }
 
 extension _ImageExtension on _ImageEnum {
   Widget getImage() {
-    return Image.asset("asset/${name}.png"); // Correct path
+    return Image.asset("asset/$name.png"); // Correct path
   }
 }
 
 class DurationUtils {
-  final Duration _duration = Duration(seconds: 3);
+  final Duration _duration = const Duration(seconds: 3);
 }

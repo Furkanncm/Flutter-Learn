@@ -7,8 +7,8 @@ class randPage extends StatelessWidget {
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.g, ";
   final String _texttt = "Skip";
   const randPage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class randPage extends StatelessWidget {
             const Spacer(),
             Padding(
               padding: pagePadding.dikey,
-              child: elevatedButtonWidget(buttonText2: "Create A Note"),
+              child: const elevatedButtonWidget(buttonText2: "Create A Note"),
             ),
             TextButton(onPressed: () {}, child: Text(_texttt)),
            const  SizedBox(
@@ -54,9 +54,9 @@ class randPage extends StatelessWidget {
 class elevatedButtonWidget extends StatelessWidget {
   final String buttonText2;
   const elevatedButtonWidget({
-    Key? key,
+    super.key,
     required this.buttonText2,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -72,9 +72,9 @@ class elevatedButtonWidget extends StatelessWidget {
 class elevatedButtonTextWidget extends StatelessWidget {
   final String buttonText;
   const elevatedButtonTextWidget({
-    Key? key,
+    super.key,
     required this.buttonText,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -92,10 +92,10 @@ class subtitleWidget extends StatelessWidget {
   final String subtitle;
 
   const subtitleWidget({
-    Key? key,
+    super.key,
     required this.subtitle,
     this.textAlign = TextAlign.center,
-  }) : super(key: key);
+  });
   final TextAlign? textAlign;
   @override
   Widget build(BuildContext context) {
@@ -111,9 +111,9 @@ class subtitleWidget extends StatelessWidget {
 class TextWidget extends StatelessWidget {
   final String title;
   const TextWidget({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -126,8 +126,8 @@ class TextWidget extends StatelessWidget {
 }
 
 class pagePadding {
-  static final EdgeInsets yatay = const EdgeInsets.symmetric(horizontal: 20);
-  static final EdgeInsets dikey = const EdgeInsets.symmetric(vertical: 10);
+  static const EdgeInsets yatay = EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets dikey = EdgeInsets.symmetric(vertical: 10);
 }
 
 class ImageView extends StatelessWidget {

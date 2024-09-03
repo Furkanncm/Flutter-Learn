@@ -32,16 +32,16 @@ class _SigInPageViewState extends SigInViewModel {
                       onPressed: () async {
                         await checkCondition(context);
                       },
-                      icon: Icon(Icons.check),
+                      icon: const Icon(Icons.check),
                       label: Text(labelTitle)),
                   ElevatedButton.icon(
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-                          return LoginView();
+                          return const LoginView();
                         }));
                       },
-                      icon: Icon(Icons.chevron_right),
+                      icon: const Icon(Icons.chevron_right),
                       label: Text(labelMailEmpty))
                 ],
               ),
@@ -66,12 +66,12 @@ class _SigInPageViewState extends SigInViewModel {
                         changePasswordVisible();
                       },
                       icon: isPasswordVisible
-                          ? Icon(Icons.visibility_off_outlined)
-                          : Icon(Icons.visibility_outlined),
+                          ? const Icon(Icons.visibility_off_outlined)
+                          : const Icon(Icons.visibility_outlined),
                     ),
                     labeltext: labelPassword,
                     inputType: TextInputType.text,
-                    icon: Icon(Icons.lock_open_outlined));
+                    icon: const Icon(Icons.lock_open_outlined));
   }
 }
 
@@ -98,7 +98,7 @@ class validateMailFiled extends StatelessWidget {
         },
         labeltext: labelMail,
         inputType: TextInputType.emailAddress,
-        icon: Icon(Icons.mail_outline_outlined));
+        icon: const Icon(Icons.mail_outline_outlined));
   }
 }
 
@@ -111,7 +111,7 @@ class customFormField extends StatelessWidget {
   final Icon icon;
   final bool? isVisible;
   const customFormField({
-    Key? key,
+    super.key,
     required this.textEditingController,
     this.validator,
     required this.inputType,
@@ -119,7 +119,7 @@ class customFormField extends StatelessWidget {
     required this.labeltext,
     required this.icon,
     this.isVisible,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ class customFormField extends StatelessWidget {
         obscureText: isVisible ?? false,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
-          suffixIcon: suffixIcon ?? null,
+          suffixIcon: suffixIcon,
           labelText: labeltext,
           prefixIcon: icon,
           border: OutlineInputBorder(
@@ -144,7 +144,7 @@ class customFormField extends StatelessWidget {
 }
 
 class ProjectPadding {
-  final columnMargin = EdgeInsets.all(8.0);
-  final textFieldBottomPadding = EdgeInsets.only(bottom: 16.0);
-  final textFieldTopPadding = EdgeInsets.only(bottom: 8.0);
+  final columnMargin = const EdgeInsets.all(8.0);
+  final textFieldBottomPadding = const EdgeInsets.only(bottom: 16.0);
+  final textFieldTopPadding = const EdgeInsets.only(bottom: 8.0);
 }

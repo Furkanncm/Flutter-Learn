@@ -22,30 +22,30 @@ class _TextFormLearnState extends State<TextFormLearn> {
           key: _globalKey,
           child: Column(
             children: [
-              validateField(),
-              SizedBox(
+              const validateField(),
+              const SizedBox(
                 height: 50,
               ),
-              validateField(),
+              const validateField(),
               ElevatedButton(
                   onPressed: () {
                     if (_globalKey.currentState?.validate() ?? false) {}
                   },
-                  child: Text("Save")),
+                  child: const Text("Save")),
               DropdownButtonFormField(
-                  hint: Text("Choose the item"),
+                  hint: const Text("Choose the item"),
                   selectedItemBuilder: (context) {
                     return _myOptions.values.map((e) => Text(e.name)).toList();
                   },
                   isDense: false,
                   elevation: 8,
-                  icon: Icon(Icons.arrow_drop_down_sharp),
+                  icon: const Icon(Icons.arrow_drop_down_sharp),
                   iconDisabledColor: Colors.red,
                   iconEnabledColor: Colors.amber,
                   items: _myOptions.values
                       .map((e) => DropdownMenuItem(
-                            child: Text(e.name),
                             value: e,
+                            child: Text(e.name),
                           ))
                       .toList(),
                   onChanged: (value) {
@@ -57,7 +57,7 @@ class _TextFormLearnState extends State<TextFormLearn> {
                 textInputAction: TextInputAction.next,
                 readOnly: true,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   hintText: _options?.name,
                 ),
                 // validator: (value) {

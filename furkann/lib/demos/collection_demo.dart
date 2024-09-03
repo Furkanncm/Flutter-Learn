@@ -20,7 +20,7 @@ class _collectionDemoState extends State<collectionDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           itemCount: _items.length,
           itemBuilder: (context, index) {
             return Card(

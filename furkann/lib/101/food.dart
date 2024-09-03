@@ -46,12 +46,12 @@ class foodPage extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          Expanded(
+          const Expanded(
               flex: 1,
               child: textWidget(
                 text: "WE HAVE SPECIAL FOOD",
               )),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Expanded(
@@ -62,8 +62,8 @@ class foodPage extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => mainFood()));
                   },
-                  child: buttonText(buttonTextt: "Start Explore"))),
-          Spacer(
+                  child: const buttonText(buttonTextt: "Start Explore"))),
+          const Spacer(
             flex: 1,
           )
         ],
@@ -75,9 +75,9 @@ class foodPage extends StatelessWidget {
 class customIconButton extends StatelessWidget {
   final Icon icon;
   const customIconButton({
-    Key? key,
+    super.key,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

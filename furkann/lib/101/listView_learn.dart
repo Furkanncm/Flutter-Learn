@@ -17,13 +17,13 @@ class _listviewLearnState extends State<listviewLearn> {
             return ListTile(
               title: Text("List Item $index"),
               subtitle: Text("List Item $index"),
-              leading: Icon(Icons.ac_unit),
+              leading: const Icon(Icons.ac_unit),
               trailing: IconButton(
-                  onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
+                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios)),
             );
           },
           separatorBuilder: (context, count) { // what would you do when created every item?
-            return Divider();
+            return const Divider();
           },
           itemCount: 15),
     );

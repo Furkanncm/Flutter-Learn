@@ -17,9 +17,9 @@ class _customTextFieldState extends State<customTextField> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          actions: [Icon(Icons.safety_check)],
-          title: Text(LanguageItems.MainTitle),
-          leading: Icon(Icons.chevron_left),
+          actions: const [Icon(Icons.safety_check)],
+          title: const Text(LanguageItems.MainTitle),
+          leading: const Icon(Icons.chevron_left),
         ),
         body: Padding(
           padding: ProjectPadding.generalPadding,
@@ -31,7 +31,7 @@ class _customTextFieldState extends State<customTextField> {
                 focusNode: focusNode1,
                 textInputAction: TextInputAction.next,
                 decoration: _customTextFieldDecoration(
-                    Icon(Icons.person), LanguageItems.usernameTitle),
+                    const Icon(Icons.person), LanguageItems.usernameTitle),
                 keyboardType: TextInputType.name,
               ),
               Padding(padding: ProjectPadding.generalPadding),
@@ -40,26 +40,26 @@ class _customTextFieldState extends State<customTextField> {
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.emailAddress,
                 decoration: _customTextFieldDecoration(
-                    Icon(Icons.email), LanguageItems.emailTitle),
+                    const Icon(Icons.email), LanguageItems.emailTitle),
               ),
               Padding(padding: ProjectPadding.generalPadding),
               TextField(
                 focusNode: focusNode3,
                 textInputAction: TextInputAction.next,
                 decoration: _customTextFieldDecoration(
-                    Icon(Icons.lock), LanguageItems.passwordTitle),
+                    const Icon(Icons.lock), LanguageItems.passwordTitle),
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
               ),
               Padding(padding: ProjectPadding.generalPadding),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(), backgroundColor: Colors.blueGrey),
+                      shape: const StadiumBorder(), backgroundColor: Colors.blueGrey),
                   onPressed: () {},
-                  child: Text(LanguageItems.submitTitle)),
+                  child: const Text(LanguageItems.submitTitle)),
             ],
           ),
         ));
@@ -68,12 +68,12 @@ class _customTextFieldState extends State<customTextField> {
   InputDecoration _customTextFieldDecoration(Icon icon, String text) {
     return InputDecoration(
       prefixIcon: icon,
-      border: OutlineInputBorder(),
+      border: const OutlineInputBorder(),
       labelText: text,
     );
   }
 }
 
 class ProjectPadding {
-  static final generalPadding = EdgeInsets.all(8.0);
+  static final generalPadding = const EdgeInsets.all(8.0);
 }

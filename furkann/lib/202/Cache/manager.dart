@@ -12,6 +12,7 @@ class Manager {
 
   String? getStringItem(SKeys sKeys) {
     sharedPreferences?.getString(sKeys.name);
+    return null;
   }
 
   Future<void> setStringItem(SKeys sKeys, String value) async {

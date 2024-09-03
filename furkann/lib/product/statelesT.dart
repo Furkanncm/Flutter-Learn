@@ -4,9 +4,9 @@ class States extends StatefulWidget {
   final String message;
 
   const States({
-    Key? key,
+    super.key,
     required this.message,
-  }) : super(key: key);
+  });
 
   @override
   State<States> createState() => _StatesState();

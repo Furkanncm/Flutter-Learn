@@ -82,7 +82,7 @@ class postCard extends StatelessWidget {
         },
         title: Text(
           _model?.title ?? " ",
-          style: TextStyle(color: Colors.amber),
+          style: const TextStyle(color: Colors.amber),
         ),
         subtitle: Text(_model?.body ?? ""),
       ),

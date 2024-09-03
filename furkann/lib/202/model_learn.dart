@@ -1,6 +1,6 @@
 class PostModel12 {
-   int _UserId;
-   int _id;
+   final int _UserId;
+   final int _id;
    String _title;
    String _body;
 
@@ -23,7 +23,7 @@ class PostModel12 {
   set settitle ( String title){
     _title = title;
   }
-  void set setbody (String body){
+  set setbody (String body){
     _body = body;
   }
 

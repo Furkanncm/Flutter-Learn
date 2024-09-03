@@ -23,14 +23,14 @@ class _UpdateServiceViewState extends State<UpdateServiceView> {
 
   void fetchSpesific() {
     final response = _service
-        .getSpecialItems(int.tryParse("${_updateIdController.text}") ?? 0);
+        .getSpecialItems(int.tryParse(_updateIdController.text) ?? 0);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Update & Delete Service View'),
+        title: const Text('Update & Delete Service View'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -46,8 +46,8 @@ class _UpdateServiceViewState extends State<UpdateServiceView> {
                   onPressed: () {
                     fetchSpesific();
                   },
-                  icon: Icon(Icons.find_in_page_outlined),
-                  label: Text("Search User")),
+                  icon: const Icon(Icons.find_in_page_outlined),
+                  label: const Text("Search User")),
             ),
           ],
         ),

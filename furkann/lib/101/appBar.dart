@@ -24,7 +24,7 @@ class appBarView extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.message),
+            icon: const Icon(Icons.message),
             iconSize: _iconSize.iconSmall,
             color: _iconSize.Froly,
           )
@@ -36,5 +36,5 @@ class appBarView extends StatelessWidget {
 
 class iconProp {
   final double iconSmall = 40;
-  final Color Froly = Color(0xffED617A);
+  final Color Froly = const Color(0xffED617A);
 }

@@ -10,7 +10,7 @@ import 'package:furkann/core/random_image.dart';
 class mainFood extends StatelessWidget {
   final String text = "4.6";
   final String name = "Incle Banka";
-  mainFood({super.key});
+  const mainFood({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,14 @@ class mainFood extends StatelessWidget {
           leading: IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => foodPage()));
+                    MaterialPageRoute(builder: (context) => const foodPage()));
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.chevron_left,
                 color: Colors.amberAccent,
               )),
-          title: textWidget(text: "REVIEW"),
-          actions: [customIconButton(icon: Icon(Icons.shopping_basket))],
+          title: const textWidget(text: "REVIEW"),
+          actions: const [customIconButton(icon: Icon(Icons.shopping_basket))],
         ),
         body: Column(
           children: [
@@ -50,7 +50,7 @@ class mainFood extends StatelessWidget {
                   top: 140,
                   child: textWidget(text: name),
                 ),
-                Positioned(
+                const Positioned(
                   left: 140,
                   top: 180,
                   child: randomImage(
@@ -59,7 +59,7 @@ class mainFood extends StatelessWidget {
                 )
               ]),
             ),
-            Expanded(
+            const Expanded(
               flex: 1,
               child: Card(
                 color: Colors.brown,
@@ -77,7 +77,7 @@ class mainFood extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
+            const Expanded(
                 flex: 3,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -96,7 +96,6 @@ class mainFood extends StatelessWidget {
 
 class _container extends StatelessWidget {
   const _container({
-    super.key,
     required this.text,
   });
 
@@ -120,9 +119,9 @@ class _container extends StatelessWidget {
 class _text extends StatelessWidget {
   final String text;
   const _text({
-    Key? key,
+    super.key,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -140,9 +139,9 @@ class _text extends StatelessWidget {
 class _card extends StatelessWidget {
   final Icon icon;
   const _card({
-    Key? key,
+    super.key,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

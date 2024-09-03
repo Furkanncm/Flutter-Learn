@@ -32,7 +32,7 @@ class _pageViewState extends State<pageView> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             _floatingAcButton(
-              icon: Icon(Icons.chevron_left),
+              icon: const Icon(Icons.chevron_left),
               method: () {
                 _pageController.previousPage(
                     duration: customDuration.durationTime,
@@ -41,7 +41,7 @@ class _pageViewState extends State<pageView> {
             ),
             Text(currentPage.toString()),
             _floatingAcButton(
-              icon: Icon(Icons.chevron_right),
+              icon: const Icon(Icons.chevron_right),
               method: () {
                 _pageController.nextPage(
                     duration: customDuration.durationTime,
@@ -55,8 +55,8 @@ class _pageViewState extends State<pageView> {
         controller: _pageController,
         onPageChanged: _pageCounter,
         children: [
-          firstPage(),
-          listTile(),
+          const firstPage(),
+          const listTile(),
           mainFood(),
         ],
       ),
@@ -68,10 +68,10 @@ class _floatingAcButton extends StatelessWidget {
   final Icon icon;
   final VoidCallback method;
   const _floatingAcButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.method,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -83,9 +83,9 @@ class _floatingAcButton extends StatelessWidget {
 }
 
 class customDuration {
-  static final durationTime = Duration(seconds: 1);
+  static final durationTime = const Duration(seconds: 1);
 }
 
 class _customCurve {
-  static final CustomCurve = Curves.easeInOut;
+  static const CustomCurve = Curves.easeInOut;
 }

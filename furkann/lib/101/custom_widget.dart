@@ -39,7 +39,7 @@ class customWidget extends StatelessWidget {
           //  Center(child: circularRedIndicator()),
         ],
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
@@ -51,7 +51,7 @@ class circularRedIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircularProgressIndicator(
+    return const CircularProgressIndicator(
       strokeWidth: 5,
     );
   }
@@ -61,10 +61,10 @@ class customButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
   const customButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -82,5 +82,5 @@ class customButton extends StatelessWidget {
 }
 
 class customPadding {
-  static final paddingsl = EdgeInsets.all(8);
+  static final paddingsl = const EdgeInsets.all(8);
 }

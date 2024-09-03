@@ -4,9 +4,9 @@ import 'package:furkann/product/statelesT.dart';
 
 class lifeCycle extends StatefulWidget {
   const lifeCycle({
-    Key? key,
+    super.key,
     required this.message,
-  }) : super(key: key);
+  });
   final String message;
 
   @override
@@ -41,17 +41,17 @@ class _lifeCycleState extends State<lifeCycle> {
       appBar: AppBar(title: Text(mmessage)),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 250,
           ),
           Text(data.toString()),
-          SizedBox(
+          const SizedBox(
             height: 250,
           ),
           Center(
               child: _isOdd
                   ? TextButton(onPressed: () {}, child: Text(mmessage))
-                  : States(
+                  : const States(
                       message: "Furkan",
                     )),
         ],

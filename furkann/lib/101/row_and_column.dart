@@ -16,7 +16,7 @@ class rowAndColumn extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Expanded(
+            const Expanded(
               flex: 4,
               child: Row(
                 children: [
@@ -40,13 +40,13 @@ class rowAndColumn extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Container(
-                color: Color.fromARGB(255, 16, 50, 162),
+                color: const Color.fromARGB(255, 16, 50, 162),
               ),
             ),
             Expanded(
               flex: 1,
               child: Container(
-                color: Color.fromARGB(255, 147, 0, 93),
+                color: const Color.fromARGB(255, 147, 0, 93),
               ),
             )
           ],

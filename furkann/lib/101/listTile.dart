@@ -25,9 +25,9 @@ class listTile extends StatelessWidget {
                 text: subText,
                 textSize: 15,
               ),
-              leading: Icon(Icons.money),
+              leading: const Icon(Icons.money),
               trailing:
-                  IconButton(onPressed: () {}, icon: Icon(Icons.chevron_right)),
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.chevron_right)),
             ),
           ),
           Card(
@@ -47,10 +47,10 @@ class textTheme extends StatelessWidget {
   final String text;
   final double textSize;
   const textTheme({
-    Key? key,
+    super.key,
     required this.text,
     required this.textSize,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

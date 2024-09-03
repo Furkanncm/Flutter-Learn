@@ -15,12 +15,12 @@ class _colorDemosState extends State<colorDemos> {
     return Scaffold(
       appBar: AppBar(),
       backgroundColor: _backgroundcolor,
-      body: Column(
+      body: const Column(
         children: [],
       ),
       bottomNavigationBar: BottomNavigationBar(
           onTap: _customOnTap,
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 label: "BlueGrey", icon: Icon(Icons.colorize)),
             BottomNavigationBarItem(

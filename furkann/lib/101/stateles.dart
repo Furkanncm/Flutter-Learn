@@ -15,9 +15,7 @@ class  statelessLearn extends StatelessWidget {
 }
 
 class _customColumn extends StatelessWidget {
-  const _customColumn({
-    super.key,
-  });
+  const _customColumn();
 
   @override
   Widget build(BuildContext context) {

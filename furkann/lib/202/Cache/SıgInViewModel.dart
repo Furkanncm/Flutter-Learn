@@ -30,7 +30,7 @@ abstract class SigInViewModel extends State<SigInPageView> {
           labelPassword, passwordController.text);
       
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginView()));
+          context, MaterialPageRoute(builder: (context) => const LoginView()));
     } else {
       print("Form validation failed");
     }

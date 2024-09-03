@@ -8,8 +8,8 @@ class SheetLearnView extends StatefulWidget {
 }
 
 class _SheetLearnViewState extends State<SheetLearnView> {
-  Color _backgroundColorBlue = Colors.blueGrey;
-  Color _backgroundColorAmber = Colors.amberAccent;
+  final Color _backgroundColorBlue = Colors.blueGrey;
+  final Color _backgroundColorAmber = Colors.amberAccent;
   bool isAmber = true;
 
   void changebg() {
@@ -29,14 +29,14 @@ class _SheetLearnViewState extends State<SheetLearnView> {
               backgroundColor: Colors.indigo,
               context: context,
               builder: (context) {
-                return CustomSheet();
+                return const CustomSheet();
               });
 
           if (result is bool) {
             changebg();
           }
         },
-        child: Icon(Icons.share),
+        child: const Icon(Icons.share),
       ),
     );
   }
@@ -60,8 +60,8 @@ class _CustomSheetState extends State<CustomSheet> {
     });
   }
 
-  Color _color = Colors.indigo;
-  Color _color2 = Colors.amber;
+  final Color _color = Colors.indigo;
+  final Color _color2 = Colors.amber;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class _CustomSheetState extends State<CustomSheet> {
               indent: MediaQuery.of(context).size.width / 3,
               endIndent: MediaQuery.of(context).size.width / 3,
             ),
-            Text("data"),
+            const Text("data"),
             Image.network("https://picsum.photos/seed/picsum/200/300"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -94,12 +94,12 @@ class _CustomSheetState extends State<CustomSheet> {
                         },
                       );
                     },
-                    child: Icon(Icons.change_circle_outlined)),
+                    child: const Icon(Icons.change_circle_outlined)),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop<bool>(true);
                     },
-                    child: Icon(Icons.swipe_up_sharp)),
+                    child: const Icon(Icons.swipe_up_sharp)),
               ],
             )
           ],

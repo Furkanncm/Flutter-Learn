@@ -12,7 +12,7 @@ class firstPage extends StatelessWidget {
         title: const Text("First Page"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         child: Column(
           children: [
             SizedBox(
@@ -34,12 +34,12 @@ class firstPage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {},
-                child: Padding(
-                    padding: pagePadding.paddingSymmetric,
-                    child: buttonText(buttonTextt: "Create A Note ")),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightBlue,
-                )),
+                ),
+                child: Padding(
+                    padding: pagePadding.paddingSymmetric,
+                    child: buttonText(buttonTextt: "Create A Note "))),
             TextButton(onPressed: () {}, child: const textWidget(text: "Skip")),
           ],
         ),
@@ -49,8 +49,8 @@ class firstPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add),
         backgroundColor: Colors.lightBlue,
+        child: Icon(Icons.add),
       ),
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
@@ -91,11 +91,11 @@ class textWidget extends StatelessWidget {
 }
 
 class pagePadding {
-  static final paddingFromRight = EdgeInsets.only(right: 15);
-  static final paddingFromLeft = EdgeInsets.only(left: 15);
+  static final paddingFromRight = const EdgeInsets.only(right: 15);
+  static final paddingFromLeft = const EdgeInsets.only(left: 15);
   static final paddingSymmetric =
-      EdgeInsets.symmetric(horizontal: 1, vertical: 15);
-  static final paddingTop = EdgeInsets.only(top: 0);
+      const EdgeInsets.symmetric(horizontal: 1, vertical: 15);
+  static final paddingTop = const EdgeInsets.only(top: 0);
 }
 
 class ProjectHeadline extends StatelessWidget {

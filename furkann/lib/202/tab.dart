@@ -33,10 +33,10 @@ class _tabbar2State extends State<tabbar2> with TickerProviderStateMixin {
         length: _MyPageNames.values.length,
         child: Scaffold(
           appBar: AppBar(),
-          body: (TabBarView(
+          body: TabBarView(
             controller: _tabController,
-            children: [mainFood(), cardView(), colorLifeCycle(), randPage()],
-          )),
+            children: [mainFood(), const cardView(), const colorLifeCycle(), const randPage()],
+          ),
           floatingActionButton: FloatingActionButton(onPressed: () {
             if (_tabController.index != 0) {
               _tabController.animateTo(0);
@@ -45,7 +45,7 @@ class _tabbar2State extends State<tabbar2> with TickerProviderStateMixin {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: BottomAppBar(
-            shape: CircularNotchedRectangle(),
+            shape: const CircularNotchedRectangle(),
             notchMargin: 10,
             child: TabBar(
                 controller: _tabController,

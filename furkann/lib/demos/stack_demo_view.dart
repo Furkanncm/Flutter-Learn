@@ -17,16 +17,16 @@ class stackDemo extends StatelessWidget {
             flex: 6,
             child: Stack(
               children: [
-                Positioned.fill(child: randomImage()),
+                const Positioned.fill(child: randomImage()),
                 Positioned(
                     left: 0,
                     child: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.chevron_left,
                           color: Colors.white,
                         ))),
-                Positioned(
+                const Positioned(
                   left: 0,
                   right: 0,
                   top: 350,  

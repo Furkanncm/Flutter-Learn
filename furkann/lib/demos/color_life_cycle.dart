@@ -18,9 +18,9 @@ class _colorLifeCycleState extends State<colorLifeCycle> {
       appBar: AppBar(actions: [
         IconButton(onPressed: () {
           
-        }, icon: Icon(Icons.dangerous_outlined))
+        }, icon: const Icon(Icons.dangerous_outlined))
       ]),
-      body: Column(
+      body: const Column(
         children: [
           Spacer(),
           Expanded(

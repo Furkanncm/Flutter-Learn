@@ -34,7 +34,7 @@ class _PostServiceViewState extends State<PostServiceView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Post Service View'),
+        title: const Text('Post Service View'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -73,8 +73,8 @@ class _PostServiceViewState extends State<PostServiceView> {
                     postItems(model);
                   }
                 },
-                icon: Icon(Icons.check_outlined),
-                label: Text("Check Post"))
+                icon: const Icon(Icons.check_outlined),
+                label: const Text("Check Post"))
           ],
         ),
       ),

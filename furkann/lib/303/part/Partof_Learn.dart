@@ -11,8 +11,8 @@ class PartOfLearn extends StatefulWidget {
 class _PartOfLearnState extends State<PartOfLearn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const _ProjectAppBar(), // const ekledim
+    return const Scaffold(
+      appBar: _ProjectAppBar(), // const ekledim
     );
   }
 }

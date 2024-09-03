@@ -1,12 +1,12 @@
 part of "./Partof_Learn.dart";
 
 class _ProjectAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const _ProjectAppBar({Key? key}) : super(key: key);
+  const _ProjectAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text("Title"),
+      title: const Text("Title"),
       actions: [
         IconButton(
           onPressed: () {},
@@ -17,5 +17,5 @@ class _ProjectAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

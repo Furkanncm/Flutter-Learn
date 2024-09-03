@@ -33,7 +33,7 @@ class SecureCacheViewState extends State<SecureCacheView> {
 
   @override
   Widget build(BuildContext context) {
-    void _changeTitle(String value) {
+    void changeTitle(String value) {
       setState(() {
         title = value;
       });
@@ -43,9 +43,9 @@ class SecureCacheViewState extends State<SecureCacheView> {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: TextField(onChanged: _changeTitle),
+      body: TextField(onChanged: changeTitle),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.save),
+        child: const Icon(Icons.save),
         onPressed: () async {
           await saveItems(title);
         },

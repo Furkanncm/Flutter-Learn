@@ -22,14 +22,15 @@ class _statefull_learnState extends State<statefull_learn> {
     setState(() {});
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
         children: [
           Center(child: textWidget(text: _countValue.toString())),
-          Placeholder(),
-          countCustom()
+          const Placeholder(),
+          const countCustom()
         ],
       ),
       floatingActionButton: Row(
@@ -44,7 +45,7 @@ class _statefull_learnState extends State<statefull_learn> {
       onPressed: () {
         updateCounter(false);
       },
-      child: Icon(Icons.remove),
+      child: const Icon(Icons.remove),
     );
   }
 
@@ -53,7 +54,7 @@ class _statefull_learnState extends State<statefull_learn> {
       onPressed: () {
         updateCounter(true);
       },
-      child: Icon(Icons.add),
+      child: const Icon(Icons.add),
     );
   }
 }

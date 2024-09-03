@@ -20,9 +20,9 @@ class _MySheetViewState extends State<MySheetView> with ProductSheetMixin {
           children: [
             FloatingActionButton(
               onPressed: () {
-                showCustomSheet(context, Expanded(child: Tabbar()));
+                showCustomSheet(context, const Expanded(child: Tabbar()));
               },
-              child: Icon(Icons.share),
+              child: const Icon(Icons.share),
             ),
             FloatingActionButton(
               onPressed: () {
@@ -41,7 +41,7 @@ class _MySheetViewState extends State<MySheetView> with ProductSheetMixin {
                       );
                     });
               },
-              child: Icon(Icons.face_2_rounded),
+              child: const Icon(Icons.face_2_rounded),
             )
           ],
         ));
@@ -50,9 +50,9 @@ class _MySheetViewState extends State<MySheetView> with ProductSheetMixin {
 
 class _customSheet extends StatelessWidget {
   const _customSheet({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
   @override
@@ -74,7 +74,7 @@ class _customSheet extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(Icons.close)),
+                icon: const Icon(Icons.close)),
           ),
           child
         ],

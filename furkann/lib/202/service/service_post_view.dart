@@ -75,14 +75,14 @@ class _ServicePostModelState extends State<ServicePostModel> {
                       if (_userIdController.text.isNotEmpty &&
                           _titleController.text.isNotEmpty &&
                           _bodyController.text.isNotEmpty) {
-                        final  _model = PostModel(
+                        final  model = PostModel(
                             title: _titleController.text,
                             body: _bodyController.text,
                             userId: int.tryParse(_userIdController.text));
-                        updateService(_model);
+                        updateService(model);
                       }
                     },
-                    icon: Icon(Icons.check),
+                    icon: const Icon(Icons.check),
                     label: Text(check),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.indigo,
@@ -104,11 +104,11 @@ class customTextField extends StatelessWidget {
   final String text;
   final TextInputType inputType;
   const customTextField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.text,
     required this.inputType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +119,7 @@ class customTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: text,
         hintText: text,
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
   }
