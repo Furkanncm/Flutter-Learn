@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/mainFood.dart';
 
@@ -60,7 +58,7 @@ class foodPage extends StatelessWidget {
                       backgroundColor: Colors.amberAccent),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => mainFood()));
+                        MaterialPageRoute(builder: (context) => const mainFood()));
                   },
                   child: const buttonText(buttonTextt: "Start Explore"))),
           const Spacer(

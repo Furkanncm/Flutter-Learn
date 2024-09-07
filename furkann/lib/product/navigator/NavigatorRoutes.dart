@@ -6,11 +6,12 @@ class Navigatorroutes {
   final items = {
     "/": (context) => const LottieLearn(),
     NavigatorRouter.home.addSlash: (context) => const NavigateHomeview(),
-    NavigatorRouter.detail.addSlash: (context) => const NavigateHomedetailview(id: "Kazım",)
+    NavigatorRouter.detail.addSlash: (context) => const NavigateHomedetailview(id: "Kazım",),
+
   };
 }
 
-enum NavigatorRouter { init, home, detail }
+enum NavigatorRouter { init, home, detail}
 
 extension NavigatorRouterExtension on NavigatorRouter {
   String get addSlash => "/$name";

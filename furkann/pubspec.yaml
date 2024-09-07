@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   dio: ^5.4.3+1
   url_launcher: ^6.3.0
+  json_serializable: ^6.8.0
+  json_annotation: ^4.9.0
 
   #Cache
   shared_preferences: ^2.2.3
@@ -40,8 +42,10 @@ dependencies:
   #State
   provider: ^6.1.2
   flutter_mobx: ^2.2.1+1
-
+  mobx: ^2.3.3+2
+  #UI
   lottie: ^3.1.2
+  image_picker: ^1.1.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
@@ -56,6 +60,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  mobx_codegen: ^2.6.1
+  build_runner: ^2.4.12
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furkann/101/card.dart';
 import 'package:furkann/101/mainFood.dart';
 import 'package:furkann/101/randomPage.dart';
@@ -35,7 +33,7 @@ class _tabbar2State extends State<tabbar2> with TickerProviderStateMixin {
           appBar: AppBar(),
           body: TabBarView(
             controller: _tabController,
-            children: [mainFood(), const cardView(), const colorLifeCycle(), const randPage()],
+            children: const [mainFood(), cardView(), colorLifeCycle(), randPage()],
           ),
           floatingActionButton: FloatingActionButton(onPressed: () {
             if (_tabController.index != 0) {

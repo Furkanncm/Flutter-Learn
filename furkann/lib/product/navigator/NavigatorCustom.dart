@@ -17,21 +17,23 @@ class Navigatorcustom {
     switch (routes) {
       case NavigatorRouter.init:
         return getPage(const LottieLearn());
-
       case NavigatorRouter.home:
         return getPage(const NavigateHomeview());
       case NavigatorRouter.detail:
-        return getPage(const NavigateHomedetailview(
-          id: "Kazım",
-        ),fullscreen: true);
+        return getPage(
+            const NavigateHomedetailview(
+              id: "Kazım",
+            ),
+            fullscreen: true);
+
     }
   }
 
   Route<dynamic>? getPage(Widget child, {bool? fullscreen}) {
     return MaterialPageRoute(
-      fullscreenDialog: fullscreen??false,
-      builder: (context) {
-      return child;
-    });
+        fullscreenDialog: fullscreen ?? false,
+        builder: (context) {
+          return child;
+        });
   }
 }

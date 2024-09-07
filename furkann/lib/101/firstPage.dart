@@ -20,9 +20,9 @@ class firstPage extends StatelessWidget {
               height: 200,
               child: ImageView(name: ProjectImage().image),
             ),
-            Padding(
+            const Padding(
               padding: pagePadding.paddingFromRight,
-              child: const ProjectHeadline(headline: "Create Your First Note"),
+              child: ProjectHeadline(headline: "Create Your First Note"),
             ),
             Padding(
               padding:
@@ -37,7 +37,7 @@ class firstPage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightBlue,
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: pagePadding.paddingSymmetric,
                     child: buttonText(buttonTextt: "Create A Note "))),
             TextButton(onPressed: () {}, child: const textWidget(text: "Skip")),
@@ -50,7 +50,7 @@ class firstPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.lightBlue,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
@@ -91,11 +91,11 @@ class textWidget extends StatelessWidget {
 }
 
 class pagePadding {
-  static final paddingFromRight = const EdgeInsets.only(right: 15);
-  static final paddingFromLeft = const EdgeInsets.only(left: 15);
-  static final paddingSymmetric =
-      const EdgeInsets.symmetric(horizontal: 1, vertical: 15);
-  static final paddingTop = const EdgeInsets.only(top: 0);
+  static const paddingFromRight = EdgeInsets.only(right: 15);
+  static const paddingFromLeft = EdgeInsets.only(left: 15);
+  static const paddingSymmetric =
+      EdgeInsets.symmetric(horizontal: 1, vertical: 15);
+  static const paddingTop = EdgeInsets.only(top: 0);
 }
 
 class ProjectHeadline extends StatelessWidget {

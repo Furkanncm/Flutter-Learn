@@ -1,10 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:furkann/101/card.dart';
 import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/food.dart';
-import 'package:furkann/101/randomPage.dart';
 import 'package:furkann/core/random_image.dart';
 
 class mainFood extends StatelessWidget {
@@ -119,7 +115,6 @@ class _container extends StatelessWidget {
 class _text extends StatelessWidget {
   final String text;
   const _text({
-    super.key,
     required this.text,
   });
 
@@ -139,7 +134,6 @@ class _text extends StatelessWidget {
 class _card extends StatelessWidget {
   final Icon icon;
   const _card({
-    super.key,
     required this.icon,
   });
 

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:furkann/101/randomPage.dart';
 
 class ImageAdvanced extends StatefulWidget {
   const ImageAdvanced({super.key});

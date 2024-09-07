@@ -26,7 +26,7 @@ class _customTextFieldState extends State<customTextField> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(padding: ProjectPadding.generalPadding),
+              const Padding(padding: ProjectPadding.generalPadding),
               TextField(
                 focusNode: focusNode1,
                 textInputAction: TextInputAction.next,
@@ -34,7 +34,7 @@ class _customTextFieldState extends State<customTextField> {
                     const Icon(Icons.person), LanguageItems.usernameTitle),
                 keyboardType: TextInputType.name,
               ),
-              Padding(padding: ProjectPadding.generalPadding),
+              const Padding(padding: ProjectPadding.generalPadding),
               TextField(
                 focusNode: focusNode2,
                 textInputAction: TextInputAction.next,
@@ -42,7 +42,7 @@ class _customTextFieldState extends State<customTextField> {
                 decoration: _customTextFieldDecoration(
                     const Icon(Icons.email), LanguageItems.emailTitle),
               ),
-              Padding(padding: ProjectPadding.generalPadding),
+              const Padding(padding: ProjectPadding.generalPadding),
               TextField(
                 focusNode: focusNode3,
                 textInputAction: TextInputAction.next,
@@ -51,7 +51,7 @@ class _customTextFieldState extends State<customTextField> {
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
               ),
-              Padding(padding: ProjectPadding.generalPadding),
+              const Padding(padding: ProjectPadding.generalPadding),
               const SizedBox(
                 height: 50,
               ),
@@ -75,5 +75,5 @@ class _customTextFieldState extends State<customTextField> {
 }
 
 class ProjectPadding {
-  static final generalPadding = const EdgeInsets.all(8.0);
+  static const generalPadding = EdgeInsets.all(8.0);
 }

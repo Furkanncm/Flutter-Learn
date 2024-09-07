@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furkann/202/Cache/LogIn.dart';
 import 'package:furkann/202/Cache/S%C4%B1gInViewModel.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SigInPageView extends StatefulWidget {
   const SigInPageView({super.key});

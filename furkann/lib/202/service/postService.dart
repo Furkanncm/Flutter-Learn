@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:furkann/202/service/comment_model.dart';
 import 'package:furkann/202/service/model.dart';
 

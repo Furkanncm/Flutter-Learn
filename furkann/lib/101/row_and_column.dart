@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:furkann/101/appBar.dart';
 import 'package:furkann/core/random_image.dart';
 import 'package:furkann/101/firstPage.dart';
 

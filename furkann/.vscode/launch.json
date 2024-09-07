@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\303\\Task\\ViewModel\\Mobx_viewmodel.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\303\\Task\\ViewModel\\Mobx_viewmodel.dart"
+        }
+    ]
+}

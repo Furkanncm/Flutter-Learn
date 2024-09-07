@@ -54,9 +54,9 @@ class _pageViewState extends State<pageView> {
       body: PageView(
         controller: _pageController,
         onPageChanged: _pageCounter,
-        children: [
-          const firstPage(),
-          const listTile(),
+        children: const [
+          firstPage(),
+          listTile(),
           mainFood(),
         ],
       ),
@@ -68,7 +68,6 @@ class _floatingAcButton extends StatelessWidget {
   final Icon icon;
   final VoidCallback method;
   const _floatingAcButton({
-    super.key,
     required this.icon,
     required this.method,
   });
@@ -83,7 +82,7 @@ class _floatingAcButton extends StatelessWidget {
 }
 
 class customDuration {
-  static final durationTime = const Duration(seconds: 1);
+  static const durationTime = Duration(seconds: 1);
 }
 
 class _customCurve {

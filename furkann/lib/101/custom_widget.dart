@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class customWidget extends StatelessWidget {
   const customWidget({super.key});
@@ -82,5 +81,5 @@ class customButton extends StatelessWidget {
 }
 
 class customPadding {
-  static final paddingsl = const EdgeInsets.all(8);
+  static const paddingsl = EdgeInsets.all(8);
 }

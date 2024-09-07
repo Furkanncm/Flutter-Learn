@@ -1,8 +1,5 @@
-import 'dart:io';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:furkann/202/model_learn.dart';
 import 'package:furkann/202/service/comment_learn_view.dart';
 import 'package:furkann/202/service/model.dart';
 import 'package:furkann/202/service/postService.dart';

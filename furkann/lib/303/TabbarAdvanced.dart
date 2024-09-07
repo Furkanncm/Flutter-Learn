@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/scheduler/ticker.dart';
 import 'package:furkann/101/card.dart';
-import 'package:furkann/101/firstPage.dart';
 import 'package:furkann/101/pageView_learn.dart';
 import 'package:furkann/101/randomPage.dart';
-import 'package:furkann/202/service/service_view.dart';
-import 'package:furkann/303/Callback_learn.dart';
-import 'package:furkann/303/Dropdown.dart';
 
 class TabbarAdvanced extends StatefulWidget {
   const TabbarAdvanced({super.key});

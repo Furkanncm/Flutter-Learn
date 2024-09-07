@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/button.dart';
 
 class randPage extends StatelessWidget {
   final String _title = "Create Your First Note";
@@ -33,9 +32,9 @@ class randPage extends StatelessWidget {
               subtitle: _description * 5,
             ),
             const Spacer(),
-            Padding(
+            const Padding(
               padding: pagePadding.dikey,
-              child: const elevatedButtonWidget(buttonText2: "Create A Note"),
+              child: elevatedButtonWidget(buttonText2: "Create A Note"),
             ),
             TextButton(onPressed: () {}, child: Text(_texttt)),
            const  SizedBox(
