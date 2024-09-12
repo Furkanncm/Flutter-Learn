@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/product/statelesT.dart';
+import '../product/statelesT.dart';
 
 class lifeCycle extends StatefulWidget {
   const lifeCycle({

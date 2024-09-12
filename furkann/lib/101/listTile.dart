@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/core/random_image.dart';
+import '../core/random_image.dart';
 
 class listTile extends StatelessWidget {
   final String text = "My Card";

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/303/Task/View/Mobx_view.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/view/PostView.dart';
-import 'package:furkann/product/global/theme_notifer.dart';
-import 'package:furkann/product/navigator/NavigatorCustom.dart';
+import '303/mvvm_Mobx/features/photo/view/PostView.dart';
+import '404/bloc/features/login/view/login_view.dart';
+import 'product/global/theme_notifer.dart';
+import 'product/navigator/NavigatorCustom.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -49,7 +49,8 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: (settings) {
          return Navigatorcustom().getView(settings);
       },
-      home: Postview(),
+      home: LoginView(),
     );
+
   }
 }

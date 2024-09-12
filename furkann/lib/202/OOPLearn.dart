@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:furkann/202/FileException.dart';
+import 'FileException.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 abstract class IDowloand {

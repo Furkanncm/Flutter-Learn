@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:furkann/303/ServiceAdvanced/Model/restModel.dart';
-import 'package:furkann/303/ServiceAdvanced/Service/restService.dart';
+import '../Model/restModel.dart';
+import '../Service/restService.dart';
 
 class RestProvider extends ChangeNotifier {
   final IRestService service;

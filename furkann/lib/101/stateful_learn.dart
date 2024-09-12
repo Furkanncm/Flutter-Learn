@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/firstPage.dart';
-import 'package:furkann/product/helloCountCustom.dart';
+import 'firstPage.dart';
+import '../product/helloCountCustom.dart';
 
 class statefull_learn extends StatefulWidget {
   const statefull_learn({super.key});

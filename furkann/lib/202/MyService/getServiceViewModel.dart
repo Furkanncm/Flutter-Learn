@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/MyService/getServiceView.dart';
-import 'package:furkann/202/MyService/myModel.dart';
-import 'package:furkann/202/MyService/service.dart';
+import 'getServiceView.dart';
+import 'myModel.dart';
+import 'service.dart';
 
 abstract class getViewModel extends State<getService>  {
   List<Models>? items;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/Cache/LogInViewModel.dart';
-import 'package:furkann/202/Cache/SigIn.dart';
-import 'package:furkann/202/MyService/Tab.dart';
+import 'LogInViewModel.dart';
+import 'SigIn.dart';
+import '../MyService/Tab.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});

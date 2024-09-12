@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/product/language/language_items.dart';
+import '../product/language/language_items.dart';
 
 class customTextField extends StatefulWidget {
   const customTextField({super.key});

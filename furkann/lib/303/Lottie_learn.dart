@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/product/constant/lottie_item.dart';
-import 'package:furkann/product/global/theme_notifer.dart';
-import 'package:furkann/product/navigator/NavigatorRoutes.dart';
+import '../product/constant/lottie_item.dart';
+import '../product/global/theme_notifer.dart';
+import '../product/navigator/NavigatorRoutes.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 

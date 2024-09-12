@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/Cache/LogIn.dart';
-import 'package:furkann/202/Cache/SigIn.dart';
+import 'LogIn.dart';
+import 'SigIn.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class SigInViewModel extends State<SigInPageView> {

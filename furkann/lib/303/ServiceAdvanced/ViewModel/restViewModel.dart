@@ -1,9 +1,9 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:furkann/303/ServiceAdvanced/Model/restModel.dart';
-import 'package:furkann/303/ServiceAdvanced/Service/restService.dart';
-import 'package:furkann/303/ServiceAdvanced/View/restView.dart';
+import '../Model/restModel.dart';
+import '../Service/restService.dart';
+import '../View/restView.dart';
 
 abstract class restViewModel extends State<RestView> {
   late final IRestService service;

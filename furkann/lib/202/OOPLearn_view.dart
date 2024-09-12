@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/OOPLearn.dart';
+import 'OOPLearn.dart';
 
 class fileexceptionView extends StatefulWidget {
   const fileexceptionView({super.key});

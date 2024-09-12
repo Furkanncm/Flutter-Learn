@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:furkann/303/Task/Model/Mobx_Model.dart';
+import '../Model/Mobx_Model.dart';
 
 abstract class IMobxService {
   final Dio dio;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/color_picker.dart';
+import '../101/color_picker.dart';
 
 class colorLifeCycle extends StatefulWidget {
   const colorLifeCycle({super.key});

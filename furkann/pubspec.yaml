@@ -34,6 +34,7 @@ dependencies:
   url_launcher: ^6.3.0
   json_serializable: ^6.8.0
   json_annotation: ^4.9.0
+  auto_route: ^9.2.2
 
   #Cache
   shared_preferences: ^2.2.3
@@ -43,6 +44,10 @@ dependencies:
   provider: ^6.1.2
   flutter_mobx: ^2.2.1+1
   mobx: ^2.3.3+2
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+
+  
   #UI
   lottie: ^3.1.2
   image_picker: ^1.1.2
@@ -62,7 +67,8 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   mobx_codegen: ^2.6.1
   build_runner: ^2.4.12
-
+  auto_route_generator: ^9.0.0
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

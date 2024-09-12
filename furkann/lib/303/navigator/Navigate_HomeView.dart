@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/product/navigator/NavigatorRoutes.dart';
+import '../../product/navigator/NavigatorRoutes.dart';
 
 
 class NavigateHomeview extends StatefulWidget {

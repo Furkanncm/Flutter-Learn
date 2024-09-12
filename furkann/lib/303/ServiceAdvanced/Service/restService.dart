@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:furkann/303/ServiceAdvanced/Model/restModel.dart';
+import '../Model/restModel.dart';
 
 abstract class IRestService {
   final Dio dio;

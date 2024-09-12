@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/firstPage.dart';
-import 'package:furkann/101/mainFood.dart';
+import 'firstPage.dart';
+import 'mainFood.dart';
 
 
 class foodPage extends StatelessWidget {

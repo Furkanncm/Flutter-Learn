@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:furkann/303/Task/Model/Mobx_Model.dart';
-import 'package:furkann/303/Task/Service/IMobxService.dart';
-import 'package:furkann/303/Task/Service/MobxService.dart';
+import '../Model/Mobx_Model.dart';
+import '../Service/IMobxService.dart';
+import '../Service/MobxService.dart';
 import 'package:mobx/mobx.dart';
 part 'Mobx_viewmodel.g.dart';
 

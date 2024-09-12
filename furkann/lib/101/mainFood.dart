@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/firstPage.dart';
-import 'package:furkann/101/food.dart';
-import 'package:furkann/core/random_image.dart';
+import 'firstPage.dart';
+import 'food.dart';
+import '../core/random_image.dart';
 
 class mainFood extends StatelessWidget {
   final String text = "4.6";

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/card.dart';
-import 'package:furkann/101/pageView_learn.dart';
-import 'package:furkann/101/randomPage.dart';
+import '../101/card.dart';
+import '../101/pageView_learn.dart';
+import '../101/randomPage.dart';
 
 class TabbarAdvanced extends StatefulWidget {
   const TabbarAdvanced({super.key});

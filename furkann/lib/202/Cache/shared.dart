@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/Cache/sharedManager.dart';
-import 'package:furkann/202/Cache/sharedViewModel.dart';
+import 'sharedManager.dart';
+import 'sharedViewModel.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SharedView extends StatefulWidget {

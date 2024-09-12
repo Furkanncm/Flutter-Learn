@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/303/Task/ViewModel/Mobx_viewmodel.dart';
+import '../ViewModel/Mobx_viewmodel.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:furkann/product/navigator/NavigatorRoutes.dart';
 
 class MobxView extends StatefulWidget {
-  MobxView({super.key});
+  const MobxView({super.key});
 
   @override
   State<MobxView> createState() => _MobxViewState();
@@ -17,11 +16,11 @@ class _MobxViewState extends State<MobxView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Service With Mobx")),
+          title: const Center(child: Text("Service With Mobx")),
         ),
         body: Observer(builder: (_) {
           if (_viewmodel.isLoading) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator.adaptive(
                 backgroundColor: Colors.red,
               ),

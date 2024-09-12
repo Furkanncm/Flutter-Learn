@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/Cache/shared.dart';
-import 'package:furkann/202/Cache/sharedManager.dart';
+import 'shared.dart';
+import 'sharedManager.dart';
 
 
 abstract class SharedViewModel extends State<SharedView> {

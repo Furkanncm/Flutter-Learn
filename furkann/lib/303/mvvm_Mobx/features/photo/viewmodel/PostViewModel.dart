@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/service/PhotoService.dart';
+import '../service/PhotoService.dart';
 import 'package:mobx/mobx.dart';
 
-import 'package:furkann/303/mvvm_Mobx/features/photo/model/PhotoModel.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/service/IPhotoService.dart';
+import '../model/PhotoModel.dart';
+import '../service/IPhotoService.dart';
 
 part 'PostViewModel.g.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/viewmodel/PostViewModel.dart';
+import '../viewmodel/PostViewModel.dart';
 
 class Postview extends StatelessWidget {
   Postview({super.key});
@@ -13,7 +13,7 @@ class Postview extends StatelessWidget {
       appBar: AppBar(),
       body: Observer(builder: (_) {
         return _viewmodel.isLoading
-            ? Center(child: const CircularProgressIndicator.adaptive())
+            ? const Center(child: CircularProgressIndicator.adaptive())
             : ListView.builder(
                 itemCount: _viewmodel.items.length,
                 itemBuilder: (BuildContext context, int index) {

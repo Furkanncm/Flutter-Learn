@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:furkann/202/service/comment_model.dart';
-import 'package:furkann/202/service/model.dart';
+import 'comment_model.dart';
+import 'model.dart';
 
 abstract class IService {
   Future<bool> postItemService(PostModel model);

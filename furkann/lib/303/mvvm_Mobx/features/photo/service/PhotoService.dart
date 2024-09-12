@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:furkann/303/mvvm_Mobx/features/photo/model/PhotoModel.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/service/IPhotoService.dart';
-import 'package:furkann/303/mvvm_Mobx/features/photo/service/serviceEndpoints/ServiceEndpoints.dart';
+import '../model/PhotoModel.dart';
+import 'IPhotoService.dart';
+import 'serviceEndpoints/ServiceEndpoints.dart';
 
 class Photoservice extends Iphotoservice {
   Photoservice({required super.dio});

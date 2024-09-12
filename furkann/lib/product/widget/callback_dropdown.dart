@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/303/Dropdown.dart';
+import '../../303/Dropdown.dart';
 
 class CallbackDropdownWidget extends StatefulWidget {
   const CallbackDropdownWidget({super.key, required this.onSelected});

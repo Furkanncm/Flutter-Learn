@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:furkann/303/DropDownCallBack.dart';
-import 'package:furkann/product/widget/button-/customAnswerButton.dart';
-import 'package:furkann/product/widget/button-/loadingButton.dart';
+import 'DropDownCallBack.dart';
+import '../product/widget/button-/customAnswerButton.dart';
+import '../product/widget/button-/loadingButton.dart';
 
 class DropdownLearn extends StatefulWidget {
   const DropdownLearn({super.key});

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:furkann/303/Task/Model/Mobx_Model.dart';
-import 'package:furkann/303/Task/Service/IMobxService.dart';
+import '../Model/Mobx_Model.dart';
+import 'IMobxService.dart';
 
 part 'MobxService_Endpoints.dart';
 class Mobxservice extends IMobxService {
@@ -11,9 +11,9 @@ class Mobxservice extends IMobxService {
   Future<List<ToDoModel>> fetchItems() async {
     final response = await dio.get(_MobxserviceEndpoints.FACTS.endpoint);
     if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-      if (_datas is List) {
-        var result = _datas.map((e) {
+      final datas = response.data;
+      if (datas is List) {
+        var result = datas.map((e) {
           return ToDoModel.fromJson(e);
         }).toList();
         return result;

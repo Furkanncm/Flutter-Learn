@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/101/card.dart';
-import 'package:furkann/101/mainFood.dart';
-import 'package:furkann/101/randomPage.dart';
-import 'package:furkann/202/model_learn.dart';
-import 'package:furkann/demos/color_life_cycle.dart';
+import '../101/card.dart';
+import '../101/mainFood.dart';
+import '../101/randomPage.dart';
+import 'model_learn.dart';
+import '../demos/color_life_cycle.dart';
 
 class tabbar2 extends StatefulWidget {
   const tabbar2({super.key});

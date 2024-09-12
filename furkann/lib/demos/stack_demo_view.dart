@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/core/random_image.dart';
-import 'package:furkann/101/listTile.dart';
+import '../core/random_image.dart';
+import '../101/listTile.dart';
 
 class stackDemo extends StatelessWidget {
   const stackDemo({super.key});

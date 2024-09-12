@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:furkann/303/ServiceAdvanced/Service/restService.dart';
-import 'package:furkann/303/ServiceAdvanced/ViewModel/restProvider.dart';
-import 'package:furkann/303/ServiceAdvanced/ViewModel/restViewModel.dart';
-import 'package:furkann/product/global/theme_notifer.dart';
+import '../Service/restService.dart';
+import '../ViewModel/restProvider.dart';
+import '../ViewModel/restViewModel.dart';
+import '../../../product/global/theme_notifer.dart';
 import 'package:provider/provider.dart';
 
 class RestView extends StatefulWidget {

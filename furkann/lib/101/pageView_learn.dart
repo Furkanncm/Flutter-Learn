@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:furkann/101/firstPage.dart';
-import 'package:furkann/101/listTile.dart';
-import 'package:furkann/101/mainFood.dart';
+import 'firstPage.dart';
+import 'listTile.dart';
+import 'mainFood.dart';
 
 class pageView extends StatefulWidget {
   const pageView({super.key});

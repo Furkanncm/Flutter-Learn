@@ -1,6 +1,6 @@
-import 'package:furkann/303/Lottie_learn.dart';
-import 'package:furkann/303/navigator/Navigate_HomeDetailView.dart';
-import 'package:furkann/303/navigator/Navigate_HomeView.dart';
+import '../../303/Lottie_learn.dart';
+import '../../303/navigator/Navigate_HomeDetailView.dart';
+import '../../303/navigator/Navigate_HomeView.dart';
 
 class Navigatorroutes {
   final items = {

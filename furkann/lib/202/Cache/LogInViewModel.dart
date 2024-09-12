@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/202/Cache/LogIn.dart';
+import 'LogIn.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class LogInViewModel extends State<LoginView>{

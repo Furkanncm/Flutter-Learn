@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:furkann/202/service/comment_learn_view.dart';
-import 'package:furkann/202/service/model.dart';
-import 'package:furkann/202/service/postService.dart';
+import 'comment_learn_view.dart';
+import 'model.dart';
+import 'postService.dart';
 
 class ServiceLearn extends StatefulWidget {
   const ServiceLearn({super.key});

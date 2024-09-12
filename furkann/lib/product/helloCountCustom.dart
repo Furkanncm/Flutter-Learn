@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furkann/product/language/language_items.dart';
+import 'language/language_items.dart';
 
 class countCustom extends StatefulWidget {
   const countCustom({super.key});
