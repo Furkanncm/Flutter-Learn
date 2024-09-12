@@ -39,7 +39,7 @@ class _LottieLearnState extends State<LottieLearn>
       appBar: AppBar(
         actions: [
           InkWell(
-              onTap: () {
+              onTap: () { 
                 controller.animateTo(_islight ? 1 : 0);
                 changeTheme();
                 context.read<ThemeNotifer>().changeTheme();
