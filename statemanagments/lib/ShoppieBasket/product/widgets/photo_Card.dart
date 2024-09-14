@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/model/photos_model.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/viewmodel/photos_vievmodel.dart';
+import '../../features/photos/model/photos_model.dart';
+import '../../features/photos/viewmodel/photos_vievmodel.dart';
 
 import '../manager/shop/shop_manager.dart';
 
@@ -82,26 +82,24 @@ class _PhotoCardState extends State<PhotoCard>
   }
 
   Widget AddandRemoveCard() {
-    return SafeArea(
-      child: AnimatedContainer(
-        duration: Durations.extralong1,
-        height: isMarketed ? 45 : 0,
-        width: isMarketed ? 130 : 0,
-        child: Card(
-            elevation: 10,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(child: _incrementProduct()),
-                Consumer<ShopManager>(
-                  builder: (context, value, child) {
-                    return Text("${widget.model.productCount}");
-                  },
-                ),
-                Expanded(child: _decreaseProduct()),
-              ],
-            )),
-      ),
+    return AnimatedContainer(
+      duration: Durations.extralong1,
+      height: isMarketed ? 45 : 0,
+      width: isMarketed ? 130 : 0,
+      child: Card(
+          elevation: 10,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: _incrementProduct()),
+              Consumer<ShopManager>(
+                builder: (context, value, child) {
+                  return Text("${widget.model.productCount}");
+                },
+              ),
+              Expanded(child: _decreaseProduct()),
+            ],
+          )),
     );
   }
 

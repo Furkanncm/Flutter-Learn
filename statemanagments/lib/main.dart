@@ -5,12 +5,14 @@ import 'ShoppieBasket/features/tabbar/app_tabbar.dart';
 import 'ShoppieBasket/product/manager/shop/shop_manager.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider<ShopManager>(create: (context) => ShopManager()),
-    ],
-    child: const MyApp(),
-  ));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ShopManager>(create: (context) => ShopManager()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

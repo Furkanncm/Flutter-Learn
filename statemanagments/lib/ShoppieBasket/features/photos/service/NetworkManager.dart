@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:statemanagments/ShoppieBasket/features/photos/model/photos_model.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/service/INetworkManager.dart';
+import '../model/photos_model.dart';
+import 'INetworkManager.dart';
 
 import 'networkPath/network_path.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagments/ShoppieBasket/features/basket/view/basket_view.dart';
+import '../../basket/view/basket_view.dart';
 
 import '../../favorite/favorite_view.dart';
 import '../../photos/view/photos_view.dart';

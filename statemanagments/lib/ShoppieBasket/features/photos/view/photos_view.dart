@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemanagments/Login&OnBoard/features/login/view/login_view.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/model/photos_model.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/viewmodel/photos_vievmodel.dart';
+import '../model/photos_model.dart';
+import '../viewmodel/photos_vievmodel.dart';
 import '../../../../Login&OnBoard/product/padding/page_padding.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-
 import '../../../product/manager/shop/shop_manager.dart';
 import '../../../product/widgets/photo_Card.dart';
 

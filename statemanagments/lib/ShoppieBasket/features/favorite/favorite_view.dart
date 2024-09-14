@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemanagments/Login&OnBoard/features/login/view/login_view.dart';
-import 'package:statemanagments/Login&OnBoard/product/padding/page_padding.dart';
-import 'package:statemanagments/ShoppieBasket/product/manager/shop/shop_manager.dart';
+import '../../../Login&OnBoard/features/login/view/login_view.dart';
+import '../../../Login&OnBoard/product/padding/page_padding.dart';
+import '../../product/manager/shop/shop_manager.dart';
 
 class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});

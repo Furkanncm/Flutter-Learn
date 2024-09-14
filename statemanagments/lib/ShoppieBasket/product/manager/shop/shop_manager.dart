@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/model/photos_model.dart';
+import '../../../features/photos/model/photos_model.dart';
 
 class ShopManager extends ChangeNotifier {
   List<PhotosModel> basketItems = [];

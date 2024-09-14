@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:mobx/mobx.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/model/photos_model.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/service/INetworkManager.dart';
-import 'package:statemanagments/ShoppieBasket/features/photos/service/NetworkManager.dart';
+import '../model/photos_model.dart';
+import '../service/INetworkManager.dart';
+import '../service/NetworkManager.dart';
 part 'photos_vievmodel.g.dart';
 
 class PhotosViewModel = _PhotosViewModelBase with _$PhotosViewModel;
