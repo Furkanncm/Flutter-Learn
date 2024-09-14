@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagments/features/onboard/view/on_board_view.dart';
+
+import 'features/login/view/login_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,13 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           appBarTheme: AppBarTheme(
-              shape: StadiumBorder(), backgroundColor: Colors.indigo[800]),
+              elevation: 0,
+              shape: const StadiumBorder(),
+              backgroundColor: Colors.indigo[800]),
           floatingActionButtonTheme: FloatingActionButtonThemeData(
               backgroundColor: Colors.indigo[900])),
-      home: const OnBoardView(),
+      debugShowCheckedModeBanner: false,
+      home: const LoginView(),
     );
   }
 }

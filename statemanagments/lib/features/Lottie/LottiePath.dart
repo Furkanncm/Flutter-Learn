@@ -1,4 +1,4 @@
-enum LottiePath { Lottie_Chef, Lottie_Delivery, Lottie_Order }
+enum LottiePath { Lottie_Chef, Lottie_Delivery, Lottie_Order,Lottie_Login }
 
 extension LottiePathExtensions on LottiePath {
   String path() {
@@ -9,6 +9,8 @@ extension LottiePathExtensions on LottiePath {
         return "Lottie_Delivery";
       case LottiePath.Lottie_Order:
         return "Lottie_Order";
+      case LottiePath.Lottie_Login:
+        return "Lottie_Login";
     }
   }
 

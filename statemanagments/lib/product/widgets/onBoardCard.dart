@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagments/features/onboard/model/on_board_model.dart';
+
+import '../../features/onboard/model/on_board_model.dart';
 
 class Onboardcard extends StatelessWidget {
   const Onboardcard({
-    Key? key,
+    super.key,
     required this.model,
-  }) : super(key: key);
+  });
   final OnBoardModel model;
 
   @override
@@ -20,6 +21,5 @@ class Onboardcard extends StatelessWidget {
         Expanded(child: model.lottie),
       ],
     );
-    ;
   }
 }

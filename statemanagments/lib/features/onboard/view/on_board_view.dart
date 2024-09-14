@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:statemanagments/features/onboard/model/on_board_model.dart';
-import 'package:statemanagments/features/onboard/view/tabIndicator.dart';
-import 'package:statemanagments/product/padding/page_padding.dart';
-import 'package:statemanagments/product/widgets/onBoardCard.dart';
+
+import '../../../product/padding/page_padding.dart';
+import '../../../product/widgets/onBoardCard.dart';
+import '../model/on_board_model.dart';
+import 'tabIndicator.dart';
 
 part "../module/startFabButton.dart";
 
@@ -62,7 +63,7 @@ class _OnBoardViewState extends State<OnBoardView>
     return Scaffold(
       appBar: _appbar(),
       body: Padding(
-        padding: PagePadding.all(),
+        padding: const PagePadding.all(),
         child: Column(
           children: [
             Expanded(
@@ -93,7 +94,7 @@ class _OnBoardViewState extends State<OnBoardView>
     return AppBar(
       systemOverlayStyle: SystemUiOverlayStyle.dark,
       leading: isFirstPage
-          ? SizedBox.shrink()
+          ? const SizedBox.shrink()
           : IconButton(
               onPressed: () {
                 _decreaseAndAnimatedTo();
@@ -106,7 +107,7 @@ class _OnBoardViewState extends State<OnBoardView>
           onPressed: () {},
           child: Text(
             skipText,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),

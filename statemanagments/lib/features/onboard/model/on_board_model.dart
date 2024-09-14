@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:statemanagments/features/onboard/Lottie/LottiePath.dart';
+import '../../Lottie/LottiePath.dart';
 
 class OnBoardModel {
   final String title;

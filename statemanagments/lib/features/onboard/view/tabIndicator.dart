@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../model/on_board_model.dart';
 
 class Tabindicator extends StatefulWidget {
-  Tabindicator({required this.currentPage});
+  Tabindicator({super.key, required this.currentPage});
   int currentPage;
 
   @override
