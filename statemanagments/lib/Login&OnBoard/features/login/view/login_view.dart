@@ -57,11 +57,11 @@ class _LoginViewState extends State<LoginView> {
 
   Consumer<LoginViewmodel> _checkBoxListTile() {
     return Consumer<LoginViewmodel>(
-              builder: (context, _loginViewmodel, child) {
+              builder: (context, loginViewmodel, child) {
                 return CheckboxListTile.adaptive(
-                  value: _loginViewmodel.isChecked,
+                  value: loginViewmodel.isChecked,
                   onChanged: (value) {
-                    _loginViewmodel.changeCheck(value ?? false);
+                    loginViewmodel.changeCheck(value ?? false);
                   },
                   title: const Text("Remember Me"),
                 );
@@ -72,11 +72,11 @@ class _LoginViewState extends State<LoginView> {
   AppBar _appBar() {
     return AppBar(
       leading: Consumer<LoginViewmodel>(
-        builder: (context, _loginViewmodel, child) {
+        builder: (context, loginViewmodel, child) {
           return Center(
-              child: _loginViewmodel.isLoading
-                  ? CircularProgressIndicator.adaptive()
-                  : SizedBox.shrink());
+              child: loginViewmodel.isLoading
+                  ? const CircularProgressIndicator.adaptive()
+                  : const SizedBox.shrink());
         },
       ),
     );
@@ -102,7 +102,6 @@ class _LoginViewState extends State<LoginView> {
 class _loginButton extends StatelessWidget {
   final LoginViewmodel loginViewmodel;
   const _loginButton({
-    super.key,
     required this.loginViewmodel,
   });
 

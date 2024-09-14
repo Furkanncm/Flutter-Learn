@@ -22,7 +22,8 @@ class LoginViewmodel extends ChangeNotifier {
 
   Future<VoidCallback?> onPressed(String email, String password) async {
     changeLoading();
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     changeLoading();
+    return null;
   }
 }

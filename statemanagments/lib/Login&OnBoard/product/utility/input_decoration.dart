@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProjectInput extends InputDecoration {
-  ProjectInput(
+  const ProjectInput(
     final String text,
     final Icon prefixIcon,
     final IconButton? suffixIcon,
