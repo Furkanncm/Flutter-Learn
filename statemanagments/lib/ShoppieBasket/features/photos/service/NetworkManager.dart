@@ -1,7 +1,7 @@
 import 'dart:io';
+
 import '../model/photos_model.dart';
 import 'INetworkManager.dart';
-
 import 'networkPath/network_path.dart';
 
 class Networkmanager extends INetworkManager {

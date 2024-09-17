@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'ShoppieBasket/features/tabbar/app_tabbar.dart';
 import 'ShoppieBasket/product/manager/shop/shop_manager.dart';
+import 'Travel/product/tabbar/tabbar.dart/travel_tabbar.dart';
 
 void main() {
   runApp(
@@ -23,6 +23,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+          tabBarTheme: TabBarTheme(
+            indicatorColor: Colors.blueGrey[400],
+            unselectedLabelColor: Colors.brown[600],
+            labelColor: Colors.blueGrey[400],
+          ),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
           useMaterial3: true,
           indicatorColor: Colors.red,
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
           floatingActionButtonTheme: FloatingActionButtonThemeData(
               backgroundColor: Colors.indigo[900])),
       debugShowCheckedModeBanner: false,
-      home: const AppTabbar(),
+      home: const TravelTabbar(),
     );
   }
 }

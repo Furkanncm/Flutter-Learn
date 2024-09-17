@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../basket/view/basket_view.dart';
 
+import '../../basket/view/basket_view.dart';
 import '../../favorite/favorite_view.dart';
 import '../../photos/view/photos_view.dart';
 
