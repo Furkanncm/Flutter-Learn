@@ -3,7 +3,7 @@ import 'package:template/core/extensions/string_extension.dart';
 
 class LocaleText extends StatelessWidget {
   final String text;
-    LocaleText({
+    const LocaleText({super.key, 
     required this.text
   });
 

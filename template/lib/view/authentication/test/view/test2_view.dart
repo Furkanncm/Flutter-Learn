@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:template/core/constants/enum/route_enum.dart';
+import 'package:template/core/init/navigation/navigation_service.dart';
 import '../../../../core/base/state/base_state.dart';
 import '../../../../core/init/language/locale_keys.g.dart';
 import '../../../../core/init/notifier/theme_notifier.dart';
@@ -16,17 +18,23 @@ class _Test2ViewState extends BaseState<Test2View> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: LocaleText(text: LocaleKeys.welcome),
-        actions: [
-          IconButton(
-            onPressed: () {
-              context.read<ThemeNotifier>().changeTheme();
-            },
-            icon: const Icon(Icons.color_lens_outlined),
-          )
-        ],
-      ),
-      body: Center(child: LocaleText(text: LocaleKeys.body)),
+          leading: IconButton(
+              onPressed: () {
+                NavigationService.instance.navigateToPage(RouteEnum.HOME.route, "");
+              },
+              icon: const Icon(Icons.route_outlined)),
+          title: const LocaleText(text: LocaleKeys.welcome),
+          actions: [_changeThemeButton(context)]),
+      body: const Center(child: LocaleText(text: LocaleKeys.body)),
+    );
+  }
+
+  IconButton _changeThemeButton(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        context.read<ThemeNotifier>().changeTheme();
+      },
+      icon: const Icon(Icons.color_lens_outlined),
     );
   }
 }

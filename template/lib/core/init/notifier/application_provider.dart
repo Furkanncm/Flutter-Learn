@@ -11,8 +11,6 @@ class ApplicationProvider {
   ApplicationProvider._init();
 
   List<SingleChildWidget> changeNotifier = [
-    ChangeNotifierProvider<ThemeNotifier>( 
-      create: (context) => ThemeNotifier(),
-    ),
+    ChangeNotifierProvider<ThemeNotifier>(create: (context) => ThemeNotifier())
   ];
 }
