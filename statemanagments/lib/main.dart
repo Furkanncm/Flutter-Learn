@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'ShoppieBasket/product/manager/shop/shop_manager.dart';
 import 'Travel/product/tabbar/tabbar.dart/travel_tabbar.dart';
 
