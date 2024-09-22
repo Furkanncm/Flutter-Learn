@@ -30,12 +30,17 @@ class _TestViewState extends BaseState<TestView> {
   }
 
   Widget get scaffoldBody => Scaffold(
-    appBar: AppBar(
-      title: LocaleText(text: LocaleKeys.welcome,),
-    ),
+        appBar: AppBar(
+          title: const LocaleText(
+            text: LocaleKeys.welcome,
+          ),
+        ),
         floatingActionButton: _floatingActionButtonIncrementNumber,
-        body: Center(
-          child: _numberText,
+        body: Column(
+          children: [
+            Center(child: _numberText),
+            
+          ],
         ),
       );
 

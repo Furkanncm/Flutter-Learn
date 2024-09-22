@@ -1,0 +1,4 @@
+enum PreferencesEnum {
+  USER,
+  TOKEN,
+}
