@@ -45,7 +45,7 @@ mixin _$TestViewModel on _TestViewModelBase, Store {
       AsyncAction('_TestViewModelBase.fetchItems', context: context);
 
   @override
-  Future<void> fetchItems() {
+  Future<List<TestModel>> fetchItems() {
     return _$fetchItemsAsyncAction.run(() => super.fetchItems());
   }
 

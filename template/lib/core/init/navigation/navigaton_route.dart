@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/view/authentication/test/view/test2_view.dart';
+import '../../../view/authentication/test/view/test2_view.dart';
 
 class NavigatonRoute {
   static final NavigatonRoute _instance = NavigatonRoute._init();

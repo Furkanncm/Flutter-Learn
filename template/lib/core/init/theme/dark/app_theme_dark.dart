@@ -1,5 +1,6 @@
 import 'package:flutter/src/material/theme_data.dart';
-import 'app_theme.dart';
+
+import '../app_theme.dart';
 
 class AppThemeDark extends AppTheme {
   static AppThemeDark? _instance;

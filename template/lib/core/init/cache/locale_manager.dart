@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:template/core/constants/enum/preferences_enum.dart';
+import '../../constants/enum/preferences_enum.dart';
 
 class LocaleManager {
   static final LocaleManager _instance= LocaleManager._init();

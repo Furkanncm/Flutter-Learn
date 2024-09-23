@@ -1,6 +1,6 @@
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
-import 'package:template/core/init/notifier/theme_notifier.dart';
+import 'theme_notifier.dart';
 
 class ApplicationProvider {
   static ApplicationProvider? _instance;

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:template/core/constants/enum/route_enum.dart';
-import 'package:template/core/init/navigation/navigation_service.dart';
-import 'package:template/view/authentication/test/viewmodel/test_viewmodel.dart';
+import '../../../../core/constants/enum/route_enum.dart';
+import '../../../../core/extensions/context_extension.dart';
+import '../../../../core/init/navigation/navigation_service.dart';
+import '../viewmodel/test_viewmodel.dart';
 import '../../../../core/base/state/base_state.dart';
 import '../../../../core/init/language/locale_keys.g.dart';
 import '../../../../core/init/notifier/theme_notifier.dart';
@@ -27,36 +28,56 @@ class _Test2ViewState extends BaseState<Test2View> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          leading: _navigatorButton(),
-          title: const LocaleText(text: LocaleKeys.welcome),
-          actions: [
-            _changeThemeButton(context),
-          ]),
-      body: Column(
+      appBar: _appBar(context),
+      body: _body(context),
+    );
+  }
+
+  Padding _body(BuildContext context) {
+    return Padding(
+      padding: context.paddingLow,
+      child: Column(
         children: [
           const Center(child: LocaleText(text: LocaleKeys.body)),
-          Expanded(
-            child: Observer(builder: (_) {
-              if (viewModel.items.isEmpty) {
-                return const Center(child: Text("No data available"));
-              }
-              return ListView.separated(
-                itemCount: viewModel.items.length,
-                separatorBuilder: (BuildContext context, int index) {
-                  return const Divider();
-                },
-                itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    child: ListTile(
-                      title: Text(viewModel.items[index].title ?? "No Title"),
-                    ),
-                  );
-                },
-              );
-            }),
-          ),
+          Expanded(child: _items()),
         ],
+      ),
+    );
+  }
+
+  Observer _items() {
+    return Observer(builder: (_) {
+      if (viewModel.items.isEmpty) {
+        return const Center(child: Text("No data available"));
+      }
+      return _listview();
+    });
+  }
+
+  AppBar _appBar(BuildContext context) {
+    return AppBar(
+        leading: _navigatorButton(),
+        title: const LocaleText(text: LocaleKeys.welcome),
+        actions: [_changeThemeButton(context)]);
+  }
+
+  ListView _listview() {
+    return ListView.separated(
+      itemCount: viewModel.items.length,
+      separatorBuilder: (BuildContext context, int index) {
+        return const Divider();
+      },
+      itemBuilder: (BuildContext context, int index) {
+        return _listviewCard(index);
+      },
+    );
+  }
+
+  Card _listviewCard(int index) {
+    return Card(
+      elevation: 10,
+      child: ListTile(
+        title: Text(viewModel.items[index].title ?? "No Title"),
       ),
     );
   }

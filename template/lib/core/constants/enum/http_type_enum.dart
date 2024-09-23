@@ -1,0 +1,4 @@
+enum HttpTypeEnum{
+  GET,
+  POST,
+}

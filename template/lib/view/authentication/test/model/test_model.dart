@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:template/core/base/model/network_model.dart';
+import '../../../../core/base/model/network_model.dart';
 
 part 'test_model.g.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:template/core/base/state/base_state.dart';
-import 'package:template/core/base/view/base_view.dart';
-import 'package:template/core/init/language/locale_keys.g.dart';
-import 'package:template/view/authentication/test/viewmodel/test_viewmodel.dart';
+import '../../../../core/base/state/base_state.dart';
+import '../../../../core/base/view/base_view.dart';
+import '../../../../core/init/language/locale_keys.g.dart';
+import '../viewmodel/test_viewmodel.dart';
 import '../../../../core/components/text/locale_text.dart';
 
 class TestView extends StatefulWidget {
