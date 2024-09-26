@@ -17,6 +17,7 @@ class AppThemeLight extends AppTheme {
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Colors.red,
         ),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.brown),
         scaffoldBackgroundColor: Colors.blueGrey,
       );
 }

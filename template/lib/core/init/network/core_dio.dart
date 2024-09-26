@@ -1,17 +1,21 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:template/core/extensions/http_type_extension.dart';
+import 'package:template/core/init/network/ICoreDio.dart';
+
 import '../../base/model/error.dart';
 import '../../base/model/network_model.dart';
 import '../../constants/enum/http_type_enum.dart';
-import '../../extensions/http_type_extension.dart';
-import 'ICoreDio.dart';
-
 class CoreDio with DioMixin implements Dio, Icoredio {
   final BaseOptions _baseOptions;
 
-  CoreDio({required BaseOptions baseOptions}) : _baseOptions = baseOptions;
+  CoreDio({required BaseOptions baseOptions}) 
+    : _baseOptions = baseOptions {
+    options = _baseOptions;
+  }
 
+  @override
   Future<R?> httpEvents<R, T extends NetworkModel>(
       String path, HttpTypeEnum type, T model,
       {dynamic data}) async {
@@ -23,6 +27,7 @@ class CoreDio with DioMixin implements Dio, Icoredio {
       default:
         BaseError(message: "message");
     }
+    return null;
   }
 
   R? _fetch<R>(NetworkModel model, dynamic data) {
