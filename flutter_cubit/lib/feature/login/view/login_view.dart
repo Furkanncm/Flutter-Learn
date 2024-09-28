@@ -1,9 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_cubit/core/base/base_state.dart';
-import 'package:flutter_cubit/feature/login/model/request_model.dart';
-import 'package:flutter_cubit/feature/widget/cubit_email_textfield.dart';
+import 'package:flutter_cubit/feature/login/model/response_model.dart';
+import 'package:flutter_cubit/feature/login/view/login_detail_view.dart';
+import '../../../core/base/base_state.dart';
+import '../model/request_model.dart';
+import '../../widget/cubit_email_textfield.dart';
 
 import '../../../core/init/language/locale_keys.g.dart';
 import '../../widget/cubit_password_textfield.dart';
@@ -41,9 +43,11 @@ class _LoginViewState extends BaseState<LoginView> {
 
   AppBar _appbar(BuildContext context, LoginState state) {
     return AppBar(
-      leading: (state is LoginPost)
-          ? Icon(Icons.check_box)
-          : Icon(Icons.warning_amber),
+      leading: context.watch<LoginCubit>().isLoading
+          ? const Center(
+              child: CircularProgressIndicator.adaptive(),
+            )
+          : const SizedBox.shrink(),
       title: _title(),
     );
   }
@@ -61,21 +65,27 @@ class _LoginViewState extends BaseState<LoginView> {
         children: [
           CubitEmailTextfield(controller: emailController),
           CubitPasswordTextfield(controller: passwordController),
-          _elevatedButton(context)
+          _elevatedButton(context, state)
         ],
       ),
     );
   }
 
-  ElevatedButton _elevatedButton(BuildContext context) {
+  ElevatedButton _elevatedButton(BuildContext context, LoginState state) {
     return ElevatedButton(
-            onPressed: () {
-              final RequestModel requestModel = RequestModel(
-                  email: emailController.text,
-                  password: passwordController.text);
-              context.read<LoginCubit>().postUserLogin(requestModel);
-            },
-            child: const Center(child: Icon(Icons.login_outlined)));
+        onPressed: () {
+          final RequestModel requestModel = RequestModel(
+              email: emailController.text, password: passwordController.text);
+          context.read<LoginCubit>().postUserLogin(requestModel);
+          final currentState = context.read<LoginCubit>().state;
+          print(currentState);
+          if (currentState is LoginPost) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) =>
+                    LoginDetailView(model: currentState.responseModel)));
+          }
+        },
+        child: const Center(child: Icon(Icons.login_outlined)));
   }
 
   Center _title() => Center(child: Text(LocaleKeys.login.tr()));

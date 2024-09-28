@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit/core/constants/application_constants.dart';
-import 'package:flutter_cubit/feature/login/model/request_model.dart';
-import 'package:flutter_cubit/feature/login/service/ILoginService.dart';
-import 'package:flutter_cubit/feature/login/service/login_service.dart';
+import '../../../core/constants/application_constants.dart';
+import '../model/request_model.dart';
+import '../service/ILoginService.dart';
+import '../service/login_service.dart';
 
 import '../model/response_model.dart';
 
@@ -18,6 +18,7 @@ class LoginCubit extends Cubit<LoginState> {
     required this.globalKey,
   }) : super(LoginInitial());
 
+  bool isLoading = false;
   bool isLogin = false;
   final ILoginService service = LoginService(
       dio: Dio(BaseOptions(baseUrl: ApplicationConstants.BaseUrl)));
@@ -30,6 +31,11 @@ class LoginCubit extends Cubit<LoginState> {
       emit(LoginValidate(isFail: false));
     }
   }
+
+  void changeLoading() {
+    isLoading = !isLoading;
+    emit(LoginLoading(isLoading: isLoading));
+  }
 }
 
 abstract class LoginState {}
@@ -40,6 +46,11 @@ class LoginValidate extends LoginState {
   final bool isFail;
 
   LoginValidate({required this.isFail});
+}
+
+class LoginLoading extends LoginState {
+  final bool isLoading;
+  LoginLoading({required this.isLoading});
 }
 
 class LoginPost extends LoginState {

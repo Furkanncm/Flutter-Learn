@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_cubit/core/widget/email_textfied.dart';
+import '../../core/widget/email_textfied.dart';
 
 class CubitEmailTextfield extends StatelessWidget {
   final TextEditingController controller;

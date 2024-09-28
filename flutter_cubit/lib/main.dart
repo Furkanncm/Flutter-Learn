@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit/core/init/language/language_manager.dart';
+import 'core/init/language/language_manager.dart';
 
 import 'core/constants/application_constants.dart';
 import 'feature/login/view/login_view.dart';

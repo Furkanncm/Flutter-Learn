@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_cubit/core/components/root_text_field.dart';
+import '../components/root_text_field.dart';
 
 import '../init/language/locale_keys.g.dart';
 

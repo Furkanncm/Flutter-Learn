@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit/core/extensions/context_extensions.dart';
+import '../extensions/context_extensions.dart';
 
 class RootTextField extends StatelessWidget {
   final IconData prefixIcon;

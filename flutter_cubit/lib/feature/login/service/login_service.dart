@@ -1,11 +1,9 @@
 import 'dart:io';
-
-import 'package:dio/dio.dart';
-import 'package:flutter_cubit/core/constants/enum/service_path_enum.dart';
-import 'package:flutter_cubit/core/extensions/service_path_extension.dart';
-import 'package:flutter_cubit/feature/login/model/request_model.dart';
-import 'package:flutter_cubit/feature/login/model/response_model.dart';
-import 'package:flutter_cubit/feature/login/service/ILoginService.dart';
+import '../../../core/constants/enum/service_path_enum.dart';
+import '../../../core/extensions/service_path_extension.dart';
+import '../model/request_model.dart';
+import '../model/response_model.dart';
+import 'ILoginService.dart';
 
 import '../../../core/constants/application_constants.dart';
 

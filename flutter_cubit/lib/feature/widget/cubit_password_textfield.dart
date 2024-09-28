@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_cubit/core/widget/password_textfield.dart';
+import '../../core/widget/password_textfield.dart';
 
 class CubitPasswordTextfield extends StatefulWidget {
   final TextEditingController controller;
