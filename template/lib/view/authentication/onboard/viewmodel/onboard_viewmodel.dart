@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-import 'package:template/core/base/viewmodel/base_viewmodel.dart';
-import 'package:template/view/authentication/onboard/model/onboard_model.dart';
+import '../../../../core/base/viewmodel/base_viewmodel.dart';
+import '../model/onboard_model.dart';
 
 import '../../../../core/constants/app/app_onboard_constants.dart';
 part 'onboard_viewmodel.g.dart';

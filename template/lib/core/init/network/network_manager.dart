@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:template/core/init/network/ICoreDio.dart';
+import 'ICoreDio.dart';
 
 import '../../constants/app/app_constants.dart';
 import 'core_dio.dart';
@@ -15,7 +15,6 @@ class NetworkManager {
 
   NetworkManager._init() {
     final baseOptions = BaseOptions(baseUrl: AppConstants.BASE_URL);
-    
-    coreDio = CoreDio(baseOptions: baseOptions);
+    coreDio = CoreDio(baseOptions);
   }
 }

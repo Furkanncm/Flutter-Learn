@@ -1,18 +1,20 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:template/core/extensions/http_type_extension.dart';
-import 'package:template/core/init/network/ICoreDio.dart';
+import '../../extensions/http_type_extension.dart';
+import 'ICoreDio.dart';
 
 import '../../base/model/error.dart';
 import '../../base/model/network_model.dart';
 import '../../constants/enum/http_type_enum.dart';
+
 class CoreDio with DioMixin implements Dio, Icoredio {
   final BaseOptions _baseOptions;
 
-  CoreDio({required BaseOptions baseOptions}) 
-    : _baseOptions = baseOptions {
+  CoreDio(this._baseOptions) {
     options = _baseOptions;
+    httpClientAdapter = HttpClientAdapter();
+    interceptors.add(InterceptorsWrapper());
   }
 
   @override

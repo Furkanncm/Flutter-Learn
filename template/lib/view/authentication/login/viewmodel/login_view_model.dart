@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-import 'package:template/core/constants/enum/http_type_enum.dart';
-import 'package:template/core/init/network/ICoreDio.dart';
-import 'package:template/core/init/network/network_manager.dart';
-import 'package:template/view/authentication/test/model/test_model.dart';
 
 import '../../../../core/base/viewmodel/base_viewmodel.dart';
+import '../../../../core/constants/enum/http_type_enum.dart';
+import '../../../../core/init/network/ICoreDio.dart';
+import '../../../../core/init/network/network_manager.dart';
+import '../../test/model/test_model.dart';
 
 part 'login_view_model.g.dart';
 

@@ -10,12 +10,12 @@ TestModel _$TestModelFromJson(Map<String, dynamic> json) => TestModel(
       userId: (json['userId'] as num?)?.toInt(),
       id: (json['id'] as num?)?.toInt(),
       title: json['title'] as String?,
-      completed: json['completed'] as bool?,
+      body: json['body'] as String?,
     );
 
 Map<String, dynamic> _$TestModelToJson(TestModel instance) => <String, dynamic>{
       'userId': instance.userId,
       'id': instance.id,
       'title': instance.title,
-      'completed': instance.completed,
+      'body': instance.body,
     };

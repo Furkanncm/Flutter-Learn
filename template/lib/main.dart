@@ -8,9 +8,7 @@ import 'core/init/navigation/navigation_service.dart';
 import 'core/init/navigation/navigaton_route.dart';
 import 'core/init/notifier/application_provider.dart';
 import 'core/init/notifier/theme_notifier.dart';
-import 'view/authentication/login/view/login_view.dart';
 import 'view/authentication/onboard/view/onboard_view.dart';
-import 'view/authentication/test/view/test2_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

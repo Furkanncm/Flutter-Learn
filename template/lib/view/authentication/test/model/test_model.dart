@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 import '../../../../core/base/model/network_model.dart';
 
 part 'test_model.g.dart';
@@ -8,9 +9,9 @@ class TestModel extends NetworkModel<TestModel> {
   int? userId;
   int? id;
   String? title;
-  bool? completed;
+  String? body;
 
-  TestModel({this.userId, this.id, this.title, this.completed});
+  TestModel({this.userId, this.id, this.title, this.body});
 
   @override
   Map<String, dynamic> toJson() {

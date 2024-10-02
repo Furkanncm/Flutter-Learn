@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 
 class AppThemeLight extends AppTheme {
@@ -13,11 +14,11 @@ class AppThemeLight extends AppTheme {
   ThemeData get themeData => ThemeData.light().copyWith(
         primaryColor: Colors.blue,
         cardColor: Colors.brown,
-        cardTheme: CardTheme(color: Colors.green),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
+        cardTheme: const CardTheme(color: Colors.green),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Colors.red,
         ),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.brown),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.brown),
         scaffoldBackgroundColor: Colors.blueGrey,
       );
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:template/core/base/state/base_state.dart';
-import 'package:template/core/base/view/base_view.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/view/authentication/onboard/viewmodel/onboard_viewmodel.dart';
-import 'package:template/view/authentication/test/view/test2_view.dart';
+
+import '../../../../core/base/state/base_state.dart';
+import '../../../../core/base/view/base_view.dart';
+import '../../../../core/extensions/context_extension.dart';
+import '../viewmodel/onboard_viewmodel.dart';
 
 class OnboardView extends StatefulWidget {
   const OnboardView({super.key});
