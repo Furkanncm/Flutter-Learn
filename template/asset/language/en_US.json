@@ -1,4 +1,10 @@
 {
     "welcome":"Welcome to My App",
-    "body":"Furkan"
+    "body":"Furkan",
+    "chef":"Live The Life",
+    "chefDescription":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "deliver":"Find The Path",
+    "deliverDescription":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    "burger":"Make it Good",
+    "burgerDescription":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
 }

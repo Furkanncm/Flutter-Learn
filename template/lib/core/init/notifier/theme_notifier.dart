@@ -4,7 +4,7 @@ import '../theme/dark/app_theme_dark.dart';
 import '../theme/light/app_theme_light.dart';
 
 class ThemeNotifier extends ChangeNotifier {
-  ThemeData _currentTheme = AppThemeLight.instance.themeData;
+  ThemeData _currentTheme = AppThemeDark.instance.themeData;
   ThemeData get currentTheme => _currentTheme;
 
   void changeTheme() {

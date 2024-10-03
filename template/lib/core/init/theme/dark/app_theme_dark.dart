@@ -1,5 +1,4 @@
-import 'package:flutter/src/material/theme_data.dart';
-
+import 'package:flutter/material.dart';
 import '../app_theme.dart';
 
 class AppThemeDark extends AppTheme {
@@ -11,5 +10,10 @@ class AppThemeDark extends AppTheme {
   AppThemeDark._init();
 
   @override
-  ThemeData get themeData => ThemeData.dark();
+  ThemeData get themeData => ThemeData.dark().copyWith(
+      colorScheme: const ColorScheme.dark().copyWith(
+        secondary: Colors.blueGrey,
+      ),
+      floatingActionButtonTheme:const  FloatingActionButtonThemeData()
+          .copyWith(backgroundColor: Colors.blueGrey));
 }

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/constants/enum/route_enum.dart';
-import '../../../../core/init/navigation/navigation_service.dart';
-import '../viewmodel/test_viewmodel.dart';
+
 import '../../../../core/base/state/base_state.dart';
-import '../../../../core/init/language/locale_keys.g.dart';
-import '../../../../core/init/notifier/theme_notifier.dart';
 import '../../../../core/components/text/locale_text.dart';
+import '../../../../core/constants/enum/route_enum.dart';
+import '../../../../core/extensions/context_extension.dart';
+import '../../../../core/init/language/locale_keys.g.dart';
+import '../../../../core/init/navigation/navigation_service.dart';
+import '../../../../core/init/notifier/theme_notifier.dart';
+import '../viewmodel/test_viewmodel.dart';
 
 class Test2View extends StatefulWidget {
   const Test2View({super.key});

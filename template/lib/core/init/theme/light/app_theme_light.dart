@@ -20,5 +20,6 @@ class AppThemeLight extends AppTheme {
         ),
         appBarTheme: const AppBarTheme(backgroundColor: Colors.brown),
         scaffoldBackgroundColor: Colors.blueGrey,
+        textTheme: TextTheme()
       );
 }

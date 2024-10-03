@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import '../../extensions/http_type_extension.dart';
-import 'ICoreDio.dart';
 
 import '../../base/model/error.dart';
 import '../../base/model/network_model.dart';
 import '../../constants/enum/http_type_enum.dart';
+import '../../extensions/http_type_extension.dart';
+import 'ICoreDio.dart';
 
 class CoreDio with DioMixin implements Dio, Icoredio {
   final BaseOptions _baseOptions;

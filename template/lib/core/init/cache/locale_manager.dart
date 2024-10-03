@@ -19,4 +19,10 @@ class LocaleManager {
 
   String? getStringValue(PreferencesEnum key) =>
       _sharedPreferences.getString(key.toString());
+
+  Future<void> setBoolValue(PreferencesEnum key,bool value) async {
+    await _sharedPreferences.setBool(key.toString(), value);
+  }
+   bool getBoolValue(PreferencesEnum key) =>
+      _sharedPreferences.getBool(key.toString())??false;
 }
