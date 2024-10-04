@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/components/text/normal_board_text.dart';
 
 class LiveLifeDescription extends StatelessWidget {

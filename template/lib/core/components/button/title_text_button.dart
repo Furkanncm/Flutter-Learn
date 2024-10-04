@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'normal_button.dart';
+import 'normal_elevated_button.dart';
 
 class TitleTextButton extends StatelessWidget {
   final String text;

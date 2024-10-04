@@ -12,4 +12,13 @@ abstract class LocaleKeys {
   static const burger = 'Make it Good';
   static const burgerDescription =
       'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.';
+  static const login = 'Login';
+  static const register = 'Register';
+  static const loginButton = "Enter to App";
+  static const haveAccount = "Do you have an account?";
+  static const email = "Email";
+  static const password = "Password";
+  static const forgotPassword = "FORGOT PASSWORD?";
+  static const emailNotValidate = "Email is not Validate";
+  static const passwordNotValidate = "Password is not Validate";
 }

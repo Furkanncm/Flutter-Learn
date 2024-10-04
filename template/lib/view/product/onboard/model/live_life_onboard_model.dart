@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+
 import '../../../../core/constants/enum/image_enum.dart';
 import '../../../../core/extensions/image_extensions.dart';
-
 import '../../../../core/init/language/locale_keys.g.dart';
 
 class LiveLifeOnboardModel {

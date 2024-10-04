@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'ICoreDio.dart';
 
 import '../../constants/app/app_constants.dart';
+import 'ICoreDio.dart';
 import 'core_dio.dart';
 
 class NetworkManager {

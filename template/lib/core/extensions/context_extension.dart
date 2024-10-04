@@ -4,6 +4,8 @@ extension MediaQueryExtension on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
   double get height => mediaQuery.size.height;
   double get width => mediaQuery.size.width;
+  double dynamicWidth(double value) => width * value;
+  double dynamicHeight(double value) => height * value;
 
   double get lowValue => height * 0.01;
   double get normalValue => height * 0.02;
@@ -16,7 +18,18 @@ extension PaddingExtension on BuildContext {
   EdgeInsets get paddingHigh => EdgeInsets.all(highValue);
   EdgeInsets get horizontalLow => EdgeInsets.symmetric(horizontal: lowValue);
   EdgeInsets get verticalLow => EdgeInsets.symmetric(vertical: lowValue);
-
+  EdgeInsets get bottomLow => EdgeInsets.only(bottom: lowValue);
+  EdgeInsets get topLow => EdgeInsets.only(top: lowValue);
+  EdgeInsets get bottomNormal => EdgeInsets.only(bottom: normalValue);
+  EdgeInsets get topNormal => EdgeInsets.only(top: normalValue);
+  EdgeInsets get bottomHigh => EdgeInsets.only(bottom: highValue);
+  EdgeInsets get topHigh => EdgeInsets.only(top: highValue);
+  EdgeInsets get rightLow => EdgeInsets.only(right: lowValue);
+  EdgeInsets get leftLow => EdgeInsets.only(left: lowValue);
+  EdgeInsets get rightNormal => EdgeInsets.only(right: normalValue);
+  EdgeInsets get leftNormal => EdgeInsets.only(left: normalValue);
+  EdgeInsets get rightHigh => EdgeInsets.only(right: highValue);
+  EdgeInsets get leftHigh => EdgeInsets.only(left: highValue * 5);
 }
 
 extension ThemeExtension on BuildContext {

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/constants/enum/preferences_enum.dart';
-import '../../../../core/init/cache/locale_manager.dart';
+
 import '../../../../core/base/state/base_state.dart';
+import '../../../../core/constants/enum/preferences_enum.dart';
 import '../../../../core/extensions/context_extension.dart';
+import '../../../../core/init/cache/locale_manager.dart';
+import '../../widget/live_life_description.dart';
+import '../../widget/live_live_title.dart';
 import '../cubit/live_life_cubit.dart';
 import '../model/live_life_onboard_model.dart';
-import '../../widget/live_live_title.dart';
-import '../../widget/live_life_description.dart';
 
 class LiveLifeOnboardView extends StatefulWidget {
   const LiveLifeOnboardView({super.key});
@@ -53,9 +54,7 @@ class _LiveLifeOnboardViewState extends BaseState<LiveLifeOnboardView>
     );
   }
 
-  Widget _pageViewBuilder(
-    BuildContext context,
-  ) {
+  Widget _pageViewBuilder(BuildContext context) {
     return PageView.builder(
         onPageChanged: (value) {
           context.read<LiveLifeCubit>().changePage(value);
@@ -81,13 +80,13 @@ class _LiveLifeOnboardViewState extends BaseState<LiveLifeOnboardView>
 
   Widget _fabButton(BuildContext context) {
     final pageIndex = context.watch<LiveLifeCubit>().currentPage;
-    return FloatingActionButton(
-        onPressed: () {
-          context.read<LiveLifeCubit>().skipOnBoard(context);
-          LocaleManager.instance.setBoolValue(PreferencesEnum.SKIP, true);
-        },
-        child: pageIndex != 2
-            ? Text(pageIndex.toString())
-            : const Icon(Icons.arrow_forward_outlined));
+    return pageIndex != 2
+        ? const SizedBox.shrink()
+        : FloatingActionButton(
+            onPressed: () {
+              context.read<LiveLifeCubit>().skipOnBoard(context);
+              LocaleManager.instance.setBoolValue(PreferencesEnum.SKIP, true);
+            },
+            child: const Icon(Icons.arrow_forward_outlined));
   }
 }

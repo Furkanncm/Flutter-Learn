@@ -36,8 +36,8 @@ dependencies:
   provider: ^6.1.2
   flutter_mobx: ^2.2.1+1
   mobx_codegen: ^2.6.1
-  bloc: ^8.1.4
-  flutter_bloc: ^8.1.6
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.0
 
   #Util
   easy_localization: ^3.0.7

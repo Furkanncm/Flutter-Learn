@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/extensions/context_extension.dart';
+import '../../extensions/context_extension.dart';
 
 class NormalBoardText extends StatelessWidget {
   final String text;
