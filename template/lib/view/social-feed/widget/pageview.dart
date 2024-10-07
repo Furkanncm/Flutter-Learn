@@ -5,6 +5,7 @@ import 'package:template/core/extensions/context_extension.dart';
 import 'package:template/core/extensions/image_extensions.dart';
 import 'package:template/view/social-feed/cubit/feed_cubit.dart';
 import 'package:template/view/social-feed/model/card_model.dart';
+
 import '../../../core/components/text/card_small_text.dart';
 import '../../../core/constants/enum/image_enum.dart';
 
@@ -62,7 +63,12 @@ class _ListTileWidget extends StatelessWidget {
                 onPressed: () {
                   context.read<FeedCubit>().changeLikedState(model);
                 },
-                icon: Icon(model.isLiked ? Icons.favorite : Icons.favorite_border));
+                icon: model.isLiked
+                    ? const Icon(
+                        Icons.favorite,
+                        color: Colors.pink,
+                      )
+                    : const Icon(Icons.favorite_border_outlined));
           },
         ),
         leading: model.avatar,

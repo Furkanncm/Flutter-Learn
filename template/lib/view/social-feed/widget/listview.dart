@@ -19,11 +19,15 @@ class Listview extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             return IconButton(
-              onPressed: () {
-                context.read<FeedCubit>().changeLikedState(model);
-              },
-              icon: Icon(model.isLiked ? Icons.favorite : Icons.favorite_border_outlined),
-            );
+                onPressed: () {
+                  context.read<FeedCubit>().changeLikedState(model);
+                },
+                icon: model.isLiked
+                    ? const Icon(
+                        Icons.favorite,
+                        color: Colors.pink,
+                      )
+                    : const Icon(Icons.favorite_border_outlined));
           },
         ),
         title: CardMediumText(text: model.title),

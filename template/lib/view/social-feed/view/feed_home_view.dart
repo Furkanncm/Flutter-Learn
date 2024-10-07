@@ -24,22 +24,25 @@ class _FeedHomeViewState extends State<FeedHomeView> {
       create: (context) => FeedCubit(),
       child: DefaultTabController(
         length: FeedTop.values.length,
-        child: Scaffold(
-          drawer: const Drawer(),
-          appBar: AppBar(
-            actions: [Padding(padding: context.rightNormal, child: const Icon(Icons.search))],
-            bottom: TabBar(
-              tabs: FeedTop.values.map((e) => Tab(text: e.rawValue)).toList(),
+        child: Padding(
+          padding: context.paddingLow,
+          child: Scaffold(
+            drawer: const Drawer(),
+            appBar: AppBar(
+              actions: [Padding(padding: context.rightNormal, child: const Icon(Icons.search))],
+              bottom: TabBar(
+                tabs: FeedTop.values.map((e) => Tab(text: e.rawValue)).toList(),
+              ),
             ),
-          ),
-          body: const Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(flex: 5, child: _PageView()),
-              Spacer(),
-              CardTitleText(text: LocaleKeys.recommend),
-              Expanded(flex: 4, child: _ListView()),
-            ],
+            body: const Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(flex: 5, child: _PageView()),
+                Spacer(),
+                CardTitleText(text: LocaleKeys.recommend),
+                Expanded(flex: 4, child: _ListView()),
+              ],
+            ),
           ),
         ),
       ),

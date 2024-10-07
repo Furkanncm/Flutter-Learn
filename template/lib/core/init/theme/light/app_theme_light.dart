@@ -20,7 +20,19 @@ class AppThemeLight extends AppTheme {
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Color(0xffeba246),
         ),
+        inputDecorationTheme: const InputDecorationTheme(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Color(0xffeba246),
+            ),
+          ),
+          prefixIconColor: Colors.black,
+          iconColor: Colors.black,
+          labelStyle: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.w600),
+        ),
         textTheme: const TextTheme(
+          headlineMedium: TextStyle(color: Colors.black, fontSize: 35, fontWeight: FontWeight.bold),
+          labelLarge: TextStyle(color: Colors.red, fontSize: 15, fontWeight: FontWeight.w400),
           titleLarge: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w400),
           displaySmall: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w300),
           displayMedium: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.w600),
