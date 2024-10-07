@@ -11,6 +11,7 @@ import 'core/init/notifier/application_provider.dart';
 import 'core/init/notifier/theme_notifier.dart';
 import 'view/product/advanceLogin/view/cubit_login_view.dart';
 import 'view/product/advanceLogin/view/tabbar/cubit_login_tabbar.dart';
+import 'view/social-feed/view/feed_tabbar_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           // home: LocaleManager.instance.getBoolValue(PreferencesEnum.SKIP)
           //     ? const LoginView()
           //     : const LiveLifeOnboardView(),
-          home: const CubitLoginTabbar(),
+          home: const FeedTabbarView(),
           debugShowCheckedModeBanner: false,
           navigatorKey: NavigationService.instance.globalKey,
           onGenerateRoute: NavigatonRoute.instance.onRoutes,

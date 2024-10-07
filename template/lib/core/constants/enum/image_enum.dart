@@ -1,1 +1,1 @@
-enum ImageEnum { CHEF, BURGER, DELIVER, LOGIN}
+enum ImageEnum { CHEF, BURGER, DELIVER, LOGIN,HOME}

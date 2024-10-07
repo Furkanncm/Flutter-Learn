@@ -29,6 +29,7 @@ class BaseTextFormfield extends StatelessWidget {
         keyboardType: keyboardType,
         obscureText: isVisible,
         validator: validator,
+        style: Theme.of(context).textTheme.labelSmall,
         cursorColor: Theme.of(context).primaryColor,
         decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(

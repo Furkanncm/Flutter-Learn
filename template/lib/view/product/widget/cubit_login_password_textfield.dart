@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../core/components/textfield/password_textfield.dart';
 
 class CubitLoginPasswordTextfield extends StatefulWidget {
-  const CubitLoginPasswordTextfield({super.key});
+  final TextEditingController controller;
+  const CubitLoginPasswordTextfield({
+    super.key,
+    required this.controller,
+  });
 
   @override
   State<CubitLoginPasswordTextfield> createState() =>
@@ -12,9 +16,8 @@ class CubitLoginPasswordTextfield extends StatefulWidget {
 
 class _CubitLoginPasswordTextfieldState
     extends State<CubitLoginPasswordTextfield> {
-  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return PasswordTextfield(controller: controller);
+    return PasswordTextfield(controller:widget.controller);
   }
 }

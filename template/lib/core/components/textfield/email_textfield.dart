@@ -20,10 +20,9 @@ class EmailTextfield extends StatelessWidget {
       text: LocaleKeys.email,
       prefixIcon: Icons.email_outlined,
       validator: (value) {
-        (value?.contains(AppConstants.EMAIL_REGEX) ?? false)
-            ? ""
-            : BaseError(message: LocaleKeys.emailNotValidate);
-        return null;
+        controller.text.contains(AppConstants.EMAIL_REGEX)
+            ? null
+            : LocaleKeys.emailNotValidate;
       },
     );
   }

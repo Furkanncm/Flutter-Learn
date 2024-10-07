@@ -11,6 +11,8 @@ extension ImageExtensions on ImageEnum {
         return 'asset/image/lottie_deliver.json';
       case ImageEnum.LOGIN:
         return 'asset/image/lottie_login.json';
+      case ImageEnum.HOME:
+        return "asset/image/home.jpeg";
     }
   }
 

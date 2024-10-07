@@ -6,9 +6,14 @@ import '../../../../../core/constants/app/app_login_constants.dart';
 import '../../../../../core/constants/contant_values/kvalues.dart';
 import '../../../../../core/constants/enum/image_enum.dart';
 
-class CubitLoginTabbar extends StatelessWidget {
+class CubitLoginTabbar extends StatefulWidget {
   const CubitLoginTabbar({super.key});
 
+  @override
+  State<CubitLoginTabbar> createState() => _CubitLoginTabbarState();
+}
+
+class _CubitLoginTabbarState extends State<CubitLoginTabbar> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -17,12 +22,13 @@ class CubitLoginTabbar extends StatelessWidget {
           body: Column(
             children: [
               Stack(children: [
-                _LoginImage(),
+                const _LoginImage(),
                 Positioned(
                   bottom: 0,
                   left: 0,
                   right: 0,
                   child: TabBar(
+                      //controller: controller,
                       tabs: AppLoginConstants.models.map((e) {
                     return Tab(text: e.title);
                   }).toList()),

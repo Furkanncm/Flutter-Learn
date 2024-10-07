@@ -21,4 +21,9 @@ abstract class LocaleKeys {
   static const forgotPassword = "FORGOT PASSWORD?";
   static const emailNotValidate = "Email is not Validate";
   static const passwordNotValidate = "Password is not Validate";
+  static const betul = "Betül";
+  static const furkan = "Furkan";
+  static const emirhan = "Emirhan";
+  static const ibrahim = "İbrahim";
+  static const recommend = "Recommend";
 }
