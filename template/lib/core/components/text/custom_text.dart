@@ -4,10 +4,10 @@ class CustomText extends StatelessWidget {
   final String data;
   final TextStyle textStyle;
   const CustomText({
-    Key? key,
+    super.key,
     required this.data,
     required this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

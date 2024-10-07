@@ -8,7 +8,7 @@ import 'base_textfield.dart';
 
 class PasswordTextfield extends StatelessWidget {
   final TextEditingController controller;
-  PasswordTextfield({
+  const PasswordTextfield({
     super.key,
     required this.controller,
   });

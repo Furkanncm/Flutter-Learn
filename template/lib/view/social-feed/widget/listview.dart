@@ -20,13 +20,9 @@ class Listview extends StatelessWidget {
           builder: (context, state) {
             return IconButton(
               onPressed: () {
-                state is IsLiked
-                    ? context.read<FeedCubit>().changeLikedState(model)
-                    : null;
+                context.read<FeedCubit>().changeLikedState(model);
               },
-              icon: Icon(model.isLiked
-                  ? Icons.favorite
-                  : Icons.favorite_border_outlined),
+              icon: Icon(model.isLiked ? Icons.favorite : Icons.favorite_border_outlined),
             );
           },
         ),

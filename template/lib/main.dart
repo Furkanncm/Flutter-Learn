@@ -9,8 +9,6 @@ import 'core/init/navigation/navigation_service.dart';
 import 'core/init/navigation/navigaton_route.dart';
 import 'core/init/notifier/application_provider.dart';
 import 'core/init/notifier/theme_notifier.dart';
-import 'view/product/advanceLogin/view/cubit_login_view.dart';
-import 'view/product/advanceLogin/view/tabbar/cubit_login_tabbar.dart';
 import 'view/social-feed/view/feed_tabbar_view.dart';
 
 void main() async {

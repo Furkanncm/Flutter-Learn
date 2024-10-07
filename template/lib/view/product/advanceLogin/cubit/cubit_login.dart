@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/base/model/error.dart';
-import 'package:template/core/constants/app/app_constants.dart';
 import 'package:template/view/authentication/onboard/view/onboard_view.dart';
 import 'package:template/view/authentication/test/view/test2_view.dart';
 import 'package:template/view/product/advanceLogin/cubit/Icubit_login.dart';

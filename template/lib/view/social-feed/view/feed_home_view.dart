@@ -4,6 +4,7 @@ import 'package:template/core/extensions/context_extension.dart';
 import 'package:template/core/extensions/feed_top_extension.dart';
 import 'package:template/view/social-feed/cubit/feed_cubit.dart';
 import 'package:template/view/social-feed/widget/listview.dart';
+
 import '../../../core/components/text/card_title_text.dart';
 import '../../../core/constants/app/app_card_items.dart';
 import '../../../core/constants/enum/feed_top_enum.dart';
@@ -26,22 +27,18 @@ class _FeedHomeViewState extends State<FeedHomeView> {
         child: Scaffold(
           drawer: const Drawer(),
           appBar: AppBar(
-              actions: [
-                Padding(
-                    padding: context.rightNormal,
-                    child: const Icon(Icons.search))
-              ],
-              bottom: TabBar(
-                  tabs: FeedTop.values
-                      .map((e) => Tab(text: e.rawValue))
-                      .toList())),
+            actions: [Padding(padding: context.rightNormal, child: const Icon(Icons.search))],
+            bottom: TabBar(
+              tabs: FeedTop.values.map((e) => Tab(text: e.rawValue)).toList(),
+            ),
+          ),
           body: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(flex: 5, child: _PageView()),
               Spacer(),
               CardTitleText(text: LocaleKeys.recommend),
-              Expanded(flex: 4, child: _ListView())
+              Expanded(flex: 4, child: _ListView()),
             ],
           ),
         ),

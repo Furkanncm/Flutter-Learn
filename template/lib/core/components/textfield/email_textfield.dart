@@ -23,6 +23,7 @@ class EmailTextfield extends StatelessWidget {
         controller.text.contains(AppConstants.EMAIL_REGEX)
             ? null
             : LocaleKeys.emailNotValidate;
+        return null;
       },
     );
   }

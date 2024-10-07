@@ -14,8 +14,8 @@ import '../cubit/Icubit_login.dart';
 
 class CubitLoginView extends StatefulWidget {
   const CubitLoginView({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   @override
   State<CubitLoginView> createState() => _CubitLoginViewState();
 }
@@ -51,7 +51,6 @@ class _BodyForm extends StatelessWidget {
   final TextEditingController passwordController;
   final GlobalKey<FormState> formKey;
   const _BodyForm({
-    super.key,
     required this.emailController,
     required this.passwordController,
     required this.formKey,
