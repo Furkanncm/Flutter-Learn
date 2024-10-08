@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/constants/app/app_constants.dart';
-import 'package:template/view/find-friends/model/find_friends.dart';
-import 'package:template/view/find-friends/service/IFindFriends_service.dart';
-import 'package:template/view/find-friends/service/find_friends_service.dart';
+import '../../../core/constants/app/app_constants.dart';
+import '../model/find_friends.dart';
+import '../service/IFindFriends_service.dart';
+import '../service/find_friends_service.dart';
 
 class FindFriendsCubit extends Cubit<FindFriendsCubitState> {
   FindFriendsCubit() : super(FindFriendsCubitLoading());

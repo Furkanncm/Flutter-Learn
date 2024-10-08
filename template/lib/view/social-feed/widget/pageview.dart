@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/components/text/card_medium_text.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/core/extensions/image_extensions.dart';
-import 'package:template/view/social-feed/cubit/feed_cubit.dart';
-import 'package:template/view/social-feed/model/card_model.dart';
+import '../../../core/components/text/card_medium_text.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/image_extensions.dart';
+import '../cubit/feed_cubit.dart';
+import '../model/card_model.dart';
 
 import '../../../core/components/text/card_small_text.dart';
 import '../../../core/constants/enum/image_enum.dart';

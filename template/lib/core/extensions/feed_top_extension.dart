@@ -1,4 +1,4 @@
-import 'package:template/core/constants/enum/feed_top_enum.dart';
+import '../constants/enum/feed_top_enum.dart';
 
 extension FeedTopExtension on FeedTop {
   String get rawValue {

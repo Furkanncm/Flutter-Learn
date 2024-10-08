@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/core/extensions/feed_top_extension.dart';
-import 'package:template/view/social-feed/cubit/feed_cubit.dart';
-import 'package:template/view/social-feed/widget/listview.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/feed_top_extension.dart';
+import '../cubit/feed_cubit.dart';
+import '../widget/listview.dart';
 
 import '../../../core/components/text/card_title_text.dart';
 import '../../../core/constants/app/app_card_items.dart';

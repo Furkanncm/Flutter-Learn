@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
-import '../../../../core/base/state/base_state.dart';
-import '../../../../core/base/view/base_view.dart';
-import '../../../../core/extensions/context_extension.dart';
+import '../../../core/base/state/base_state.dart';
+import '../../../core/base/view/base_view.dart';
+import '../../../core/extensions/context_extension.dart';
 import '../viewmodel/onboard_viewmodel.dart';
 
 class OnboardView extends StatefulWidget {

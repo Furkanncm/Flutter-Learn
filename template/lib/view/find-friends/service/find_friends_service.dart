@@ -1,10 +1,9 @@
 import 'dart:io';
 
-import 'package:template/core/constants/enum/service_path_enum.dart';
-import 'package:template/core/extensions/service_path_extensions.dart';
-import 'package:template/view/find-friends/service/IFindFriends_service.dart';
-
+import '../../../core/constants/enum/service_path_enum.dart';
+import '../../../core/extensions/service_path_extensions.dart';
 import '../model/find_friends.dart';
+import 'IFindFriends_service.dart';
 
 class FindFriendsService extends IfindfriendsService {
   FindFriendsService({required super.dio});

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:template/view/social-feed/model/card_model.dart';
+import '../model/card_model.dart';
 
 class FeedCubit extends Cubit<FeedCubitState> {
   FeedCubit() : super(FeedCubitInitial());

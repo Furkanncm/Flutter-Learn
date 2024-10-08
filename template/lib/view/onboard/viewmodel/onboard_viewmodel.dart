@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
-import '../../../../core/base/viewmodel/base_viewmodel.dart';
-import '../../../../core/constants/app/app_onboard_constants.dart';
+import '../../../core/base/viewmodel/base_viewmodel.dart';
+import '../../../core/constants/app/app_onboard_constants.dart';
 import '../model/onboard_model.dart';
 
 part 'onboard_viewmodel.g.dart';

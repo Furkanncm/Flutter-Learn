@@ -26,6 +26,15 @@ abstract class LocaleKeys {
   static const String cancel = "Cancel";
   static const String next = "Next";
   static const String skip = "Skip";
-  static const String findFriends="Find Friends";
+  static const String findFriends = "Find Friends";
   static const String seeAll = "See All";
+  static const String game = "Unity Game";
+  static const String dashboard = "Dashboard";
+  static const String simulation = "Simulation";
+  static const String casual = "Casual";
+  static const String cartoony = "Cartoony";
+  static const String trailing = "Trailing";
+  static const String update = "New & updated Games";
+  static const String popular = "Top Dowloand Games";
+  static const String viewAll = "View All >";
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../base/model/error.dart';
 
-import 'base_textfield.dart';
 import '../../constants/app/app_constants.dart';
 import '../../init/language/locale_keys.g.dart';
+import 'base_textfield.dart';
 
 class EmailTextfield extends StatelessWidget {
   final TextEditingController controller;

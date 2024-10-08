@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:template/core/extensions/image_extensions.dart';
+import '../../../../../core/extensions/image_extensions.dart';
 
 import '../../../../../core/constants/app/app_login_constants.dart';
 import '../../../../../core/constants/contant_values/kvalues.dart';

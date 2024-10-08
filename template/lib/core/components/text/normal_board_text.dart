@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../extensions/context_extension.dart';
 
 class NormalBoardText extends StatelessWidget {
   final String text;
-  final TextStyle textStyle;
-  const NormalBoardText(
-      {super.key, required this.text, required this.textStyle});
+  final TextStyle? textStyle;
+  const NormalBoardText({super.key, required this.text, this.textStyle = const TextStyle()});
 
   @override
   Widget build(BuildContext context) {

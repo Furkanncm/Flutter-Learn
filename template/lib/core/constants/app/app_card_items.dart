@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/constants/enum/image_enum.dart';
-import 'package:template/core/extensions/image_extensions.dart';
-import 'package:template/view/social-feed/model/card_model.dart';
+import '../enum/image_enum.dart';
+import '../../extensions/image_extensions.dart';
+import '../../../view/social-feed/model/card_model.dart';
 
 import '../../init/language/locale_keys.g.dart';
 

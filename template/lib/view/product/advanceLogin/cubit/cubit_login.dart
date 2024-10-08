@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/view/authentication/onboard/view/onboard_view.dart';
-import 'package:template/view/authentication/test/view/test2_view.dart';
-import 'package:template/view/product/advanceLogin/cubit/Icubit_login.dart';
-import 'package:template/view/product/advanceLogin/cubit/cubit_login_state.dart';
+import '../../../onboard/view/onboard_view.dart';
+import '../../../authentication/test/view/test2_view.dart';
+import 'Icubit_login.dart';
+import 'cubit_login_state.dart';
 
 class CubitLoginCubit extends Cubit<CubitLoginCubitState> {
   final TextEditingController emailController;

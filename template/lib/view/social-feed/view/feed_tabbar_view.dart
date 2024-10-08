@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/constants/app/app_feed_tabbar.dart';
+import '../../../core/constants/app/app_feed_tabbar.dart';
 
 class FeedTabbarView extends StatelessWidget {
   const FeedTabbarView({super.key});

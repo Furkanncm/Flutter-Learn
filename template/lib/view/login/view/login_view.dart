@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/base/state/base_state.dart';
-import '../../../../core/base/view/base_view.dart';
-import '../../../../core/components/button/title_text_button.dart';
-import '../../../../core/extensions/string_extension.dart';
-import '../../../../core/init/language/locale_keys.g.dart';
+import '../../../core/base/state/base_state.dart';
+import '../../../core/base/view/base_view.dart';
+import '../../../core/components/button/title_text_button.dart';
+import '../../../core/extensions/string_extension.dart';
+import '../../../core/init/language/locale_keys.g.dart';
 import '../viewmodel/login_view_model.dart';
 
 class LoginView extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../authentication/login/view/login_view.dart';
+import '../../../login/view/login_view.dart';
 import '../model/live_life_onboard_model.dart';
 
 class LiveLifeCubit extends Cubit<LiveLifeCubitState> {

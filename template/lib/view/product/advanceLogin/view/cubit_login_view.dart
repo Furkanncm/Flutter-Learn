@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:template/view/product/advanceLogin/cubit/cubit_login.dart';
+import '../cubit/cubit_login.dart';
 
 import '../../../../core/base/state/base_state.dart';
 import '../../../../core/extensions/context_extension.dart';

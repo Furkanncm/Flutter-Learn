@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/components/text/card_medium_text.dart';
-import 'package:template/view/social-feed/cubit/feed_cubit.dart';
-import 'package:template/view/social-feed/model/card_model.dart';
+import '../../../core/components/text/card_medium_text.dart';
+import '../cubit/feed_cubit.dart';
+import '../model/card_model.dart';
 
 import '../../../core/components/text/card_small_text.dart';
 

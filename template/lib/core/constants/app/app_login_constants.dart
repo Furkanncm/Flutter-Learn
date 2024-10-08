@@ -1,6 +1,6 @@
-import 'package:template/view/authentication/test/view/test2_view.dart';
-import 'package:template/view/product/advanceLogin/model/cubit_login_model.dart';
-import 'package:template/view/product/advanceLogin/view/cubit_login_view.dart';
+import '../../../view/authentication/test/view/test2_view.dart';
+import '../../../view/product/advanceLogin/model/cubit_login_model.dart';
+import '../../../view/product/advanceLogin/view/cubit_login_view.dart';
 
 import '../../init/language/locale_keys.g.dart';
 

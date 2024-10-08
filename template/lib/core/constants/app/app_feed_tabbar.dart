@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/view/social-feed/model/tabbar_model.dart';
+import '../../../view/social-feed/model/tabbar_model.dart';
 
 import '../../../view/social-feed/view/feed_home_view.dart';
 

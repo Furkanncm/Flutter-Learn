@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:template/core/components/text/card_text.dart';
+import 'card_text.dart';
 
 class CardMediumText extends StatelessWidget {
   final String text;

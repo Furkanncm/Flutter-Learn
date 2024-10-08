@@ -1,4 +1,4 @@
-import 'package:template/view/product/advanceLogin/cubit/Icubit_login.dart';
+import 'Icubit_login.dart';
 
 class CubitLoginCubitInitial extends CubitLoginCubitState {}
 

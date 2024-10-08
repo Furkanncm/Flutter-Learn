@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:template/view/find-friends/view/find_friends_view.dart';
 
 import 'core/constants/app/app_constants.dart';
 import 'core/init/cache/locale_manager.dart';
@@ -8,6 +7,7 @@ import 'core/init/language/language_manager.dart';
 import 'core/init/navigation/navigation_service.dart';
 import 'core/init/navigation/navigaton_route.dart';
 import 'core/init/theme/light/app_theme_light.dart';
+import 'view/dashboard/view/game_tabbar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       // home: LocaleManager.instance.getBoolValue(PreferencesEnum.SKIP)
       //     ? const LoginView()
       //     : const LiveLifeOnboardView(),
-      home: const FindFriendsView(),
+      home: const GameTabbar(),
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigationService.instance.globalKey,
       onGenerateRoute: NavigatonRoute.instance.onRoutes,
