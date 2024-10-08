@@ -6,5 +6,5 @@ abstract class IfindfriendsService {
   final Dio dio;
 
   IfindfriendsService({required this.dio});
-  Future<List<FindFriends>?> fetchFriends();
+  Future<FindFriends?> fetchFriends();
 }
