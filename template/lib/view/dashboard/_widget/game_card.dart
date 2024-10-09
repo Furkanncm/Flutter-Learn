@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:template/core/extensions/context_extension.dart';
 
+import '../cubit/dashboard_cubit.dart';
+import '../model/game_model.dart';
+
 class GameCard extends StatelessWidget {
-  const GameCard({super.key});
+  final DashboardCubitState state;
+  final GameModel model;
+  const GameCard({
+    super.key,
+    required this.state,
+    required this.model,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
+    return Padding(
         padding: context.paddingLow,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network("https://picsum.photos/200/300"),
-            Text("text", style: Theme.of(context).textTheme.labelMedium),
-            Text("data", style: Theme.of(context).textTheme.labelSmall),
+            Expanded(child: Image.network(state is ItemLoaded ? model.images!.first.replaceAll('"', "").replaceAll("[", "").replaceAll("]", "") : "https://picsum.photos/200")),
+            Text(maxLines: 1, model.title ?? "", style: Theme.of(context).textTheme.displaySmall?.copyWith(fontSize: 12)),
+            Text("${model.price.toString()} TL", style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w400)),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }

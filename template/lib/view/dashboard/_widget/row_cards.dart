@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:template/view/dashboard/_widget/game_card.dart';
+import 'package:template/view/dashboard/cubit/dashboard_cubit.dart';
 
 import '../../../core/components/text/normal_board_text.dart';
 import '../../../core/init/language/locale_keys.g.dart';
-import 'game_card.dart';
+import '../model/game_model.dart';
 
 class RowCards extends StatelessWidget {
+  final DashboardCubitState state;
   final String text;
   const RowCards({
     super.key,
+    required this.state,
     required this.text,
   });
 
@@ -22,7 +27,23 @@ class RowCards extends StatelessWidget {
             NormalBoardText(text: LocaleKeys.viewAll, textStyle: Theme.of(context).textTheme.bodySmall),
           ],
         ),
-        const Row(children: [GameCard(), GameCard(), GameCard()]),
+        state is DashboardCubitInitial
+            ? const Center(child: CircularProgressIndicator.adaptive())
+            : Expanded(
+                flex: 2,
+                child: BlocBuilder<DashboardCubit, DashboardCubitState>(
+                  builder: (context, state) {
+                    return GridView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemCount: state is ItemLoaded ? state.gameItems.length : 0,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+                        itemBuilder: (context, index) {
+                          return GameCard(state: state, model: state is ItemLoaded ? state.gameItems[index] : GameModel());
+                        });
+                  },
+                ),
+              ),
       ],
     );
   }

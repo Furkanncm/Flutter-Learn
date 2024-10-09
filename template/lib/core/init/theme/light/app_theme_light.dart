@@ -13,6 +13,7 @@ class AppThemeLight extends AppTheme {
   @override
   ThemeData get themeData => ThemeData.light().copyWith(
         primaryColor: const Color(0xffeba246),
+        secondaryHeaderColor: Colors.grey,
         cardColor: const Color(0xffeba246),
         buttonTheme: const ButtonThemeData(buttonColor: Color(0xffeba246)),
         iconTheme: const IconThemeData(color: Color(0xffeba246)),
@@ -36,6 +37,7 @@ class AppThemeLight extends AppTheme {
           titleLarge: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w400),
           displaySmall: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w300),
           displayMedium: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.w600),
+          displayLarge: TextStyle(color: Colors.black, fontSize: 12),
           labelSmall: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w400),
           labelMedium: TextStyle(color: Colors.black, fontSize: 17, fontWeight: FontWeight.w700),
           bodySmall: TextStyle(color: Color(0xffeba246), fontSize: 15, fontWeight: FontWeight.w400),

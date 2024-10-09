@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:template/core/extensions/context_extension.dart';
+import 'package:template/view/dashboard/cubit/dashboard_cubit.dart';
 
 import '../../../core/init/language/locale_keys.g.dart';
 import '../_widget/row_cards.dart';
@@ -10,34 +13,43 @@ class DashboardView extends StatefulWidget {
 }
 
 class _DashboardViewState extends State<DashboardView> with TickerProviderStateMixin {
-  late final TabController controller;
-  @override
-  void initState() {
-    super.initState();
-    controller = TabController(length: 2, vsync: this);
-  }
-
+  TabController? controller;
+  int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            flex: 3,
-            child: PageView.builder(
-                onPageChanged: (value) {
-                  controller.animateTo(value);
-                },
-                controller: PageController(viewportFraction: 0.9),
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return const Padding(padding: EdgeInsets.all(8.0), child: Placeholder());
-                }),
-          ),
-          TabPageSelector(controller: controller, color: Theme.of(context).primaryColor, selectedColor: Theme.of(context).primaryColor.withOpacity(0.2)),
-          const RowCards(text: LocaleKeys.update),
-          const RowCards(text: LocaleKeys.popular),
-        ],
+    return BlocProvider<DashboardCubit>(
+      create: (context) => DashboardCubit()..fetchItems(),
+      child: BlocBuilder<DashboardCubit, DashboardCubitState>(
+        builder: (context, state) {
+          if (state is ItemLoaded) {
+            controller = TabController(length: context.read<DashboardCubit>().items?.length ?? 0, vsync: this);
+          }
+          return Scaffold(
+            body: Column(
+              children: [
+                state is DashboardCubitInitial
+                    ? const Center(child: CircularProgressIndicator.adaptive())
+                    : Expanded(
+                        child: PageView.builder(
+                            onPageChanged: (value) {
+                              controller?.animateTo(value);
+                            },
+                            controller: PageController(viewportFraction: 0.7),
+                            itemCount: state is ItemLoaded ? state.gameItems.length : 0,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: context.paddingLow,
+                                child: state is ItemLoaded ? Image.network(state.gameItems[index].images!.first.replaceAll('"', "").replaceAll("[", "").replaceAll("]", "")) : const SizedBox(),
+                              );
+                            }),
+                      ),
+                TabPageSelector(indicatorSize: 9, controller: controller, color: Theme.of(context).secondaryHeaderColor, selectedColor: Theme.of(context).primaryColor),
+                Expanded(child: RowCards(state: state, text: LocaleKeys.update)),
+                Expanded(child: RowCards(state: state, text: LocaleKeys.popular))
+              ],
+            ),
+          );
+        },
       ),
     );
   }

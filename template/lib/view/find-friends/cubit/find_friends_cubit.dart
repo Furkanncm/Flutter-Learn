@@ -16,7 +16,6 @@ class FindFriendsCubit extends Cubit<FindFriendsCubitState> {
     data = await service.fetchFriends();
     if (data == null) return;
     emit(FindFriendsCubitLoaded(cart: data?.carts ?? []));
-    print(data?.carts?.length ?? 0);
   }
 
   void fetchItem(String text) {
