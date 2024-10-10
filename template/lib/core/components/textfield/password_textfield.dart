@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../view/product/advanceLogin/cubit/cubit_login.dart';
 
+import '../../../view/product/advanceLogin/cubit/cubit_login.dart';
 import '../../init/language/locale_keys.g.dart';
 import 'base_textfield.dart';
 

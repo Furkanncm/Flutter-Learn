@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:template/view/settings/view/settings_view.dart';
+import 'view/settings/view/setting_tabbar_view.dart';
 
 import 'core/constants/app/app_constants.dart';
 import 'core/init/cache/locale_manager.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       // home: LocaleManager.instance.getBoolValue(PreferencesEnum.SKIP)
       //     ? const LoginView()
       //     : const LiveLifeOnboardView(),
-      home: const SettingsView(), debugShowCheckedModeBanner: false,
+      home: const SettingTabbarView(), debugShowCheckedModeBanner: false,
       navigatorKey: NavigationService.instance.globalKey,
       onGenerateRoute: NavigatonRoute.instance.onRoutes,
     );

@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/constants/app/app_constants.dart';
-import 'package:template/view/dashboard/model/game_model.dart';
-import 'package:template/view/dashboard/service/IGameService.dart';
+import '../../../core/constants/app/app_constants.dart';
+import '../model/game_model.dart';
+import '../service/IGameService.dart';
 
 import '../service/game_service.dart';
 

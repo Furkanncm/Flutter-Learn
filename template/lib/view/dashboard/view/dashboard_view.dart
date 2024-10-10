@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/view/dashboard/cubit/dashboard_cubit.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../cubit/dashboard_cubit.dart';
 
 import '../../../core/init/language/locale_keys.g.dart';
 import '../_widget/row_cards.dart';

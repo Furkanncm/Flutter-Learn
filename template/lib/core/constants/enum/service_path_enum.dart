@@ -1,1 +1,1 @@
-enum ServicePathEnum { CARTS,PRODUCTS }
+enum ServicePathEnum { CARTS,PRODUCTS ,USERS}

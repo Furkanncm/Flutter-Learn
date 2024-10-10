@@ -7,6 +7,8 @@ extension ServicePathExtensions on ServicePathEnum {
         return '/carts';
       case ServicePathEnum.PRODUCTS:
         return '/products';
+      case ServicePathEnum.USERS:
+        return '/users';
     }
   }
 }

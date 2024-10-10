@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../enum/image_enum.dart';
-import '../../extensions/image_extensions.dart';
-import '../../../view/social-feed/model/card_model.dart';
 
+import '../../../view/social-feed/model/card_model.dart';
+import '../../extensions/image_extensions.dart';
 import '../../init/language/locale_keys.g.dart';
+import '../enum/image_enum.dart';
 
 class AppCardItems {
   static final List<CardModel> pageViewItems = [

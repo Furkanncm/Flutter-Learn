@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/components/button/normal_text_button.dart';
+import '../../../core/components/button/normal_text_button.dart';
 
 class DashboardIconButton extends StatelessWidget {
   const DashboardIconButton({super.key});

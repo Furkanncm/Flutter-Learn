@@ -1,10 +1,19 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:template/core/constants/enum/image_enum.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/core/extensions/image_extensions.dart';
-import 'package:template/core/init/language/locale_keys.g.dart';
-import 'package:template/view/settings/_widget/facebook_card.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../core/constants/enum/image_enum.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/image_extensions.dart';
+import '../../../core/init/language/locale_keys.g.dart';
+import '../_widget/settings_card.dart';
+import '../cubit/settings_cubit.dart';
+import '../model/user_model.dart';
+
+import '../_widget/aboutme_card.dart';
+import '../_widget/logout_card.dart';
+import '../_widget/my_account_card.dart';
+import '../_widget/positioned_item.dart';
+import '../_widget/profile.dart';
+import '../_widget/text_padding.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -17,26 +26,50 @@ class _SettingsViewState extends State<SettingsView> {
   bool values = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text(LocaleKeys.settings)),
-      body: Padding(
-        padding: context.paddingNormal,
-        child: Column(
-          children: [
-            Row(
+    return BlocProvider(
+      create: (context) => SettingsCubit()..fetchItems(),
+      child: Scaffold(
+        appBar: AppBar(title: const Text(LocaleKeys.settings)),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: context.paddingNormal,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  ImageEnum.HOME.imagePath,
-                  width: context.width * 0.3,
+                const ProfileCard(),
+                TextPadding(text: LocaleKeys.options, style: Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.grey)),
+                Stack(
+                  children: [
+                    Card(
+                      elevation: 5,
+                      child: SizedBox(
+                        width: context.width,
+                        height: context.height * 0.15,
+                        child: Image.asset(ImageEnum.PREMIUM.imagePath, fit: BoxFit.fill),
+                      ),
+                    ),
+                    PositionedItem(top: context.height * 0.01, text: LocaleKeys.premium),
+                    PositionedItem(top: context.height * 0.11, text: LocaleKeys.seeAll),
+                  ],
                 ),
-                Column(
-                  children: [Text(LocaleKeys.settings.tr()), Text(LocaleKeys.settings.tr())],
-                )
+                Padding(
+                  padding: context.verticalLow,
+                  child: BlocBuilder<SettingsCubit, SettingsCubitState>(
+                    builder: (context, state) {
+                      return Column(
+                        children: [
+                          const MyAccountCard(),
+                          SettingsCard(user: context.read<SettingsCubit>().users?.first ?? UserModel()),
+                          const AboutmeCard(),
+                          const LogoutCard(),
+                        ],
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
-
-            Center(child: FacebookCard()),
-          ],
+          ),
         ),
       ),
     );

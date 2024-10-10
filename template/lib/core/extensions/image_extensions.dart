@@ -13,6 +13,8 @@ extension ImageExtensions on ImageEnum {
         return 'asset/image/lottie_login.json';
       case ImageEnum.HOME:
         return "asset/image/home.jpeg";
+      case ImageEnum.PREMIUM:
+        return "asset/image/pre.png";
     }
   }
 

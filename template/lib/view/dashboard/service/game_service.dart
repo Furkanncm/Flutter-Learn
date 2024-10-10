@@ -1,6 +1,6 @@
-import 'package:template/core/constants/enum/service_path_enum.dart';
-import 'package:template/core/extensions/service_path_extensions.dart';
-import 'package:template/view/dashboard/model/game_model.dart';
+import '../../../core/constants/enum/service_path_enum.dart';
+import '../../../core/extensions/service_path_extensions.dart';
+import '../model/game_model.dart';
 
 import 'IGameService.dart';
 

@@ -1,4 +1,4 @@
-import 'package:template/core/constants/enum/dashboard_enum.dart';
+import '../constants/enum/dashboard_enum.dart';
 
 extension DashboardExtension on DashboardEnum {
   String get dashboardName {

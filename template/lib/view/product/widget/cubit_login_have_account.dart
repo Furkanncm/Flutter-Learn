@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/components/button/normal_text_button.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/init/language/locale_keys.g.dart';

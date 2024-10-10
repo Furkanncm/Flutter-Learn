@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/view/dashboard/_widget/game_card.dart';
-import 'package:template/view/dashboard/cubit/dashboard_cubit.dart';
+import 'game_card.dart';
+import '../cubit/dashboard_cubit.dart';
 
 import '../../../core/components/text/normal_board_text.dart';
 import '../../../core/init/language/locale_keys.g.dart';

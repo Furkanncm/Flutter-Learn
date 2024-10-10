@@ -44,9 +44,8 @@ abstract class LocaleKeys {
   static const String myAccount = "My Account";
   static const String aboutMe = "About Me";
   static const String logOut = "Log Out";
-  static const String changePassword="Change Password";
-  static const String feedBack="Feed Back";
-  static const String security="Privacy & Security";
-  
-
+  static const String changePassword = "Change Password";
+  static const String feedBack = "Feed Back";
+  static const String security = "Privacy & Security";
+  static const String premium = "Premium";
 }

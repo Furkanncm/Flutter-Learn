@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/constants/app/app_dashboard_items.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/core/extensions/dashboard_extension.dart';
+import '../../../core/constants/app/app_dashboard_items.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/dashboard_extension.dart';
 
 import '../../../core/components/text/normal_board_text.dart';
 import '../../../core/constants/enum/dashboard_enum.dart';
