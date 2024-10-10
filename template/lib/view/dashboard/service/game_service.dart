@@ -7,6 +7,7 @@ import 'IGameService.dart';
 class GameService extends IGameService {
   GameService({required super.dio});
 
+  @override
   Future<List<GameModel>?> getGameCart() async {
     var response = await dio.get(ServicePathEnum.PRODUCTS.rawValue);
     switch (response.statusCode) {

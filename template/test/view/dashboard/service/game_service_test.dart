@@ -9,18 +9,17 @@ void main() {
   final Dio dio = Dio(BaseOptions(baseUrl: AppConstants.DASHBOARD_URL));
   setUp(() {});
   test("game service test", () async {
-    Future<List<GameCart>?> getGameCart() async {
+    Future<List<GameModel>?> getGameCart() async {
       var response = await dio.get(ServicePathEnum.PRODUCTS.rawValue);
       switch (response.statusCode) {
         case 200:
-            if (response.data is List) {
-          return (response.data as List)
-              .map((game) => GameCart.fromJson(game as Map<String, dynamic>))
-              .toList();
-        } 
+          if (response.data is List) {
+            return (response.data as List).map((game) => GameModel.fromJson(game as Map<String, dynamic>)).toList();
+          }
         default:
           return null;
       }
+      return null;
     }
 
     await getGameCart();

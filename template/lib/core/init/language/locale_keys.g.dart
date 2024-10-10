@@ -37,4 +37,16 @@ abstract class LocaleKeys {
   static const String update = "New & updated Games";
   static const String popular = "Top Dowloand Games";
   static const String viewAll = "View All >";
+  static const String settings = "Settings";
+  static const String options = "Options";
+  static const String facebook = "Facebook";
+  static const String google = "Google";
+  static const String myAccount = "My Account";
+  static const String aboutMe = "About Me";
+  static const String logOut = "Log Out";
+  static const String changePassword="Change Password";
+  static const String feedBack="Feed Back";
+  static const String security="Privacy & Security";
+  
+
 }
