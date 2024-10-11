@@ -10,12 +10,20 @@ class FoodService extends IFoodService {
   FoodService({required super.dio});
 
   @override
-  Future<List<FoodModel>?> fetchUsers() async {
-    var response = await dio.get(ServicePathEnum.USERS.rawValue);
+  Future<FoodModel?> fetchUsers() async {
+    var response = await dio.get(ServicePathEnum.RECIPES.rawValue);
     if (response.statusCode == HttpStatus.ok) {
-      final result = response.data as List;
-      return result.map((e){ return FoodModel.fromJson(e);}).toList();
+      final result = response.data as Map<String, dynamic>;
+      final food = FoodModel.fromJson(result);
+      return food;
     }
     return null;
+  }
+
+  @override
+  Future<List<Recipes>?> fetchRecipes() async {
+    var response = await fetchUsers();
+    var recieps = response?.recipes?.map((e) => e).toList();
+    return recieps;
   }
 }

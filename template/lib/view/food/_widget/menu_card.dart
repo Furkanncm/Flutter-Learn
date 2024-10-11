@@ -5,7 +5,7 @@ import 'package:template/view/food/model/food_model.dart';
 import 'add_button.dart';
 
 class MenuCard extends StatelessWidget {
-  final Recipes? model;
+  final Recipes model;
   const MenuCard({super.key, required this.model});
 
   @override
@@ -21,21 +21,23 @@ class MenuCard extends StatelessWidget {
                 SizedBox(
                   width: context.width * 0.9,
                   height: context.height * 0.24,
-                  child: Image.network(fit: BoxFit.fill, "https://picsum.photos/200"),
+                  child: Image.network(fit: BoxFit.fill, model.image ?? ""),
                 ),
-                const _starCard(),
+                _StarCard(
+                  model: model,
+                ),
               ],
             ),
           ),
-          Center(child: Text(model?.name ?? "", style: const TextStyle(color: Colors.black, fontSize: 20))),
+          Center(child: Text(model.name ?? "", style: const TextStyle(color: Colors.black, fontSize: 20))),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Icon(Icons.flag_outlined),
-              const Text("Turkey", style: TextStyle(color: Colors.black)), //cuisine
+              Text(model.cuisine ?? "", style: const TextStyle(color: Colors.black)), //cuisine
               SizedBox(width: context.width * 0.18),
               const Icon(Icons.timer),
-              const Text("35 min", style: TextStyle(color: Colors.black)), //cookTimeMinutes &prepTimeMinutes
+              Text("${model.cookTimeMinutes.toString()} \$", style: const TextStyle(color: Colors.black)), //cookTimeMinutes &prepTimeMinutes
               SizedBox(width: context.width * 0.18),
               AddButton(onPressed: () {})
             ],
@@ -46,9 +48,10 @@ class MenuCard extends StatelessWidget {
   }
 }
 
-class _starCard extends StatelessWidget {
-  const _starCard({
-    super.key,
+class _StarCard extends StatelessWidget {
+  final Recipes model;
+  const _StarCard({
+    required this.model,
   });
 
   @override
@@ -61,12 +64,12 @@ class _starCard extends StatelessWidget {
         child: Card(
           child: Padding(
             padding: context.paddingLow,
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("4.3", style: TextStyle(color: Colors.black)), //rating
-                Icon(Icons.star, color: Colors.amber),
-                Text("20+", style: TextStyle(color: Colors.black)), //reviewCount
+                Text(model.rating.toString(), style: const TextStyle(color: Colors.black)), //rating
+                const Icon(Icons.star, color: Colors.amber),
+                Text("(${model.reviewCount.toString()}+)", style: const TextStyle(color: Colors.black)), //reviewCount
               ],
             ),
           ),

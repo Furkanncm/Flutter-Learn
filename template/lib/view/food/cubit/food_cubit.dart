@@ -8,15 +8,15 @@ import '../../../core/constants/app/app_constants.dart';
 
 class FoodCubit extends Cubit<FoodCubitState> {
   FoodCubit() : super(FoodCubitInitial());
-  final IFoodService foodService = FoodService(dio: Dio(BaseOptions(baseUrl: AppConstants.SETTING_URL)));
+  final IFoodService foodService = FoodService(dio: Dio(BaseOptions(baseUrl: AppConstants.FRIEND_BASE_URL)));
 
-  List<FoodModel>? users;
-  Future<List<FoodModel>?> fetchUsers() async {
-    users = await foodService.fetchUsers();
-    if (users != null) {
-      emit(ItemLoaded(foods: users!));
+  List<Recipes>? recieps;
+  Future<List<Recipes>?> fetchRecipes() async {
+    recieps = await foodService.fetchRecipes();
+    if (recieps != null) {
+      emit(ItemLoaded(recieps: recieps));
     } else {
-      emit(ItemLoaded(foods:[]));
+      emit(ItemLoaded(recieps: []));
     }
     return null;
   }
@@ -27,7 +27,7 @@ abstract class FoodCubitState {}
 class FoodCubitInitial extends FoodCubitState {}
 
 class ItemLoaded extends FoodCubitState {
-  final List<FoodModel>? foods;
+  final List<Recipes>? recieps;
 
-  ItemLoaded({required this.foods});
+  ItemLoaded({required this.recieps});
 }

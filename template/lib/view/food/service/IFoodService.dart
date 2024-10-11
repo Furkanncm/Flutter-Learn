@@ -6,5 +6,6 @@ abstract class IFoodService {
   final Dio dio;
 
   IFoodService({required this.dio});
-  Future<List<FoodModel>?> fetchUsers();
+  Future<FoodModel?> fetchUsers();
+  Future<List<Recipes>?> fetchRecipes();
 }

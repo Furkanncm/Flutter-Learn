@@ -21,7 +21,7 @@ class _FoodViewState extends State<FoodView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => FoodCubit()..fetchUsers(),
+      create: (context) => FoodCubit()..fetchRecipes(),
       child: BlocConsumer<FoodCubit, FoodCubitState>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -40,14 +40,25 @@ class _FoodViewState extends State<FoodView> {
                   Expanded(flex: 1, child: CardText(text: LocaleKeys.category, textStyle: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.w400))),
                   const Expanded(flex: 1, child: _ListViewBuilder()),
                   Expanded(
-                      flex: 4,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: context.read<FoodCubit>().users?[0].recipes?.length??0,
-                        itemBuilder: (BuildContext context, int index) {
-                          return MenuCard(model: FoodCubit().users?[0].recipes?[index]);
-                        },
-                      )),
+                    flex: 4,
+                    child: BlocBuilder<FoodCubit, FoodCubitState>(
+                      builder: (context, state) {
+                        if (state is ItemLoaded && state.recieps != null && state.recieps!.isNotEmpty) {
+                          return ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: state.recieps!.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return MenuCard(model: state.recieps![index]);
+                            },
+                          );
+                        } else if (state is FoodCubitInitial) {
+                          return const Center(child: CircularProgressIndicator());
+                        } else {
+                          return const Center(child: Text("No recipes found"));
+                        }
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
