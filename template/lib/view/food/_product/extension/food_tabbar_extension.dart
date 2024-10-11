@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:template/view/food/_product/enum/tabbar_enum.dart';
+import '../enum/filter_enum.dart';
 
-extension FoodTabbarExtension on FoodTabbarEnum {
+extension FoodTabbarExtension on FilterEnum {
   String get name {
     switch (this) {
-      case FoodTabbarEnum.RATING:
+      case FilterEnum.RATING:
         return 'Rating';
-      case FoodTabbarEnum.CUISENE:
+      case FilterEnum.CUISENE:
         return 'Cuisine';
-      case FoodTabbarEnum.TOPREVIEW:
+      case FilterEnum.TOPREVIEW:
         return 'Top Review';
     }
   }
 
-  Widget icon(String path) {
+  Widget get icon {
     switch (this) {
-      case FoodTabbarEnum.RATING:
-      case FoodTabbarEnum.CUISENE:
-      case FoodTabbarEnum.TOPREVIEW:
-        return Image.network(path);
+      case FilterEnum.RATING:
+        return const Icon(Icons.star);
+      case FilterEnum.CUISENE:
+        return const Icon(Icons.flag);
+      case FilterEnum.TOPREVIEW:
+        return const Icon(Icons.rate_review);
     }
   }
 }

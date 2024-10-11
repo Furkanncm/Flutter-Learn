@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import '../../../../../core/extensions/image_extensions.dart';
 
 import '../../../../../core/constants/app/app_login_constants.dart';
 import '../../../../../core/constants/contant_values/kvalues.dart';
 import '../../../../../core/constants/enum/image_enum.dart';
+import '../../../../../core/extensions/image_extensions.dart';
 
 class CubitLoginTabbar extends StatefulWidget {
   const CubitLoginTabbar({super.key});

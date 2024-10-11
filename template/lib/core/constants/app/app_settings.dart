@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:template/view/find-friends/view/find_friends_view.dart';
-import 'package:template/view/onboard/view/onboard_view.dart';
+import '../../../view/find-friends/view/find_friends_view.dart';
+import '../../../view/onboard/view/onboard_view.dart';
 
 import '../../../view/settings/model/tabbar_model.dart';
 import '../../../view/settings/view/settings_view.dart';

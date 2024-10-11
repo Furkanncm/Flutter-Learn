@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../init/language/locale_keys.g.dart';
 
 import '../../../view/dashboard/model/dashboard.dart';
 import '../../../view/dashboard/view/dashboard_view.dart';
+import '../../init/language/locale_keys.g.dart';
 
 class AppDashboardItems {
   static final List<Dashboard> items = [

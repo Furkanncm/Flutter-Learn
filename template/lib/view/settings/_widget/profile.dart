@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/extensions/context_extension.dart';
-import '../../../core/extensions/image_extensions.dart';
-import 'text_padding.dart';
-import '../cubit/settings_cubit.dart';
 
 import '../../../core/constants/enum/image_enum.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/image_extensions.dart';
 import '../../../core/init/language/locale_keys.g.dart';
+import '../cubit/settings_cubit.dart';
+import 'text_padding.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});

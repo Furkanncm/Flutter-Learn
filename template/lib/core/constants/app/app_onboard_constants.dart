@@ -1,7 +1,7 @@
-import '../../../view/login/view/login_view.dart';
-import '../../../view/onboard/model/onboard_model.dart';
 import '../../../view/authentication/test/view/test2_view.dart';
 import '../../../view/authentication/test/view/test_view.dart';
+import '../../../view/login/view/login_view.dart';
+import '../../../view/onboard/model/onboard_model.dart';
 
 class AppOnboardConstantsModels {
   static List<OnboardModel> onBoardModels = [

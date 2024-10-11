@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/components/text/card_text.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/core/init/language/locale_keys.g.dart';
-import 'package:template/view/food/_product/enum/tabbar_enum.dart';
-import 'package:template/view/food/_product/extension/food_tabbar_extension.dart';
-import 'package:template/view/food/_widget/filter_button.dart';
 
 import '../../../core/components/button/normal_icon_button.dart';
+import '../../../core/components/text/card_text.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/init/language/locale_keys.g.dart';
+import '../_product/enum/filter_enum.dart';
+import '../_product/extension/food_tabbar_extension.dart';
+import '../_widget/filter_button.dart';
 import '../_widget/menu_card.dart';
 import '../cubit/food_cubit.dart';
 
@@ -33,32 +33,12 @@ class _FoodViewState extends State<FoodView> {
             ),
             body: Padding(
               padding: context.paddingNormal,
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Expanded(flex: 3, child: _SearchCard()),
-                  Expanded(flex: 1, child: CardText(text: LocaleKeys.category, textStyle: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.w400))),
-                  const Expanded(flex: 1, child: _ListViewBuilder()),
-                  Expanded(
-                    flex: 4,
-                    child: BlocBuilder<FoodCubit, FoodCubitState>(
-                      builder: (context, state) {
-                        if (state is ItemLoaded && state.recieps != null && state.recieps!.isNotEmpty) {
-                          return ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: state.recieps!.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return MenuCard(model: state.recieps![index]);
-                            },
-                          );
-                        } else if (state is FoodCubitInitial) {
-                          return const Center(child: CircularProgressIndicator());
-                        } else {
-                          return const Center(child: Text("No recipes found"));
-                        }
-                      },
-                    ),
-                  ),
+                  Expanded(flex: 3, child: _SearchCard()),
+                  Expanded(flex: 1, child: _ListViewBuilder()),
+                  Expanded(flex: 4, child: _MenuView()),
                 ],
               ),
             ),
@@ -69,17 +49,40 @@ class _FoodViewState extends State<FoodView> {
   }
 }
 
+class _MenuView extends StatelessWidget {
+  const _MenuView();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<FoodCubit, FoodCubitState>(
+      builder: (context, state) {
+        if (state is ItemLoaded && state.recieps != null && state.recieps!.isNotEmpty) {
+          return ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: state.recieps!.length,
+            itemBuilder: (BuildContext context, int index) {
+              return MenuCard(model: state.recieps![index]);
+            },
+          );
+        } else if (state is FoodCubitInitial) {
+          return const Center(child: CircularProgressIndicator.adaptive());
+        } else {
+          return const Center(child: Text(LocaleKeys.notFound));
+        }
+      },
+    );
+  }
+}
+
 class _ListViewBuilder extends StatelessWidget {
-  const _ListViewBuilder({
-    super.key,
-  });
+  const _ListViewBuilder();
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
       scrollDirection: Axis.horizontal,
-      itemCount: FoodTabbarEnum.values.length,
+      itemCount: FilterEnum.values.length,
       itemBuilder: (BuildContext context, int index) {
         return listViewRow(index, context);
       },
@@ -95,22 +98,15 @@ class _ListViewBuilder extends StatelessWidget {
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
               )),
-          onPressed: () {},
+          onPressed: () {
+            context.read<FoodCubit>().filterBy(FilterEnum.values[index]);
+          },
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              NormalIconButton(
-                  onPressed: null,
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: FoodTabbarEnum.values[index].icon("https://picsum.photos/200"),
-                  )),
-              Center(
-                  child: Text(
-                FoodTabbarEnum.values[index].name,
-                style: const TextStyle(color: Colors.black),
-              )),
+              NormalIconButton(onPressed: null, color: Colors.white, child: Padding(padding: const EdgeInsets.all(6.0), child: FilterEnum.values[index].icon)),
+              Center(child: Text(FilterEnum.values[index].name, style: const TextStyle(color: Colors.black))),
             ],
           )),
     );
@@ -118,9 +114,7 @@ class _ListViewBuilder extends StatelessWidget {
 }
 
 class _SearchCard extends StatelessWidget {
-  const _SearchCard({
-    super.key,
-  });
+  const _SearchCard();
 
   @override
   Widget build(BuildContext context) {
@@ -130,10 +124,12 @@ class _SearchCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Spacer(),
             CardText(
               text: LocaleKeys.letsEat,
               textStyle: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.w400, fontSize: 30),
             ),
+            const Spacer(),
             Row(
               children: [
                 Expanded(

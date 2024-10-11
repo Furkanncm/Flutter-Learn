@@ -1,7 +1,6 @@
 import '../../../core/constants/enum/service_path_enum.dart';
 import '../../../core/extensions/service_path_extensions.dart';
 import '../model/game_model.dart';
-
 import 'IGameService.dart';
 
 class GameService extends IGameService {

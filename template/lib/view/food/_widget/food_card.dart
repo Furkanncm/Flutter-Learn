@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/constants/app/app_constants.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/view/food/_widget/remove_button.dart';
-import 'package:template/view/food/model/food_model.dart';
+import '../../../core/constants/app/app_constants.dart';
+import '../../../core/extensions/context_extension.dart';
+import 'remove_button.dart';
+import '../model/food_model.dart';
 
 import 'add_button.dart';
 

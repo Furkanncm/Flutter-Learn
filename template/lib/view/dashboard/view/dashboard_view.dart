@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/extensions/context_extension.dart';
-import '../cubit/dashboard_cubit.dart';
 
+import '../../../core/extensions/context_extension.dart';
 import '../../../core/init/language/locale_keys.g.dart';
 import '../_widget/row_cards.dart';
+import '../cubit/dashboard_cubit.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});

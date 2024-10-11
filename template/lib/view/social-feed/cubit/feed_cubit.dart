@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+
 import '../model/card_model.dart';
 
 class FeedCubit extends Cubit<FeedCubitState> {

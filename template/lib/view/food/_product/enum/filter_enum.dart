@@ -1,4 +1,4 @@
-enum FoodTabbarEnum {
+enum FilterEnum {
   RATING,
   CUISENE,
   TOPREVIEW,

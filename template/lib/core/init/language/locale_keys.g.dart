@@ -52,6 +52,7 @@ abstract class LocaleKeys {
   static const String search = "Search for Foods";
   static const String category = "Category";
   static const String myCarts = "My Carts";
+  static const String filter = "Filter";
   static const String subTotal = "Subtotal";
   static const String delivery = "Delivery charge";
   static const String total = "Total";
@@ -60,4 +61,5 @@ abstract class LocaleKeys {
   static const String price = "Price";
   static const String seeMore = "See More";
   static const String popularFoods = "Popular Foods";
+  static const String notFound="Not Found";
 }

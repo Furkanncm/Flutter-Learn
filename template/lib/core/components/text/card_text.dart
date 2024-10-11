@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/extensions/context_extension.dart';
+import '../../extensions/context_extension.dart';
 
 class CardText extends StatelessWidget {
   final String text;
@@ -9,7 +9,7 @@ class CardText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.bottomHigh + context.topNormal,
+      padding: context.paddingLow,
       child: Text(text, maxLines: 2, style: textStyle ?? const TextStyle()),
     );
   }

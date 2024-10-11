@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/extensions/context_extension.dart';
-import 'package:template/view/food/model/food_model.dart';
 
+import '../../../core/extensions/context_extension.dart';
+import '../model/food_model.dart';
 import 'add_button.dart';
 
 class MenuCard extends StatelessWidget {
@@ -20,12 +20,10 @@ class MenuCard extends StatelessWidget {
               children: [
                 SizedBox(
                   width: context.width * 0.9,
-                  height: context.height * 0.24,
+                  height: context.height * 0.28,
                   child: Image.network(fit: BoxFit.fill, model.image ?? ""),
                 ),
-                _StarCard(
-                  model: model,
-                ),
+                _StarCard(model: model),
               ],
             ),
           ),
@@ -57,18 +55,21 @@ class _StarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        top: context.height * 0.18,
+        top: context.height * 0.20,
         left: context.width * 0.02,
-        right: context.width * 0.55,
+        right: context.width * 0.5,
         bottom: context.width * 0.02,
         child: Card(
           child: Padding(
-            padding: context.paddingLow,
+            padding: context.paddinglow2xValue * 3,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(model.rating.toString(), style: const TextStyle(color: Colors.black)), //rating
-                const Icon(Icons.star, color: Colors.amber),
+                TextButton.icon(
+                  onPressed: () {},
+                  label: Text(model.rating.toString(), style: const TextStyle(color: Colors.black)),
+                  icon: const Icon(Icons.star, color: Colors.amber),
+                ),
                 Text("(${model.reviewCount.toString()}+)", style: const TextStyle(color: Colors.black)), //reviewCount
               ],
             ),

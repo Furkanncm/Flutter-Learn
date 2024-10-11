@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/core/components/button/normal_icon_button.dart';
+import '../../../core/components/button/normal_icon_button.dart';
 
 class FilterButton extends StatelessWidget {
   final VoidCallback onPressed;

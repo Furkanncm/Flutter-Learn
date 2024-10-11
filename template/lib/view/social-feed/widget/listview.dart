@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../core/components/text/card_medium_text.dart';
+import '../../../core/components/text/card_small_text.dart';
 import '../cubit/feed_cubit.dart';
 import '../model/card_model.dart';
-
-import '../../../core/components/text/card_small_text.dart';
 
 class Listview extends StatelessWidget {
   final CardModel model;

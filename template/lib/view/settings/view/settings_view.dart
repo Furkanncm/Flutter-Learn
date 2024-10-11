@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../core/constants/enum/image_enum.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../core/extensions/image_extensions.dart';
 import '../../../core/init/language/locale_keys.g.dart';
-import '../_widget/settings_card.dart';
-import '../cubit/settings_cubit.dart';
-import '../model/user_model.dart';
-
 import '../_widget/aboutme_card.dart';
 import '../_widget/logout_card.dart';
 import '../_widget/my_account_card.dart';
 import '../_widget/positioned_item.dart';
 import '../_widget/profile.dart';
+import '../_widget/settings_card.dart';
 import '../_widget/text_padding.dart';
+import '../cubit/settings_cubit.dart';
+import '../model/user_model.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});

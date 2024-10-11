@@ -1,10 +1,9 @@
 import 'dart:io';
 
-import 'package:template/view/food/model/food_model.dart';
-import 'package:template/view/food/service/IFoodService.dart';
-
 import '../../../core/constants/enum/service_path_enum.dart';
 import '../../../core/extensions/service_path_extensions.dart';
+import '../model/food_model.dart';
+import 'IFoodService.dart';
 
 class FoodService extends IFoodService {
   FoodService({required super.dio});
@@ -14,8 +13,7 @@ class FoodService extends IFoodService {
     var response = await dio.get(ServicePathEnum.RECIPES.rawValue);
     if (response.statusCode == HttpStatus.ok) {
       final result = response.data as Map<String, dynamic>;
-      final food = FoodModel.fromJson(result);
-      return food;
+      return FoodModel.fromJson(result);
     }
     return null;
   }
@@ -23,7 +21,6 @@ class FoodService extends IFoodService {
   @override
   Future<List<Recipes>?> fetchRecipes() async {
     var response = await fetchUsers();
-    var recieps = response?.recipes?.map((e) => e).toList();
-    return recieps;
+    return response?.recipes;
   }
 }
