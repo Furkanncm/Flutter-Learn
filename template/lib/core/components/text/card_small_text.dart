@@ -11,7 +11,6 @@ class CardSmallText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardText(
-        text: text, textStyle: Theme.of(context).textTheme.labelSmall);
+    return CardText(text: text, textStyle: Theme.of(context).textTheme.labelSmall);
   }
 }

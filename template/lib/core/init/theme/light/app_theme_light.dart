@@ -16,12 +16,13 @@ class AppThemeLight extends AppTheme {
         secondaryHeaderColor: Colors.grey,
         cardColor: const Color(0xffeba246),
         buttonTheme: const ButtonThemeData(buttonColor: Color(0xffeba246)),
-        iconTheme: const IconThemeData(color: Colors.blueGrey),
-        cardTheme: const CardTheme(color: Colors.blueGrey),
+        iconTheme: const IconThemeData(color: Colors.black),
+        cardTheme: CardTheme(color: Colors.grey[100]),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Color(0xffeba246),
         ),
         inputDecorationTheme: const InputDecorationTheme(
+          fillColor: Colors.amber,
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Color(0xffeba246),
@@ -44,7 +45,20 @@ class AppThemeLight extends AppTheme {
         ),
         tabBarTheme: const TabBarTheme(indicatorColor: Color(0xffeba246), indicatorSize: TabBarIndicatorSize.label, labelColor: Colors.black, unselectedLabelColor: (Colors.grey), labelStyle: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w300)),
         elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(backgroundColor: WidgetStateProperty.all(const Color(0xffeba246)))),
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.grey),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.grey[100]),
         scaffoldBackgroundColor: const Color.fromARGB(255, 226, 226, 226),
       );
+  ColorScheme get colorScheme {
+    return ThemeData.light().colorScheme.copyWith(
+          primary: const Color.fromARGB(255, 200, 114, 8),
+          secondary: Colors.grey,
+          onPrimary: Colors.black,
+          onSecondary: Colors.black,
+          onError: Colors.red,
+          onSurface: Colors.black,
+          surface: Colors.white,
+          error: Colors.red,
+          brightness: Brightness.light,
+        );
+  }
 }

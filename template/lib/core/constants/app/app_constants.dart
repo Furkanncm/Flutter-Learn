@@ -5,4 +5,6 @@ class AppConstants {
   static const String FRIEND_BASE_URL = "https://dummyjson.com";
   static const String DASHBOARD_URL = "https://api.escuelajs.co/api/v1";
   static const String SETTING_URL = "https://jsonplaceholder.typicode.com";
+  static const String RAND_IMAGE = "https://picsum.photos/200";
+
 }

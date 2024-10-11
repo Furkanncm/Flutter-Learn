@@ -9,6 +9,8 @@ extension ServicePathExtensions on ServicePathEnum {
         return '/products';
       case ServicePathEnum.USERS:
         return '/users';
+      case ServicePathEnum.RECIPES:
+        return '/recipes';
     }
   }
 }

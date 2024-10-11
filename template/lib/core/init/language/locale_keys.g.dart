@@ -48,4 +48,16 @@ abstract class LocaleKeys {
   static const String feedBack = "Feed Back";
   static const String security = "Privacy & Security";
   static const String premium = "Premium";
+  static const String letsEat = "Let's Eat \nHealty Food";
+  static const String search = "Search for Foods";
+  static const String category = "Category";
+  static const String myCarts = "My Carts";
+  static const String subTotal = "Subtotal";
+  static const String delivery = "Delivery charge";
+  static const String total = "Total";
+  static const String checkOut = "Check Out";
+  static const String details = "Details";
+  static const String price = "Price";
+  static const String seeMore = "See More";
+  static const String popularFoods = "Popular Foods";
 }
