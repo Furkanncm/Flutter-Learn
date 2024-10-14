@@ -22,7 +22,13 @@ class AppThemeLight extends AppTheme {
           backgroundColor: Color(0xffeba246),
         ),
         inputDecorationTheme: const InputDecorationTheme(
-          fillColor: Colors.amber,
+          fillColor: Colors.white,
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Color(0xffeba246),
+            ),
+          ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Color(0xffeba246),

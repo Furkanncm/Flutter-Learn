@@ -12,7 +12,7 @@ part 'test_viewmodel.g.dart';
 class TestViewModel = _TestViewModelBase with _$TestViewModel;
 
 abstract class _TestViewModelBase with Store implements BaseViewmodel {
-  late BuildContext _buildContext;
+  late BuildContext buildContext;
 
   @observable
   int number = 0;
@@ -21,7 +21,7 @@ abstract class _TestViewModelBase with Store implements BaseViewmodel {
   Icoredio? coredio = NetworkManager.instance.coreDio;
 
   @override
-  BuildContext setContext(BuildContext context) => _buildContext = context;
+  BuildContext setContext(BuildContext context) => buildContext = context;
 
   @override
   void init() {}
@@ -33,15 +33,13 @@ abstract class _TestViewModelBase with Store implements BaseViewmodel {
 
   @action
   Future<List<TestModel>?> fetchItems() async {
-    final response = await coredio?.httpEvents<List<TestModel>, TestModel>(
-        "path", HttpTypeEnum.GET, TestModel());
+    final response = await coredio?.httpEvents<List<TestModel>, TestModel>("path", HttpTypeEnum.GET, TestModel());
     return response;
   }
 
-  @action 
+  @action
   Future<void> postItem(TestModel model) async {
-    final response = await coredio?.httpEvents("path", HttpTypeEnum.POST,data: model, TestModel());
+    final response = await coredio?.httpEvents("path", HttpTypeEnum.POST, data: model, TestModel());
     return response;
-    
   }
 }

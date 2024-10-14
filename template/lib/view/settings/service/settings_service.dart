@@ -8,6 +8,7 @@ import 'ISettingsService.dart';
 class SettingsService extends ISettingsService {
   SettingsService({required super.dio});
 
+  @override
   Future<List<UserModel>?> fetchUsers() async {
     var response = await dio.get(ServicePathEnum.USERS.rawValue);
     if (response.statusCode == HttpStatus.ok) {

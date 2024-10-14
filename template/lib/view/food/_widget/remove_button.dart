@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/components/button/normal_icon_button.dart';
 
 class RemoveButton extends StatelessWidget {
@@ -7,6 +8,6 @@ class RemoveButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NormalIconButton(onPressed: onPressed, color: Theme.of(context).colorScheme.onError, child: const Icon(Icons.remove));
+    return NormalIconButton(onPressed: onPressed, child: const Icon(Icons.remove));
   }
 }

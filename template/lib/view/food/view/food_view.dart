@@ -7,9 +7,9 @@ import '../../../core/extensions/context_extension.dart';
 import '../../../core/init/language/locale_keys.g.dart';
 import '../_product/enum/filter_enum.dart';
 import '../_product/extension/food_tabbar_extension.dart';
-import '../_widget/filter_button.dart';
 import '../_widget/menu_card.dart';
 import '../cubit/food_cubit.dart';
+import 'basket_view.dart';
 
 class FoodView extends StatefulWidget {
   const FoodView({super.key});
@@ -25,11 +25,24 @@ class _FoodViewState extends State<FoodView> {
       child: BlocConsumer<FoodCubit, FoodCubitState>(
         listener: (context, state) {},
         builder: (context, state) {
+          final bloc = context.read<FoodCubit>();
           return Scaffold(
             backgroundColor: Colors.white,
             appBar: AppBar(
               leading: const Icon(Icons.set_meal_rounded),
-              actions: [Padding(padding: context.rightNormal, child: const CircleAvatar())],
+              actions: [
+                Padding(
+                    padding: context.rightNormal,
+                    child: ActionChip(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return BasketView(bloc: bloc);
+                        }));
+                      },
+                      avatar: const Icon(Icons.shopping_basket_outlined),
+                      label: Text(context.watch<FoodCubit>().totalPrice.toString()),
+                    ))
+              ],
             ),
             body: Padding(
               padding: context.paddingNormal,
@@ -105,8 +118,14 @@ class _ListViewBuilder extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              NormalIconButton(onPressed: null, color: Colors.white, child: Padding(padding: const EdgeInsets.all(6.0), child: FilterEnum.values[index].icon)),
-              Center(child: Text(FilterEnum.values[index].name, style: const TextStyle(color: Colors.black))),
+              NormalIconButton(
+                  onPressed: null,
+                  color: Colors.white,
+                  child:
+                      Padding(padding: context.paddingLow, child: FilterEnum.values[index].icon)),
+              Center(
+                  child: Text(FilterEnum.values[index].name,
+                      style: const TextStyle(color: Colors.black))),
             ],
           )),
     );
@@ -127,15 +146,29 @@ class _SearchCard extends StatelessWidget {
             const Spacer(),
             CardText(
               text: LocaleKeys.letsEat,
-              textStyle: Theme.of(context).textTheme.displayMedium?.copyWith(fontWeight: FontWeight.w400, fontSize: 30),
+              textStyle: Theme.of(context)
+                  .textTheme
+                  .displayMedium
+                  ?.copyWith(fontWeight: FontWeight.w400, fontSize: 30),
             ),
             const Spacer(),
             Row(
               children: [
                 Expanded(
-                  child: TextField(decoration: InputDecoration(hintText: LocaleKeys.search, border: const OutlineInputBorder(), prefixIcon: Icon(Icons.search, color: Theme.of(context).iconTheme.color?.withOpacity(0.5)))),
-                ),
-                FilterButton(onPressed: () {}),
+                  child: TextField(
+                    cursorColor: Theme.of(context).iconTheme.color,
+                    style: Theme.of(context).textTheme.labelSmall,
+                    onChanged: (value) {
+                      context.read<FoodCubit>().filterByName(value);
+                    },
+                    decoration: InputDecoration(
+                      hintText: LocaleKeys.search,
+                      border: const OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.search,
+                          color: Theme.of(context).iconTheme.color?.withOpacity(0.5)),
+                    ),
+                  ),
+                )
               ],
             )
           ],

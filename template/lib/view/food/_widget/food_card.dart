@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/constants/app/app_constants.dart';
 import '../../../core/extensions/context_extension.dart';
-import 'remove_button.dart';
 import '../model/food_model.dart';
-
 import 'add_button.dart';
+import 'remove_button.dart';
 
 class FoodCard extends StatelessWidget {
-  final FoodModel model;
+  final Recipes model;
   const FoodCard({
     super.key,
     required this.model,
@@ -16,32 +16,31 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.grey[300],
       child: Row(
         children: [
           Padding(
             padding: context.paddingNormal,
             child: Image.network(
-              model.recipes?[1].image ?? AppConstants.RAND_IMAGE,
+              model.image ?? AppConstants.RAND_IMAGE,
               width: context.width * 0.25,
             ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(model.recipes?[1].name ?? 'Title'),
-              Text(model.recipes?[1].cuisine ?? 'Description'),
+              Text(model.name ?? 'Title', style: const TextStyle(color: Colors.black)),
+              Text(model.cuisine ?? 'Description', style: const TextStyle(color: Colors.black)),
               Row(
                 children: [
                   const Icon(Icons.star, color: Colors.amber),
-                  Text(model.recipes?[1].rating.toString() ?? 'Rating'),
+                  Text(model.rating.toString(), style: const TextStyle(color: Colors.black)),
                   SizedBox(
                     width: context.width * 0.08,
                   ),
                   RemoveButton(
                     onPressed: () {},
                   ),
-                  const Text("0"),
+                  const Text("0", style: TextStyle(color: Colors.black)),
                   AddButton(onPressed: () {}),
                 ],
               ),

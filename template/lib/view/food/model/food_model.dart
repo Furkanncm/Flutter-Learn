@@ -5,6 +5,7 @@ part 'food_model.g.dart';
 
 @JsonSerializable()
 class FoodModel {
+  @JsonKey(includeFromJson:true)
   List<Recipes>? recipes;
   int? total;
   int? skip;
